@@ -1,0 +1,2189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view type="View" id="MainView">
+    <bounds x="0" y="0" width="1358" height="701"/>
+    <image id="background" src="images/background_main.png" stretch="true"/>
+
+    <view type="View" id="ToolbarView">
+        <bounds x="0" y="0" width="355" height="38"/>
+        <image id="background" src="images/control_surface_toolbar.png"/>
+        <intercepts_mouse value="false"/>
+        
+        <view type="StaticText" id="PageOfLabel">
+            <bounds x="7" y="9" width="95" height="20"/>
+            <font typeface="Arial" height="14" bold="0" italic="0" underlined="0"/>
+            <color id="text" red="238" green="238" blue="238" alpha="255"/>
+            <justification horizontal="left" vertical="center"/>
+            <text string="Page   (of   )"/>
+            <intercepts_mouse value="false"/>
+        </view>
+        
+        <view type="Button" id="PrevPageButton">
+            <bounds x="108" y="12" width="9" height="13"/>
+            <image_list id="state" stretch="true">
+                <image id="" src="images/left_arrow.png"/>
+                <image id="" src="images/left_arrow_lit.png"/>
+            </image_list>
+            <tooltip string="Previous page (&#8984; + &#8592;)"/>
+        </view>
+        
+        <view type="Popup" id="PagePopup">
+            <bounds x="119" y="9" width="26" height="20"/>
+            <font typeface="Arial" height="14" bold="0" italic="0" underlined="0"/>
+            <color id="text" red="238" green="238" blue="238" alpha="255"/>
+            <justification horizontal="left" vertical="bottom"/>
+        </view>
+        
+        <view type="Button" id="NextPageButton">
+            <bounds x="147" y="12" width="9" height="13"/>
+            <image_list id="state" stretch="true">
+                <image id="" src="images/right_arrow.png"/>
+                <image id="" src="images/right_arrow_lit.png"/>
+            </image_list>
+            <tooltip string="Next page (&#8984; + &#8594;)"/>
+        </view>
+        
+        <view type="Button" id="InsertButton">
+            <bounds x="161" y="8" width="28" height="22"/>
+            <image_list id="state" stretch="true">
+                <image id="" src=""/>
+                <image id="" src="images/insert_page_lit.png"/>
+            </image_list>
+            <tooltip string="Create new page (&#8984; + N) "/>
+        </view>
+        
+        <view type="Button" id="DuplicateButton">
+            <bounds x="194" y="8" width="28" height="22"/>
+            <image_list id="state" stretch="true">
+                <image id="" src=""/>
+                <image id="" src="images/duplicate_page_lit.png"/>
+            </image_list>
+            <tooltip string="Duplicate page (&#8984; + D)"/>
+        </view>
+        
+        <view type="Button" id="DeleteButton">
+            <bounds x="227" y="8" width="28" height="22"/>
+            <image_list id="state" stretch="true">
+                <image id="" src=""/>
+                <image id="" src="images/delete_page_lit.png"/>
+            </image_list>
+            <tooltip string="Delete page (&#8984; + R)"/>
+        </view>
+        
+        <view type="Button" id="ShowAbbreviatedNamesCheckBox">
+            <bounds x="260" y="8" width="46" height="22"/>
+            <image_list id="state" stretch="true">
+                <image id="" src=""/>
+                <image id="" src="images/abbreviations_lit.png"/>
+            </image_list>
+            <tooltip string="Show abbreviated names"/>
+        </view>
+		
+		<view type="Button" id="HelpButton">
+			<bounds x="332" y="11" width="20" height="18"/>
+			<font typeface="Arial" height="14" bold="1" italic="0" underlined="0"/>
+			<color id="text" red="238" green="238" blue="238" alpha="255"/>
+			<text string=" ? "/>
+			<image_list id="state" stretch="true">
+				<image id="" src="images/button.png"/>
+				<image id="" src=""/>
+			</image_list>
+		</view>
+		
+    </view>
+    
+    <view type="TableList" id="ParametersList">
+        <bounds x="1062" y="0" width="296" height="701"/>
+        <header height="24">
+            <header_item title_string="Type" width="30" minWidth="30" maxWidth="30"/>
+            <header_item title_string="Parameter Name" width="155" minWidth="155"/>
+            <header_item title_string="Assignment Page" width="100" minWidth="100"/>
+        </header>
+    </view>
+    
+    <view type="View" id="4CellsView01">
+        <bounds x="0" y="38" width="1062" height="663"/>
+        <image id="background" src="images/s6_expand_background.png"/>
+        <intercepts_mouse value="false"/>
+    
+        <!-- ======================================================================== -->
+        <!--                                4 Cells View 1                            -->
+        <!-- ======================================================================== -->
+        <view type="View" id="4CellsView01">
+            <bounds x="7" y="9" width="131" height="601"/>
+            <intercepts_mouse value="false"/>
+
+            <!-- Surface encoder cell 01 -->
+            <view type="View" id="CellView01">
+                <bounds x="10" y="10" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob01">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob01">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob01"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch01">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch01">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch01"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton01">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton01">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton01"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 02 -->
+            <view type="View" id="CellView02">
+                <bounds x="10" y="160" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob02">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob02">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob02"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch02">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch02">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch02"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton02">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton02">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton02"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 03 -->
+            <view type="View" id="CellView03">
+                <bounds x="10" y="310" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob03">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob03">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob03"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch03">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch03">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch03"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton03">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton03">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton03"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 04 -->
+            <view type="View" id="CellView04">
+                <bounds x="10" y="460" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob04">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob04">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob04"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch04">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch04">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch04"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton04">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton04">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton04"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+        </view>
+
+        <!-- ======================================================================== -->
+        <!--                                4 Cells View 2                            -->
+        <!-- ======================================================================== -->
+        <view type="View" id="4CellsView02">
+            <bounds x="138" y="9" width="131" height="601"/>
+            <intercepts_mouse value="false"/>
+            
+            <!-- Surface encoder cell 05 -->
+            <view type="View" id="CellView05">
+                <bounds x="10" y="10" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob05">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob05">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob05"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch05">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch05">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch05"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton05">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton05">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton05"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 06 -->
+            <view type="View" id="CellView06">
+                <bounds x="10" y="160" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob06">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob06">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob06"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch06">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch06">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch06"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton06">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton06">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton06"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 07 -->
+            <view type="View" id="CellView07">
+                <bounds x="10" y="310" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob07">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob07">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob07"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch07">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch07">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch07"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton07">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton07">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton07"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 08 -->
+            <view type="View" id="CellView08">
+                <bounds x="10" y="460" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob08">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob08">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob08"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch08">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch08">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch08"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton08">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton08">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton08"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+        </view>
+
+        <!-- ======================================================================== -->
+        <!--                                4 Cells View 3                            -->
+        <!-- ======================================================================== -->
+        <view type="View" id="4CellsView03">
+            <bounds x="269" y="9" width="131" height="601"/>
+            <intercepts_mouse value="false"/>
+            
+            <!-- Surface encoder cell 09 -->
+            <view type="View" id="CellView09">
+                <bounds x="10" y="10" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob09">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob09">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob09"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch09">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch09">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch09"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton09">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton09">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton09"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 10 -->
+            <view type="View" id="CellView10">
+                <bounds x="10" y="160" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob10">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob10">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob10"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch10">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch10">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch10"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton10">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton10">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton10"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 11 -->
+            <view type="View" id="CellView11">
+                <bounds x="10" y="310" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob11">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob11">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob11"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch11">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch11">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch11"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton11">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton11">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton11"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 12 -->
+            <view type="View" id="CellView12">
+                <bounds x="10" y="460" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob12">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob12">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob12"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch12">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch12">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch12"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton12">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton12">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton12"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+        </view>
+        
+        <!-- ======================================================================== -->
+        <!--                                8 Cells View 4                            -->
+        <!-- ======================================================================== -->
+        <view type="View" id="4CellsView04">
+            <bounds x="400" y="9" width="131" height="601"/>
+            <intercepts_mouse value="false"/>
+            
+            <!-- Surface encoder cell 13 -->
+            <view type="View" id="CellView13">
+                <bounds x="10" y="10" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob13">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob13">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob13"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch13">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch13">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch13"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton13">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton13">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton13"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 14 -->
+            <view type="View" id="CellView14">
+                <bounds x="10" y="160" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob14">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob14">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob14"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch14">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch14">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch14"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton14">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton14">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton14"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 15 -->
+            <view type="View" id="CellView15">
+                <bounds x="10" y="310" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob15">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob15">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob15"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch15">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch15">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch15"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton15">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton15">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton15"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 16 -->
+            <view type="View" id="CellView16">
+                <bounds x="10" y="460" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob16">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob16">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob16"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch16">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch16">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch16"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton16">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton16">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton16"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+        </view>
+        
+        <!-- ======================================================================== -->
+        <!--                                4 Cells View 5                            -->
+        <!-- ======================================================================== -->
+        <view type="View" id="4CellsView05">
+            <bounds x="531" y="9" width="131" height="601"/>
+            <intercepts_mouse value="false"/>
+            
+            <!-- Surface encoder cell 17 -->
+            <view type="View" id="CellView17">
+                <bounds x="10" y="10" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob17">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob17">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob17"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch17">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch17">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch17"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton17">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton17">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton17"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 18 -->
+            <view type="View" id="CellView18">
+                <bounds x="10" y="160" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob18">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob18">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob18"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch18">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch18">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch18"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton18">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton18">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton18"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 19 -->
+            <view type="View" id="CellView19">
+                <bounds x="10" y="310" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob19">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob19">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob19"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch19">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch19">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch19"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton19">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton19">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton19"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 20 -->
+            <view type="View" id="CellView20">
+                <bounds x="10" y="460" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob20">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob20">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob20"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch20">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch20">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch20"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton20">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton20">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton20"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+        </view>
+        
+        <!-- ======================================================================== -->
+        <!--                                4 Cells View 6                            -->
+        <!-- ======================================================================== -->
+        <view type="View" id="4CellsView06">
+            <bounds x="662" y="9" width="131" height="601"/>
+            <intercepts_mouse value="false"/>
+            
+            <!-- Surface encoder cell 21 -->
+            <view type="View" id="CellView21">
+                <bounds x="10" y="10" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob21">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob21">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob21"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch21">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch21">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch21"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton21">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton21">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton21"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 22 -->
+            <view type="View" id="CellView22">
+                <bounds x="10" y="160" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob22">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob22">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob22"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch22">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch22">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch22"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton22">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton22">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton22"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 23 -->
+            <view type="View" id="CellView23">
+                <bounds x="10" y="310" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob23">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob23">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob23"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch23">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch23">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch23"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton23">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton23">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton23"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 24 -->
+            <view type="View" id="CellView24">
+                <bounds x="10" y="460" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob24">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob24">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob24"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch24">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch24">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch24"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton24">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton24">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton24"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+        </view>
+        
+        <!-- ======================================================================== -->
+        <!--                                8 Cells View 7                            -->
+        <!-- ======================================================================== -->
+        <view type="View" id="4CellsView07">
+            <bounds x="793" y="9" width="131" height="601"/>
+            <intercepts_mouse value="false"/>
+            
+            <!-- Surface encoder cell 25 -->
+            <view type="View" id="CellView25">
+                <bounds x="10" y="10" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob25">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob25">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob25"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch25">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch25">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch25"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton25">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton25">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton25"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 26 -->
+            <view type="View" id="CellView26">
+                <bounds x="10" y="160" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob26">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob26">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob26"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch26">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch26">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch26"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton26">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton26">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton26"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 27 -->
+            <view type="View" id="CellView27">
+                <bounds x="10" y="310" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob27">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob27">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob27"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch27">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch27">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch27"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton27">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton27">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton27"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 28 -->
+            <view type="View" id="CellView28">
+                <bounds x="10" y="460" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob28">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob28">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob28"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch28">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch28">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch28"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton28">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton28">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton28"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+        </view>
+        
+        <!-- ======================================================================== -->
+        <!--                                8 Cells View 8                            -->
+        <!-- ======================================================================== -->
+        <view type="View" id="4CellsView08">
+            <bounds x="924" y="9" width="131" height="601"/>
+            <intercepts_mouse value="false"/>
+            
+            <!-- Surface encoder cell 29 -->
+            <view type="View" id="CellView29">
+                <bounds x="10" y="10" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob29">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob29">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob29"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch29">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch29">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch29"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton29">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton29">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton29"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 30 -->
+            <view type="View" id="CellView30">
+                <bounds x="10" y="160" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob30">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob30">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob30"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch30">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch30">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch30"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton30">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton30">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton30"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 31 -->
+            <view type="View" id="CellView31">
+                <bounds x="10" y="310" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob31">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob31">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob31"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch31">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch31">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch31"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton31">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton31">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton31"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+            
+            <!-- Surface encoder cell 32 -->
+            <view type="View" id="CellView32">
+                <bounds x="10" y="460" width="111" height="135"/>
+                <intercepts_mouse value="false"/>
+                
+                <view type="Button" id="ClickZoneKnob32">
+                    <bounds x="47" y="77" width="53" height="53"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_knob_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="27" alpha="64"/>
+                </view>
+                <view type="StaticText" id="Knob32">
+                    <bounds x="2" y="2" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="Knob32"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneSelSwitch32">
+                    <bounds x="3" y="73" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_sel_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="SelSwitch32">
+                    <bounds x="2" y="23" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="SelSwitch32"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+                
+                <view type="Button" id="ClickZoneInOutButton32">
+                    <bounds x="3" y="105" width="29" height="29"/>
+                    <image_list id="state">
+                        <image id="" src=""/>
+                        <image id="" src="images/s6_expand_inout_lit.png"/>
+                    </image_list>
+                    <toggles value="true"/>
+                    <drag_n_drop thickness="15" alpha="64"/>
+                </view>
+                <view type="StaticText" id="InOutButton32">
+                    <bounds x="2" y="44" width="107" height="21"/>
+                    <font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+                    <color id="text" red="253" green="254" blue="59" alpha="255"/>
+                    <justification horizontal="left" vertical="center"/>
+                    <text string="InOutButton32"/>
+                    <intercepts_mouse value="false"/>
+					<highlight thickness="3"/>
+                </view>
+            </view>
+        </view>
+    </view>
+    
+</view>

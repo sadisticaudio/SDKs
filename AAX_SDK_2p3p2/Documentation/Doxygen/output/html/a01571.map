@@ -1,0 +1,6 @@
+<map id="AAX_CString" name="AAX_CString">
+<area shape="rect" id="node1" title="A generic AAX string class with similar functionality to std::string" alt="" coords="24,180,124,205"/>
+<area shape="rect" id="node2" href="$a01873.html" title="A simple string container that can be passed across a binary boundary. This class,..." alt="" coords="5,93,99,119"/>
+<area shape="rect" id="node3" title="STL class." alt="" coords="123,93,203,119"/>
+<area shape="rect" id="node4" title="STL class." alt="" coords="100,5,226,44"/>
+</map>

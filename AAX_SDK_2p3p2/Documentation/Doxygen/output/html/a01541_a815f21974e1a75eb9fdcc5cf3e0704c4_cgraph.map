@@ -1,0 +1,6 @@
+<map id="AAX_CStatelessParameter::Release" name="AAX_CStatelessParameter::Release">
+<area shape="rect" id="node1" title="Signals the automation system that a control has been released." alt="" coords="5,37,187,76"/>
+<area shape="rect" id="node2" href="$a01541.html#a9ab991e0bad2bc76b7efba3d129f1953" title="Returns the parameter&#39;s unique identifier." alt="" coords="235,5,418,44"/>
+<area shape="rect" id="node4" href="$a01773.html#a89049fae2c35a4b99cfeb6585898bb69" title=" " alt="" coords="237,68,417,107"/>
+<area shape="rect" id="node3" href="$a01573.html#a325db10aee379f7b23e44edcab47893b" title=" " alt="" coords="466,12,617,37"/>
+</map>

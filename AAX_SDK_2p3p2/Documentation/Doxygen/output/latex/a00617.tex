@@ -1,0 +1,173 @@
+\hypertarget{a00617}{}\section{A\+A\+X\+\_\+\+Init.\+h File Reference}
+\label{a00617}\index{AAX\_Init.h@{AAX\_Init.h}}
+{\ttfamily \#include \char`\"{}A\+A\+X.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}acfbasetypes.\+h\char`\"{}}\newline
+
+
+\subsection{Description}
+A\+AX library implementations of required plug-\/in initialization, registration, and tear-\/down methods. 
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a00796_ga83d05333118598c179ca6d89487fa203}{A\+A\+X\+Register\+Plugin}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host, I\+A\+C\+F\+Plugin\+Definition $\ast$$\ast$pp\+Plugin\+Definition)
+\begin{DoxyCompactList}\small\item\em The main plug-\/in registration method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a00617_a03c71f96fcf624bf50b7acbe31a846f0}{A\+A\+X\+Register\+Component}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host, acf\+U\+Int32 index, I\+A\+C\+F\+Component\+Definition $\ast$$\ast$pp\+Component\+Definition)
+\begin{DoxyCompactList}\small\item\em Registers a specific component in the D\+LL. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a00617_a84cf37211a57dbaec9e7d077dd171798}{A\+A\+X\+Get\+Class\+Factory}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host, const acf\+C\+L\+S\+ID \&clsid, const \mbox{\hyperlink{a00269_a59df0b41744eee7a066787aaedf97f67}{acf\+I\+ID}} \&iid, void $\ast$$\ast$pp\+Out)
+\begin{DoxyCompactList}\small\item\em Gets the factory for a given class ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a00617_a160de7bc2883da8ba24400933d814523}{A\+A\+X\+Can\+Unload\+Now}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host)
+\begin{DoxyCompactList}\small\item\em Determines whether or not the host may unload the D\+LL. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a00617_a0d9b6aed98567dfb34a38b69432b564d}{A\+A\+X\+Startup}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host)
+\begin{DoxyCompactList}\small\item\em D\+LL initialization routine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a00617_a7423d60c255d0db99a9d8ee128279b9c}{A\+A\+X\+Shutdown}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host)
+\begin{DoxyCompactList}\small\item\em D\+LL shutdown routine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a00617_a6a9bb35afab5850f43b0f8f9ce2df6ef}{A\+A\+X\+Get\+S\+D\+K\+Version}} (acf\+U\+Int64 $\ast$o\+S\+D\+K\+Version)
+\begin{DoxyCompactList}\small\item\em Returns the D\+LL\textquotesingle{}s S\+DK version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{a00617_a03c71f96fcf624bf50b7acbe31a846f0}\label{a00617_a03c71f96fcf624bf50b7acbe31a846f0}} 
+\index{AAX\_Init.h@{AAX\_Init.h}!AAXRegisterComponent@{AAXRegisterComponent}}
+\index{AAXRegisterComponent@{AAXRegisterComponent}!AAX\_Init.h@{AAX\_Init.h}}
+\subsubsection{\texorpdfstring{AAXRegisterComponent()}{AAXRegisterComponent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+Register\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unk\+Host,  }\item[{acf\+U\+Int32}]{index,  }\item[{I\+A\+C\+F\+Component\+Definition $\ast$$\ast$}]{pp\+Component\+Definition }\end{DoxyParamCaption})}
+
+
+
+Registers a specific component in the D\+LL. 
+
+The implementation of this method in the A\+AX library simply sets {\ttfamily $\ast$pp\+Component\+Definition} to N\+U\+LL and returns \mbox{\hyperlink{a00494_a5f8c7439f3a706c4f8315a9609811937aeddbd1bb67e3a66e6af54a4b4a7a57b3}{A\+A\+X\+\_\+\+S\+U\+C\+C\+E\+SS}}.
+
+{\itshape Wrapped by \mbox{\hyperlink{a00500_a68950ea83fea9b46b8f3fef409355b71}{A\+C\+F\+Register\+Component()}} } 
+
+Referenced by A\+C\+F\+Register\+Component().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00617_a03c71f96fcf624bf50b7acbe31a846f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00617_a84cf37211a57dbaec9e7d077dd171798}\label{a00617_a84cf37211a57dbaec9e7d077dd171798}} 
+\index{AAX\_Init.h@{AAX\_Init.h}!AAXGetClassFactory@{AAXGetClassFactory}}
+\index{AAXGetClassFactory@{AAXGetClassFactory}!AAX\_Init.h@{AAX\_Init.h}}
+\subsubsection{\texorpdfstring{AAXGetClassFactory()}{AAXGetClassFactory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+Get\+Class\+Factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unk\+Host,  }\item[{const acf\+C\+L\+S\+ID \&}]{clsid,  }\item[{const \mbox{\hyperlink{a00269_a59df0b41744eee7a066787aaedf97f67}{acf\+I\+ID}} \&}]{iid,  }\item[{void $\ast$$\ast$}]{pp\+Out }\end{DoxyParamCaption})}
+
+
+
+Gets the factory for a given class ID. 
+
+This method is required by A\+CF but is not supported by \mbox{\hyperlink{a00852}{A\+AX}}. Therefore the implementation of this method in the A\+AX library simply sets {\ttfamily $\ast$pp\+Out} to N\+U\+LL and returns \mbox{\hyperlink{a00494_a5f8c7439f3a706c4f8315a9609811937a3b76994b32b97fcd56b19ef8032245df}{A\+A\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+N\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED}}.
+
+{\itshape Wrapped by \mbox{\hyperlink{a00500_a63cbe0222beee199dad20c26e79ebeaa}{A\+C\+F\+Get\+Class\+Factory()}} } 
+
+Referenced by A\+C\+F\+Get\+Class\+Factory().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{a00617_a84cf37211a57dbaec9e7d077dd171798_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00617_a160de7bc2883da8ba24400933d814523}\label{a00617_a160de7bc2883da8ba24400933d814523}} 
+\index{AAX\_Init.h@{AAX\_Init.h}!AAXCanUnloadNow@{AAXCanUnloadNow}}
+\index{AAXCanUnloadNow@{AAXCanUnloadNow}!AAX\_Init.h@{AAX\_Init.h}}
+\subsubsection{\texorpdfstring{AAXCanUnloadNow()}{AAXCanUnloadNow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+Can\+Unload\+Now (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unk\+Host }\end{DoxyParamCaption})}
+
+
+
+Determines whether or not the host may unload the D\+LL. 
+
+The implementation of this method in the A\+AX library returns the result of {\ttfamily Get\+Active\+Object\+Count()} as an \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}}, with zero active objects interpreted as \mbox{\hyperlink{a00494_a5f8c7439f3a706c4f8315a9609811937aeddbd1bb67e3a66e6af54a4b4a7a57b3}{A\+A\+X\+\_\+\+S\+U\+C\+C\+E\+SS}} (see C\+A\+C\+F\+Unknown.\+h)
+
+{\itshape Wrapped by \mbox{\hyperlink{a00500_ae5327dbd8fd750c78eca3892831f4ad8}{A\+C\+F\+Can\+Unload\+Now()}} } 
+
+Referenced by A\+C\+F\+Can\+Unload\+Now().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{a00617_a160de7bc2883da8ba24400933d814523_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00617_a0d9b6aed98567dfb34a38b69432b564d}\label{a00617_a0d9b6aed98567dfb34a38b69432b564d}} 
+\index{AAX\_Init.h@{AAX\_Init.h}!AAXStartup@{AAXStartup}}
+\index{AAXStartup@{AAXStartup}!AAX\_Init.h@{AAX\_Init.h}}
+\subsubsection{\texorpdfstring{AAXStartup()}{AAXStartup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+Startup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unk\+Host }\end{DoxyParamCaption})}
+
+
+
+D\+LL initialization routine. 
+
+Called once at init time. The implementation of this method in the A\+AX library uses {\ttfamily p\+Unk\+Host} as an {\ttfamily I\+A\+C\+F\+Component\+Factory} to initialize global services (see acfbaseapi.\+h)
+
+{\itshape Wrapped by \mbox{\hyperlink{a00500_ada314f5040499160998c3c444fbe4dfd}{A\+C\+F\+Startup()}} } 
+
+Referenced by A\+C\+F\+Startup().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{a00617_a0d9b6aed98567dfb34a38b69432b564d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00617_a7423d60c255d0db99a9d8ee128279b9c}\label{a00617_a7423d60c255d0db99a9d8ee128279b9c}} 
+\index{AAX\_Init.h@{AAX\_Init.h}!AAXShutdown@{AAXShutdown}}
+\index{AAXShutdown@{AAXShutdown}!AAX\_Init.h@{AAX\_Init.h}}
+\subsubsection{\texorpdfstring{AAXShutdown()}{AAXShutdown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+Shutdown (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unk\+Host }\end{DoxyParamCaption})}
+
+
+
+D\+LL shutdown routine. 
+
+Called once before unloading the D\+LL. The implementation of this method in the A\+AX library tears down any globally initialized state and releases any globally retained resources.
+
+{\itshape Wrapped by \mbox{\hyperlink{a00500_aba48dc247519ce7ecd2c064e928d9f18}{A\+C\+F\+Shutdown()}} } 
+
+Referenced by A\+C\+F\+Shutdown().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{a00617_a7423d60c255d0db99a9d8ee128279b9c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00617_a6a9bb35afab5850f43b0f8f9ce2df6ef}\label{a00617_a6a9bb35afab5850f43b0f8f9ce2df6ef}} 
+\index{AAX\_Init.h@{AAX\_Init.h}!AAXGetSDKVersion@{AAXGetSDKVersion}}
+\index{AAXGetSDKVersion@{AAXGetSDKVersion}!AAX\_Init.h@{AAX\_Init.h}}
+\subsubsection{\texorpdfstring{AAXGetSDKVersion()}{AAXGetSDKVersion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+Get\+S\+D\+K\+Version (\begin{DoxyParamCaption}\item[{acf\+U\+Int64 $\ast$}]{o\+S\+D\+K\+Version }\end{DoxyParamCaption})}
+
+
+
+Returns the D\+LL\textquotesingle{}s S\+DK version. 
+
+The implementation of this method in the A\+AX library provides a 64-\/bit value in which the upper 32 bits represent the S\+DK version and the lower 32 bits represent the revision number of the S\+DK. See \mbox{\hyperlink{a00707}{A\+A\+X\+\_\+\+Version.\+h}}
+
+{\itshape Wrapped by \mbox{\hyperlink{a00500_a2a47c5f7e29baf716a4c4956389e83c9}{A\+C\+F\+Get\+S\+D\+K\+Version()}} } 
+
+Referenced by A\+C\+F\+Get\+S\+D\+K\+Version().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{a00617_a6a9bb35afab5850f43b0f8f9ce2df6ef_icgraph}
+\end{center}
+\end{figure}

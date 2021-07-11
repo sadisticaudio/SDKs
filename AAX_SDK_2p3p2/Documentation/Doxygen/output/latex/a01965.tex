@@ -1,0 +1,164 @@
+\hypertarget{a01965}{}\section{A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info Struct Reference}
+\label{a01965}\index{AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+C\+Monolithic\+Parameters.\+h$>$}
+
+
+
+Collaboration diagram for A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a01963}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+Information used to parameterize \mbox{\hyperlink{a01969_a04f2f73d70ea28c17747c68fc3a20fc8}{A\+A\+X\+\_\+\+C\+Monolithic\+Parameters\+::\+Render\+Audio()}} 
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float $\ast$$\ast$ \mbox{\hyperlink{a01965_a84a9670391f6c3ade12f8577e3c127a7}{m\+Audio\+Inputs}}
+\begin{DoxyCompactList}\small\item\em Audio input buffers. \end{DoxyCompactList}\item 
+float $\ast$$\ast$ \mbox{\hyperlink{a01965_a24be01ad79dac3d110302a4392a8c8cc}{m\+Audio\+Outputs}}
+\begin{DoxyCompactList}\small\item\em Audio output buffers, including any aux output stems. \end{DoxyCompactList}\item 
+int32\+\_\+t $\ast$ \mbox{\hyperlink{a01965_a7668a9950721f0a2819bee60fafc8e10}{m\+Num\+Samples}}
+\begin{DoxyCompactList}\small\item\em Number of samples in each buffer. Bounded as per \mbox{\hyperlink{a00491_aa1769ee466fd07659d8c7ef5ac61cd49}{A\+A\+E\+\_\+\+E\+Audio\+Buffer\+Length\+Native}}. The exact value can vary from buffer to buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_aae7325dbfa53a983f208a68cb563fba5}{A\+A\+X\+\_\+\+C\+Timestamp}} $\ast$ \mbox{\hyperlink{a01965_a4db77b69a4d4993b0fa6a5ab3573eb05}{m\+Clock}}
+\begin{DoxyCompactList}\small\item\em Pointer to the global running time clock. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a01845}{A\+A\+X\+\_\+\+I\+M\+I\+D\+I\+Node}} $\ast$ \mbox{\hyperlink{a01965_ab567e317ed0127a51bf0491a4d972f3b}{m\+Input\+Node}}
+\begin{DoxyCompactList}\small\item\em Buffered local M\+I\+DI input node. Used for incoming M\+I\+DI messages directed to the instrument. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a01845}{A\+A\+X\+\_\+\+I\+M\+I\+D\+I\+Node}} $\ast$ \mbox{\hyperlink{a01965_a48eed53d672bf4c844ec501d5dfe1784}{m\+Global\+Node}}
+\begin{DoxyCompactList}\small\item\em Buffered global M\+I\+DI input node. Used for global events like beat updates in metronomes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a01845}{A\+A\+X\+\_\+\+I\+M\+I\+D\+I\+Node}} $\ast$ \mbox{\hyperlink{a01965_a60ea39a008cad2ecd97b2251787b3b38}{m\+Transport\+Node}}
+\begin{DoxyCompactList}\small\item\em Transport M\+I\+DI node. Used for querying the state of the M\+I\+DI transport. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a01845}{A\+A\+X\+\_\+\+I\+M\+I\+D\+I\+Node}} $\ast$ \mbox{\hyperlink{a01965_ab90074855c83148226feb8a64ac0b354}{m\+Additional\+Input\+M\+I\+D\+I\+Nodes}} \mbox{[}\mbox{\hyperlink{a00746_af66ae5854aedf3b38c6d6540670966b1}{k\+Max\+Additional\+M\+I\+D\+I\+Nodes}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em List of additional input M\+I\+DI nodes, if your plugin needs them. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a01961}{A\+A\+X\+\_\+\+S\+Instrument\+Private\+Data}} $\ast$ \mbox{\hyperlink{a01965_aff00dfa131d966478ab571ebcab7a86c}{m\+Private\+Data}}
+\begin{DoxyCompactList}\small\item\em Struct containing private data relating to the instance. You should not need to use this data. \end{DoxyCompactList}\item 
+float $\ast$$\ast$ \mbox{\hyperlink{a01965_a68ae865355f50537127d3e2e0efd585f}{m\+Meters}}
+\begin{DoxyCompactList}\small\item\em Array of meter taps. One meter value should be entered per tap for each render call. \end{DoxyCompactList}\item 
+int64\+\_\+t $\ast$ \mbox{\hyperlink{a01965_a846c5f9e518bb66bf1854a9eb77d54a7}{m\+Current\+State\+Num}}
+\begin{DoxyCompactList}\small\item\em State counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{a01965_a84a9670391f6c3ade12f8577e3c127a7}\label{a01965_a84a9670391f6c3ade12f8577e3c127a7}} 
+\index{AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}!mAudioInputs@{mAudioInputs}}
+\index{mAudioInputs@{mAudioInputs}!AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}}
+\subsubsection{\texorpdfstring{mAudioInputs}{mAudioInputs}}
+{\footnotesize\ttfamily float$\ast$$\ast$ A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info\+::m\+Audio\+Inputs}
+
+
+
+Audio input buffers. 
+
+\mbox{\Hypertarget{a01965_a24be01ad79dac3d110302a4392a8c8cc}\label{a01965_a24be01ad79dac3d110302a4392a8c8cc}} 
+\index{AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}!mAudioOutputs@{mAudioOutputs}}
+\index{mAudioOutputs@{mAudioOutputs}!AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}}
+\subsubsection{\texorpdfstring{mAudioOutputs}{mAudioOutputs}}
+{\footnotesize\ttfamily float$\ast$$\ast$ A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info\+::m\+Audio\+Outputs}
+
+
+
+Audio output buffers, including any aux output stems. 
+
+\mbox{\Hypertarget{a01965_a7668a9950721f0a2819bee60fafc8e10}\label{a01965_a7668a9950721f0a2819bee60fafc8e10}} 
+\index{AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}!mNumSamples@{mNumSamples}}
+\index{mNumSamples@{mNumSamples}!AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}}
+\subsubsection{\texorpdfstring{mNumSamples}{mNumSamples}}
+{\footnotesize\ttfamily int32\+\_\+t$\ast$ A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info\+::m\+Num\+Samples}
+
+
+
+Number of samples in each buffer. Bounded as per \mbox{\hyperlink{a00491_aa1769ee466fd07659d8c7ef5ac61cd49}{A\+A\+E\+\_\+\+E\+Audio\+Buffer\+Length\+Native}}. The exact value can vary from buffer to buffer. 
+
+\mbox{\Hypertarget{a01965_a4db77b69a4d4993b0fa6a5ab3573eb05}\label{a01965_a4db77b69a4d4993b0fa6a5ab3573eb05}} 
+\index{AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}!mClock@{mClock}}
+\index{mClock@{mClock}!AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}}
+\subsubsection{\texorpdfstring{mClock}{mClock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_aae7325dbfa53a983f208a68cb563fba5}{A\+A\+X\+\_\+\+C\+Timestamp}}$\ast$ A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info\+::m\+Clock}
+
+
+
+Pointer to the global running time clock. 
+
+\mbox{\Hypertarget{a01965_ab567e317ed0127a51bf0491a4d972f3b}\label{a01965_ab567e317ed0127a51bf0491a4d972f3b}} 
+\index{AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}!mInputNode@{mInputNode}}
+\index{mInputNode@{mInputNode}!AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}}
+\subsubsection{\texorpdfstring{mInputNode}{mInputNode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01845}{A\+A\+X\+\_\+\+I\+M\+I\+D\+I\+Node}}$\ast$ A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info\+::m\+Input\+Node}
+
+
+
+Buffered local M\+I\+DI input node. Used for incoming M\+I\+DI messages directed to the instrument. 
+
+\mbox{\Hypertarget{a01965_a48eed53d672bf4c844ec501d5dfe1784}\label{a01965_a48eed53d672bf4c844ec501d5dfe1784}} 
+\index{AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}!mGlobalNode@{mGlobalNode}}
+\index{mGlobalNode@{mGlobalNode}!AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}}
+\subsubsection{\texorpdfstring{mGlobalNode}{mGlobalNode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01845}{A\+A\+X\+\_\+\+I\+M\+I\+D\+I\+Node}}$\ast$ A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info\+::m\+Global\+Node}
+
+
+
+Buffered global M\+I\+DI input node. Used for global events like beat updates in metronomes. 
+
+\mbox{\Hypertarget{a01965_a60ea39a008cad2ecd97b2251787b3b38}\label{a01965_a60ea39a008cad2ecd97b2251787b3b38}} 
+\index{AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}!mTransportNode@{mTransportNode}}
+\index{mTransportNode@{mTransportNode}!AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}}
+\subsubsection{\texorpdfstring{mTransportNode}{mTransportNode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01845}{A\+A\+X\+\_\+\+I\+M\+I\+D\+I\+Node}}$\ast$ A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info\+::m\+Transport\+Node}
+
+
+
+Transport M\+I\+DI node. Used for querying the state of the M\+I\+DI transport. 
+
+\mbox{\Hypertarget{a01965_ab90074855c83148226feb8a64ac0b354}\label{a01965_ab90074855c83148226feb8a64ac0b354}} 
+\index{AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}!mAdditionalInputMIDINodes@{mAdditionalInputMIDINodes}}
+\index{mAdditionalInputMIDINodes@{mAdditionalInputMIDINodes}!AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}}
+\subsubsection{\texorpdfstring{mAdditionalInputMIDINodes}{mAdditionalInputMIDINodes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01845}{A\+A\+X\+\_\+\+I\+M\+I\+D\+I\+Node}}$\ast$ A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info\+::m\+Additional\+Input\+M\+I\+D\+I\+Nodes\mbox{[}\mbox{\hyperlink{a00746_af66ae5854aedf3b38c6d6540670966b1}{k\+Max\+Additional\+M\+I\+D\+I\+Nodes}}\mbox{]}}
+
+
+
+List of additional input M\+I\+DI nodes, if your plugin needs them. 
+
+\mbox{\Hypertarget{a01965_aff00dfa131d966478ab571ebcab7a86c}\label{a01965_aff00dfa131d966478ab571ebcab7a86c}} 
+\index{AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}!mPrivateData@{mPrivateData}}
+\index{mPrivateData@{mPrivateData}!AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}}
+\subsubsection{\texorpdfstring{mPrivateData}{mPrivateData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01961}{A\+A\+X\+\_\+\+S\+Instrument\+Private\+Data}}$\ast$ A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info\+::m\+Private\+Data}
+
+
+
+Struct containing private data relating to the instance. You should not need to use this data. 
+
+\mbox{\Hypertarget{a01965_a68ae865355f50537127d3e2e0efd585f}\label{a01965_a68ae865355f50537127d3e2e0efd585f}} 
+\index{AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}!mMeters@{mMeters}}
+\index{mMeters@{mMeters}!AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}}
+\subsubsection{\texorpdfstring{mMeters}{mMeters}}
+{\footnotesize\ttfamily float$\ast$$\ast$ A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info\+::m\+Meters}
+
+
+
+Array of meter taps. One meter value should be entered per tap for each render call. 
+
+\mbox{\Hypertarget{a01965_a846c5f9e518bb66bf1854a9eb77d54a7}\label{a01965_a846c5f9e518bb66bf1854a9eb77d54a7}} 
+\index{AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}!mCurrentStateNum@{mCurrentStateNum}}
+\index{mCurrentStateNum@{mCurrentStateNum}!AAX\_SInstrumentRenderInfo@{AAX\_SInstrumentRenderInfo}}
+\subsubsection{\texorpdfstring{mCurrentStateNum}{mCurrentStateNum}}
+{\footnotesize\ttfamily int64\+\_\+t$\ast$ A\+A\+X\+\_\+\+S\+Instrument\+Render\+Info\+::m\+Current\+State\+Num}
+
+
+
+State counter. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00746}{A\+A\+X\+\_\+\+C\+Monolithic\+Parameters.\+h}}\end{DoxyCompactItemize}

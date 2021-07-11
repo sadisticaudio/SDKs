@@ -1,0 +1,5 @@
+<map id="AAX_IParameter" name="AAX_IParameter">
+<area shape="rect" id="node1" title="The base interface for all normalizable plug&#45;in parameters." alt="" coords="121,5,242,31"/>
+<area shape="rect" id="node2" href="$a01537.html" title="Generic implementation of an AAX_IParameter." alt="" coords="5,79,163,104"/>
+<area shape="rect" id="node3" href="$a01541.html" title="A stateless parameter implementation." alt="" coords="188,79,370,104"/>
+</map>

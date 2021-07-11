@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view type="View" id="MainView">
+    <bounds x="0" y="0" width="368" height="640"/>
+    <image id="background" src="images/background_main.png" stretch="true"/>
+    
+    <view type="TableList" id="NameVariationsList">
+        <bounds x="10" y="10" width="348" height="620"/>
+        <header height="24">
+            <header_item title_string="Type" width="30" minWidth="30" maxWidth="30"/>
+            <header_item title_string="Parameter Name" width="155" minWidth="155"/>
+            <header_item title_string="1 Char" width="42" minWidth="42"/>
+            <header_item title_string="2 Char" width="42" minWidth="42"/>
+            <header_item title_string="3 Char" width="42" minWidth="42"/>
+            <header_item title_string="4 Char" width="42" minWidth="42"/>
+            <header_item title_string="5 Char" width="44" minWidth="44"/>
+            <header_item title_string="6 Char" width="48" minWidth="48"/>
+            <header_item title_string="7 Char" width="56" minWidth="56"/>
+            <header_item title_string="8 Char" width="58" minWidth="58"/>
+            <header_item title_string="9 Char" width="60" minWidth="60"/>
+            <header_item title_string="10 Char" width="70" minWidth="70"/>
+            <header_item title_string="11 Char" width="70" minWidth="70"/>
+            <header_item title_string="12 Char" width="80" minWidth="80"/>
+            <header_item title_string="13 Char" width="84" minWidth="84"/>
+            <header_item title_string="14 Char" width="90" minWidth="90"/>
+            <header_item title_string="15 Char" width="94" minWidth="94"/>
+            <header_item title_string="16 Char" width="100" minWidth="100"/>
+            <header_item title_string="17 Char" width="108" minWidth="108"/>
+            <header_item title_string="18 Char" width="110" minWidth="110"/>
+            <header_item title_string="19 Char" width="110" minWidth="110"/>
+            <header_item title_string="20 Char" width="114" minWidth="114"/>
+            <header_item title_string="21 Char" width="124" minWidth="124"/>
+            <header_item title_string="22 Char" width="128" minWidth="128"/>
+            <header_item title_string="23 Char" width="130" minWidth="130"/>
+            <header_item title_string="24 Char" width="134" minWidth="134"/>
+            <header_item title_string="25 Char" width="142" minWidth="142"/>
+            <header_item title_string="26 Char" width="144" minWidth="144"/>
+            <header_item title_string="27 Char" width="150" minWidth="150"/>
+            <header_item title_string="28 Char" width="154" minWidth="154"/>
+            <header_item title_string="29 Char" width="160" minWidth="160"/>
+            <header_item title_string="30 Char" width="164" minWidth="164"/>
+            <header_item title_string="31 Char" width="170" minWidth="170"/>
+        </header>
+    </view>
+    
+</view>

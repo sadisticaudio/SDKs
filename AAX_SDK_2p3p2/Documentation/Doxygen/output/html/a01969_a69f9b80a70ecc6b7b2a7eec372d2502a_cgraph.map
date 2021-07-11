@@ -1,0 +1,20 @@
+<map id="AAX_CMonolithicParameters::StaticDescribe" name="AAX_CMonolithicParameters::StaticDescribe">
+<area shape="rect" id="node1" title=" " alt="" coords="5,444,199,483"/>
+<area shape="rect" id="node2" href="$a01781.html#a55d6cdb4a9c860c9ed4cb685e346f0dc" title="Subscribes a buffer length context field." alt="" coords="261,5,450,44"/>
+<area shape="rect" id="node3" href="$a01781.html#a5fad32eff268756c9b4309431321f9b3" title="Subscribes an audio input context field." alt="" coords="261,68,450,107"/>
+<area shape="rect" id="node4" href="$a01781.html#afea50c52b3c2e68eef2857b75859a954" title="Subscribes an audio output context field." alt="" coords="261,131,450,169"/>
+<area shape="rect" id="node5" href="$a01781.html#a76266e8a07ce20cdbe5721172c32a93d" title="Adds an auxiliary output stem for a plug&#45;in." alt="" coords="261,193,450,232"/>
+<area shape="rect" id="node6" href="$a01781.html#a59727dee1043fcd7f14da130ab254445" title="Subscribes a clock context field." alt="" coords="261,256,450,295"/>
+<area shape="rect" id="node7" href="$a01813.html#aec33938f50461dd5e7c1dcc25faf6917" title="Add a component to an instance of a component descriptor." alt="" coords="279,319,433,357"/>
+<area shape="rect" id="node8" href="$a01781.html#a230293b9f6bb413626cd487ca501df75" title="Adds a custom data port to the algorithm context." alt="" coords="261,381,450,420"/>
+<area shape="rect" id="node9" href="$a01781.html#a5e4a61afa3d6510891e16d7179bdaa64" title="Adds a meter field to the plug&#45;in&#39;s context." alt="" coords="261,444,450,483"/>
+<area shape="rect" id="node10" href="$a01781.html#a6284dda9ccca898e33075de29dad4e39" title="Adds a MIDI node field to the plug&#45;in&#39;s context." alt="" coords="261,507,450,545"/>
+<area shape="rect" id="node11" href="$a01781.html#a125949841a13e97ff93fa321f2050433" title="Adds a private data port to the algorithm context." alt="" coords="261,569,450,608"/>
+<area shape="rect" id="node12" href="$a01781.html#a1c069508cf54a523905c8160ebf628ad" title="Registers an algorithm processing entrypoint (process procedure) for the native architecture." alt="" coords="261,632,450,671"/>
+<area shape="rect" id="node13" href="$a01869.html#a0997671afce9a2367662c764c1d055dd" title="Add a property to a property map." alt="" coords="247,695,464,720"/>
+<area shape="rect" id="node14" href="$a01813.html#a2102ea4391f5b60e4d5e860a997383e4" title="Create an instance of a component descriptor." alt="" coords="263,744,448,783"/>
+<area shape="rect" id="node15" href="$a01781.html#a0d7dd21daa8bc588d6a1145c3eb7ef98" title="Creates a new, empty property map." alt="" coords="261,807,450,845"/>
+<area shape="rect" id="node16" href="$a01969.html#a0384cc1e3c40ca75ffbe76b89bd12c3c" title=" " alt="" coords="259,869,453,908"/>
+<area shape="rect" id="node17" href="$a01969.html#a04f2f73d70ea28c17747c68fc3a20fc8" title=" " alt="" coords="512,841,706,880"/>
+<area shape="rect" id="node18" href="$a01441.html#a2304d6ba1f1026b6a42de48056ab3050" title=" " alt="" coords="517,904,701,929"/>
+</map>

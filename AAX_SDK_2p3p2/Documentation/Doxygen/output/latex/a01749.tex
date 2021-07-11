@@ -1,0 +1,82 @@
+\hypertarget{a01749}{}\section{A\+A\+X\+\_\+\+I\+A\+C\+F\+Property\+Map\+\_\+\+V2 Class Reference}
+\label{a01749}\index{AAX\_IACFPropertyMap\_V2@{AAX\_IACFPropertyMap\_V2}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+I\+A\+C\+F\+Property\+Map.\+h$>$}
+
+
+
+Inheritance diagram for A\+A\+X\+\_\+\+I\+A\+C\+F\+Property\+Map\+\_\+\+V2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{a01748}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+A\+X\+\_\+\+I\+A\+C\+F\+Property\+Map\+\_\+\+V2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{a01747}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+Versioned interface for an \mbox{\hyperlink{a01869}{A\+A\+X\+\_\+\+I\+Property\+Map}}. \subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01749_a364725ce288b0b5e4d0a98d2451b8878}{Add\+Property\+With\+I\+D\+Array}} (\mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0d}{A\+A\+X\+\_\+\+E\+Property}} in\+Property, const \mbox{\hyperlink{a01425}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}} $\ast$in\+Plugin\+I\+Ds, uint32\+\_\+t in\+Num\+Plugin\+I\+Ds)=0
+\begin{DoxyCompactList}\small\item\em Add an array of plug-\/in I\+Ds to a property map. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{a00392_aa216506530f1d19a2965931ced2b274b}{A\+A\+X\+\_\+\+C\+Boolean}} \mbox{\hyperlink{a01749_a14d209356ee302cfb0d500cc7ee23764}{Get\+Property\+With\+I\+D\+Array}} (\mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0d}{A\+A\+X\+\_\+\+E\+Property}} in\+Property, const \mbox{\hyperlink{a01425}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}} $\ast$$\ast$out\+Plugin\+I\+Ds, uint32\+\_\+t $\ast$out\+Num\+Plugin\+I\+Ds) const =0
+\begin{DoxyCompactList}\small\item\em Get an array of plug-\/in I\+Ds from a property map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a01749_a364725ce288b0b5e4d0a98d2451b8878}\label{a01749_a364725ce288b0b5e4d0a98d2451b8878}} 
+\index{AAX\_IACFPropertyMap\_V2@{AAX\_IACFPropertyMap\_V2}!AddPropertyWithIDArray@{AddPropertyWithIDArray}}
+\index{AddPropertyWithIDArray@{AddPropertyWithIDArray}!AAX\_IACFPropertyMap\_V2@{AAX\_IACFPropertyMap\_V2}}
+\subsubsection{\texorpdfstring{AddPropertyWithIDArray()}{AddPropertyWithIDArray()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+I\+A\+C\+F\+Property\+Map\+\_\+\+V2\+::\+Add\+Property\+With\+I\+D\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0d}{A\+A\+X\+\_\+\+E\+Property}}}]{in\+Property,  }\item[{const \mbox{\hyperlink{a01425}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}} $\ast$}]{in\+Plugin\+I\+Ds,  }\item[{uint32\+\_\+t}]{in\+Num\+Plugin\+I\+Ds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Add an array of plug-\/in I\+Ds to a property map. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Property} & The property ID. \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Plugin\+I\+Ds} & An array of \mbox{\hyperlink{a01425}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Num\+Plugin\+I\+Ds} & The length of {\ttfamily i\+Plugin\+I\+Ds} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a01749_a14d209356ee302cfb0d500cc7ee23764}\label{a01749_a14d209356ee302cfb0d500cc7ee23764}} 
+\index{AAX\_IACFPropertyMap\_V2@{AAX\_IACFPropertyMap\_V2}!GetPropertyWithIDArray@{GetPropertyWithIDArray}}
+\index{GetPropertyWithIDArray@{GetPropertyWithIDArray}!AAX\_IACFPropertyMap\_V2@{AAX\_IACFPropertyMap\_V2}}
+\subsubsection{\texorpdfstring{GetPropertyWithIDArray()}{GetPropertyWithIDArray()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{a00392_aa216506530f1d19a2965931ced2b274b}{A\+A\+X\+\_\+\+C\+Boolean}} A\+A\+X\+\_\+\+I\+A\+C\+F\+Property\+Map\+\_\+\+V2\+::\+Get\+Property\+With\+I\+D\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0d}{A\+A\+X\+\_\+\+E\+Property}}}]{in\+Property,  }\item[{const \mbox{\hyperlink{a01425}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}} $\ast$$\ast$}]{out\+Plugin\+I\+Ds,  }\item[{uint32\+\_\+t $\ast$}]{out\+Num\+Plugin\+I\+Ds }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get an array of plug-\/in I\+Ds from a property map. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Property} & The property ID. \\
+\hline
+\mbox{\texttt{ out}}  & {\em out\+Plugin\+I\+Ds} & A pointer that will be set to reference an array of \mbox{\hyperlink{a01425}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em out\+Num\+Plugin\+I\+Ds} & The length of {\ttfamily o\+Plugin\+I\+Ds} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00554}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Property\+Map.\+h}}\end{DoxyCompactItemize}

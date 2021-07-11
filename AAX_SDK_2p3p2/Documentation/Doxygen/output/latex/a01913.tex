@@ -1,0 +1,320 @@
+\hypertarget{a01913}{}\section{A\+A\+X\+\_\+\+V\+Effect\+Descriptor Class Reference}
+\label{a01913}\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+V\+Effect\+Descriptor.\+h$>$}
+
+
+
+Inheritance diagram for A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{a01912}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{a01911}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+Version-\/managed concrete \mbox{\hyperlink{a01813}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}} class. \subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a01913_a039643848c3e718abccef382c3b9d3c9}{A\+A\+X\+\_\+\+V\+Effect\+Descriptor}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host)
+\item 
+\mbox{\hyperlink{a01913_a7a87dce050a6ee3c6136a6221b90d4b5}{$\sim$\+A\+A\+X\+\_\+\+V\+Effect\+Descriptor}} () \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\item 
+\mbox{\hyperlink{a01781}{A\+A\+X\+\_\+\+I\+Component\+Descriptor}} $\ast$ \mbox{\hyperlink{a01913_a5bfabf31ae3378c465438313c7b22c19}{New\+Component\+Descriptor}} () \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Create an instance of a component descriptor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01913_ab64b449fc1176f1d4e782b3fa307ad1f}{Add\+Component}} (\mbox{\hyperlink{a01781}{A\+A\+X\+\_\+\+I\+Component\+Descriptor}} $\ast$in\+Component\+Descriptor) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Add a component to an instance of a component descriptor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01913_ac52fc7b9a0f8bd5550725c5096aa2926}{Add\+Name}} (const char $\ast$in\+Plug\+In\+Name) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Add a name to the Effect. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01913_af0f874b5d7dd2a89b3c35eb6b73d9f53}{Add\+Category}} (uint32\+\_\+t in\+Category) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Add a category to your plug-\/in. See \mbox{\hyperlink{a00491_aef9637518fb1ac0e2f403444c73aba4a}{A\+A\+X\+\_\+\+E\+Plug\+In\+Category}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01913_aad0c7c9de79b6c812befd0860cc16cc5}{Add\+Category\+Bypass\+Parameter}} (uint32\+\_\+t in\+Category, \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} in\+Param\+ID) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Add a category to your plug-\/in. See \mbox{\hyperlink{a00491_aef9637518fb1ac0e2f403444c73aba4a}{A\+A\+X\+\_\+\+E\+Plug\+In\+Category}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01913_a4b0d74ac4f4fb4ef506a5b639d0510de}{Add\+Proc\+Ptr}} (void $\ast$in\+Proc\+Ptr, \mbox{\hyperlink{a00401_af0682195d377392ad356fd2b00c36892}{A\+A\+X\+\_\+\+C\+Proc\+Ptr\+ID}} in\+Proc\+ID) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Add a process pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a01869}{A\+A\+X\+\_\+\+I\+Property\+Map}} $\ast$ \mbox{\hyperlink{a01913_a3e7b723b8e60fbc6271c6f5bcc7ad7dd}{New\+Property\+Map}} () \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Create a new property map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01913_a80928483b2aaa3f7e2a607499ee5180c}{Set\+Properties}} (\mbox{\hyperlink{a01869}{A\+A\+X\+\_\+\+I\+Property\+Map}} $\ast$in\+Properties) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Set the properties of a new property map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01913_add421d47c7812ffab6ef2210acc458c6}{Add\+Resource\+Info}} (\mbox{\hyperlink{a00491_ae2805e88175d975589153a04e42898bb}{A\+A\+X\+\_\+\+E\+Resource\+Type}} in\+Resource\+Type, const char $\ast$in\+Info) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Set resource file info. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01913_a496f09c1bff6b03672d13c42214d1d16}{Add\+Meter\+Description}} (\mbox{\hyperlink{a00392_ac678f9c1fbcc26315d209f71a147a175}{A\+A\+X\+\_\+\+C\+Type\+ID}} in\+Meter\+ID, const char $\ast$in\+Meter\+Name, \mbox{\hyperlink{a01869}{A\+A\+X\+\_\+\+I\+Property\+Map}} $\ast$in\+Properties) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Add name and property map to meter with given ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01913_a4fcd7f20eb9fb8f7387a744a34ed83a5}{Add\+Control\+M\+I\+D\+I\+Node}} (\mbox{\hyperlink{a00392_ac678f9c1fbcc26315d209f71a147a175}{A\+A\+X\+\_\+\+C\+Type\+ID}} in\+Node\+ID, \mbox{\hyperlink{a00491_a5e1dffce35d05990dbbad651702678e4}{A\+A\+X\+\_\+\+E\+M\+I\+D\+I\+Node\+Type}} in\+Node\+Type, const char in\+Node\+Name\mbox{[}$\,$\mbox{]}, uint32\+\_\+t in\+Channel\+Mask) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Add a control M\+I\+DI node to the plug-\/in data model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$ \mbox{\hyperlink{a01913_a7f968960469f22f5cbb702bad52f6d7e}{Get\+I\+Unknown}} (void) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a01913_a039643848c3e718abccef382c3b9d3c9}\label{a01913_a039643848c3e718abccef382c3b9d3c9}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{AAX\_VEffectDescriptor()}{AAX\_VEffectDescriptor()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+A\+A\+X\+\_\+\+V\+Effect\+Descriptor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unk\+Host }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a01913_a7a87dce050a6ee3c6136a6221b90d4b5}\label{a01913_a7a87dce050a6ee3c6136a6221b90d4b5}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!````~AAX\_VEffectDescriptor@{$\sim$AAX\_VEffectDescriptor}}
+\index{````~AAX\_VEffectDescriptor@{$\sim$AAX\_VEffectDescriptor}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{$\sim$AAX\_VEffectDescriptor()}{~AAX\_VEffectDescriptor()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::$\sim$\+A\+A\+X\+\_\+\+V\+Effect\+Descriptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a01913_a5bfabf31ae3378c465438313c7b22c19}\label{a01913_a5bfabf31ae3378c465438313c7b22c19}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!NewComponentDescriptor@{NewComponentDescriptor}}
+\index{NewComponentDescriptor@{NewComponentDescriptor}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{NewComponentDescriptor()}{NewComponentDescriptor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01781}{A\+A\+X\+\_\+\+I\+Component\+Descriptor}}$\ast$ A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+New\+Component\+Descriptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Create an instance of a component descriptor. 
+
+This implementation retains each generated \mbox{\hyperlink{a01781}{A\+A\+X\+\_\+\+I\+Component\+Descriptor}} and destroys the property map upon \mbox{\hyperlink{a01913}{A\+A\+X\+\_\+\+V\+Effect\+Descriptor}} destruction 
+
+Implements \mbox{\hyperlink{a01813_a2102ea4391f5b60e4d5e860a997383e4}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}}.
+
+\mbox{\Hypertarget{a01913_ab64b449fc1176f1d4e782b3fa307ad1f}\label{a01913_ab64b449fc1176f1d4e782b3fa307ad1f}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{AddComponent()}{AddComponent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01781}{A\+A\+X\+\_\+\+I\+Component\+Descriptor}} $\ast$}]{in\+Component\+Descriptor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add a component to an instance of a component descriptor. 
+
+Unlike with \mbox{\hyperlink{a01777_a5ff114b8c4da2081515186f2faf65c8c}{A\+A\+X\+\_\+\+I\+Collection\+::\+Add\+Effect()}}, the \mbox{\hyperlink{a01813}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}} does not take ownership of the \mbox{\hyperlink{a01781}{A\+A\+X\+\_\+\+I\+Component\+Descriptor}} that is passed to it in this method. The host copies out the contents of this descriptor, and thus the plug-\/in may re-\/use the same descriptor object when creating additional similar components.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Component\+Descriptor} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01813_aec33938f50461dd5e7c1dcc25faf6917}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}}.
+
+\mbox{\Hypertarget{a01913_ac52fc7b9a0f8bd5550725c5096aa2926}\label{a01913_ac52fc7b9a0f8bd5550725c5096aa2926}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!AddName@{AddName}}
+\index{AddName@{AddName}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{AddName()}{AddName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+Add\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{in\+Plug\+In\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add a name to the Effect. 
+
+May be called multiple times to add abbreviated Effect names.
+
+\begin{DoxyNote}{Note}
+Every Effect must include at least one name variant with 31 or fewer characters, plus a null terminating character
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Plug\+In\+Name} & The name assigned to the plug-\/in. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01813_a0d3a0e258050524ba6fbc354f16df207}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}}.
+
+\mbox{\Hypertarget{a01913_af0f874b5d7dd2a89b3c35eb6b73d9f53}\label{a01913_af0f874b5d7dd2a89b3c35eb6b73d9f53}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!AddCategory@{AddCategory}}
+\index{AddCategory@{AddCategory}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{AddCategory()}{AddCategory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+Add\+Category (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{in\+Category }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add a category to your plug-\/in. See \mbox{\hyperlink{a00491_aef9637518fb1ac0e2f403444c73aba4a}{A\+A\+X\+\_\+\+E\+Plug\+In\+Category}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Category} & One of the categories for the plug-\/in. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01813_aeb6683e6758f7eb00f87c153e4809641}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}}.
+
+\mbox{\Hypertarget{a01913_aad0c7c9de79b6c812befd0860cc16cc5}\label{a01913_aad0c7c9de79b6c812befd0860cc16cc5}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!AddCategoryBypassParameter@{AddCategoryBypassParameter}}
+\index{AddCategoryBypassParameter@{AddCategoryBypassParameter}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{AddCategoryBypassParameter()}{AddCategoryBypassParameter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+Add\+Category\+Bypass\+Parameter (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{in\+Category,  }\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{in\+Param\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add a category to your plug-\/in. See \mbox{\hyperlink{a00491_aef9637518fb1ac0e2f403444c73aba4a}{A\+A\+X\+\_\+\+E\+Plug\+In\+Category}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Category} & One of the categories for the plug-\/in. \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Param\+ID} & The parameter ID of the parameter used to bypass the category seciont of the plug-\/in. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01813_a8da96a465f2bd367194067a51a12816d}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}}.
+
+\mbox{\Hypertarget{a01913_a4b0d74ac4f4fb4ef506a5b639d0510de}\label{a01913_a4b0d74ac4f4fb4ef506a5b639d0510de}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!AddProcPtr@{AddProcPtr}}
+\index{AddProcPtr@{AddProcPtr}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{AddProcPtr()}{AddProcPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+Add\+Proc\+Ptr (\begin{DoxyParamCaption}\item[{void $\ast$}]{in\+Proc\+Ptr,  }\item[{\mbox{\hyperlink{a00401_af0682195d377392ad356fd2b00c36892}{A\+A\+X\+\_\+\+C\+Proc\+Ptr\+ID}}}]{in\+Proc\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add a process pointer. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Proc\+Ptr} & A process pointer. \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Proc\+ID} & A process ID. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01813_ad1a286ef7cb869e6f79423dd774ec976}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}}.
+
+\mbox{\Hypertarget{a01913_a3e7b723b8e60fbc6271c6f5bcc7ad7dd}\label{a01913_a3e7b723b8e60fbc6271c6f5bcc7ad7dd}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!NewPropertyMap@{NewPropertyMap}}
+\index{NewPropertyMap@{NewPropertyMap}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{NewPropertyMap()}{NewPropertyMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01869}{A\+A\+X\+\_\+\+I\+Property\+Map}}$\ast$ A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+New\+Property\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Create a new property map. 
+
+This implementation retains each generated \mbox{\hyperlink{a01869}{A\+A\+X\+\_\+\+I\+Property\+Map}} and destroys the property map upon \mbox{\hyperlink{a01913}{A\+A\+X\+\_\+\+V\+Effect\+Descriptor}} destruction 
+
+Implements \mbox{\hyperlink{a01813_ac90c1b595d65259f798429474bbe926f}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}}.
+
+\mbox{\Hypertarget{a01913_a80928483b2aaa3f7e2a607499ee5180c}\label{a01913_a80928483b2aaa3f7e2a607499ee5180c}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!SetProperties@{SetProperties}}
+\index{SetProperties@{SetProperties}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{SetProperties()}{SetProperties()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+Set\+Properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01869}{A\+A\+X\+\_\+\+I\+Property\+Map}} $\ast$}]{in\+Properties }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the properties of a new property map. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Properties} & Description \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01813_ac57ed8597814db525eb69a2d2bfd9d87}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}}.
+
+\mbox{\Hypertarget{a01913_add421d47c7812ffab6ef2210acc458c6}\label{a01913_add421d47c7812ffab6ef2210acc458c6}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!AddResourceInfo@{AddResourceInfo}}
+\index{AddResourceInfo@{AddResourceInfo}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{AddResourceInfo()}{AddResourceInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+Add\+Resource\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00491_ae2805e88175d975589153a04e42898bb}{A\+A\+X\+\_\+\+E\+Resource\+Type}}}]{in\+Resource\+Type,  }\item[{const char $\ast$}]{in\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set resource file info. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Resource\+Type} & See A\+A\+X\+\_\+\+E\+Resource\+Type. \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Info} & Definition varies on the resource type. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01813_a3326bd8e29690a352408539029a50a61}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}}.
+
+\mbox{\Hypertarget{a01913_a496f09c1bff6b03672d13c42214d1d16}\label{a01913_a496f09c1bff6b03672d13c42214d1d16}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!AddMeterDescription@{AddMeterDescription}}
+\index{AddMeterDescription@{AddMeterDescription}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{AddMeterDescription()}{AddMeterDescription()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+Add\+Meter\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_ac678f9c1fbcc26315d209f71a147a175}{A\+A\+X\+\_\+\+C\+Type\+ID}}}]{in\+Meter\+ID,  }\item[{const char $\ast$}]{in\+Meter\+Name,  }\item[{\mbox{\hyperlink{a01869}{A\+A\+X\+\_\+\+I\+Property\+Map}} $\ast$}]{in\+Properties }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add name and property map to meter with given ID. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Meter\+ID} & The ID of the meter being described. \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Meter\+Name} & The name of the meter. \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Properties} & The property map containing meter related data such as meter type, orientation, etc. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01813_a7b89727b793c1b57a3815e59868c2713}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}}.
+
+\mbox{\Hypertarget{a01913_a4fcd7f20eb9fb8f7387a744a34ed83a5}\label{a01913_a4fcd7f20eb9fb8f7387a744a34ed83a5}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!AddControlMIDINode@{AddControlMIDINode}}
+\index{AddControlMIDINode@{AddControlMIDINode}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{AddControlMIDINode()}{AddControlMIDINode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+Add\+Control\+M\+I\+D\+I\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_ac678f9c1fbcc26315d209f71a147a175}{A\+A\+X\+\_\+\+C\+Type\+ID}}}]{in\+Node\+ID,  }\item[{\mbox{\hyperlink{a00491_a5e1dffce35d05990dbbad651702678e4}{A\+A\+X\+\_\+\+E\+M\+I\+D\+I\+Node\+Type}}}]{in\+Node\+Type,  }\item[{const char}]{in\+Node\+Name\mbox{[}$\,$\mbox{]},  }\item[{uint32\+\_\+t}]{in\+Channel\+Mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Add a control M\+I\+DI node to the plug-\/in data model. 
+
+
+\begin{DoxyItemize}
+\item This M\+I\+DI node may receive note data as well as control data.
+\item To send M\+I\+DI data to the plug-\/in\textquotesingle{}s algorithm, use \mbox{\hyperlink{a01781_a6284dda9ccca898e33075de29dad4e39}{A\+A\+X\+\_\+\+I\+Component\+Descriptor\+::\+Add\+M\+I\+D\+I\+Node()}}.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{a01677_ab4ec161f64086070083c21b566354861}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Effect\+Parameters\+\_\+\+V2\+::\+Update\+Control\+M\+I\+D\+I\+Nodes()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Node\+ID} & The ID for the new control M\+I\+DI node. \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Node\+Type} & The type of the node. \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Node\+Name} & The name of the node. \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Channel\+Mask} & The bit mask for required nodes channels (up to 16) or required global events for global node. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01813_aa7709de005e0256feb522758ccc5b582}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}}.
+
+\mbox{\Hypertarget{a01913_a7f968960469f22f5cbb702bad52f6d7e}\label{a01913_a7f968960469f22f5cbb702bad52f6d7e}} 
+\index{AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}!GetIUnknown@{GetIUnknown}}
+\index{GetIUnknown@{GetIUnknown}!AAX\_VEffectDescriptor@{AAX\_VEffectDescriptor}}
+\subsubsection{\texorpdfstring{GetIUnknown()}{GetIUnknown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}}$\ast$ A\+A\+X\+\_\+\+V\+Effect\+Descriptor\+::\+Get\+I\+Unknown (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00704}{A\+A\+X\+\_\+\+V\+Effect\+Descriptor.\+h}}\end{DoxyCompactItemize}

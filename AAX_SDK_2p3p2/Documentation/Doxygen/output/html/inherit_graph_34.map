@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$a01857.html" title="The base interface for all normalizable plug&#45;in parameters." alt="" coords="5,31,127,56"/>
+<area shape="rect" id="node2" href="$a01537.html" title="Generic implementation of an AAX_IParameter." alt="" coords="187,5,345,31"/>
+<area shape="rect" id="node3" href="$a01541.html" title="A stateless parameter implementation." alt="" coords="175,55,357,80"/>
+</map>

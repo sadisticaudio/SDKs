@@ -1,0 +1,198 @@
+\hypertarget{a01473}{}\section{A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data Class Reference}
+\label{a01473}\index{AAX\_CEffectDirectData@{AAX\_CEffectDirectData}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data.\+h$>$}
+
+
+
+Inheritance diagram for A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{a01472}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{a01471}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+Default implementation of the \mbox{\hyperlink{a01817}{A\+A\+X\+\_\+\+I\+Effect\+Direct\+Data}} interface. 
+
+This class provides a default implementation of the \mbox{\hyperlink{a01817}{A\+A\+X\+\_\+\+I\+Effect\+Direct\+Data}} interface. \subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a01473_a4a3e96ae0ad1f0be1813b27657f66fd9}{A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data}} (void)
+\item 
+virtual \mbox{\hyperlink{a01473_a8dd2b1e2a6464cd59319047185e4e899}{$\sim$\+A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data}} (void)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Initialization and uninitialization}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01473_ad89ee93781539d8df3b0710a186c7e0d}{Initialize}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$i\+Controller) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}} \mbox{\hyperlink{a00392_aa4da4a09e940c332a2205e34e0677f40}{A\+A\+X\+\_\+\+F\+I\+N\+AL}}
+\begin{DoxyCompactList}\small\item\em Non-\/virtual implementation of A\+A\+X\+\_\+\+I\+Efect\+Direct\+Data\+::\+Initialize() \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01473_a49f02465aa623666f9e43a8646d9e56c}{Uninitialize}} (void) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Main uninitialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Data update callbacks}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01473_a3ed665cfbece195524e208e61b4d1937}{Timer\+Wakeup}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$i\+Data\+Access\+Interface) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Non-\/virtual implementation of A\+A\+X\+\_\+\+I\+Efect\+Direct\+Data\+::\+Timer\+Wakeup() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Private member accessors}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a01789}{A\+A\+X\+\_\+\+I\+Controller}} $\ast$ \mbox{\hyperlink{a01473_a33ddee1a300bb3f2584fa224975d362b}{Controller}} (void)
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the plug-\/in\textquotesingle{}s controller interface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a01825}{A\+A\+X\+\_\+\+I\+Effect\+Parameters}} $\ast$ \mbox{\hyperlink{a01473_a774a00f86f4851001f735f161187b05f}{Effect\+Parameters}} (void)
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the plug-\/in\textquotesingle{}s data model interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{Indent}\textbf{ A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data virtual interface}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01473_ac33b9e51d38ffc375df379018abd5899}{Initialize\+\_\+\+Private\+Data\+Access}} ()
+\begin{DoxyCompactList}\small\item\em Initialization routine for classes that inherit from \mbox{\hyperlink{a01473}{A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data}}. This method is called by the default \mbox{\hyperlink{a01473_ad89ee93781539d8df3b0710a186c7e0d}{Initialize()}} implementation after all internal members have been initialized, and provides a safe location in which to perform any additional initialization tasks. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01473_addd263d3a410d5c26148cee306cc7297}{Timer\+Wakeup\+\_\+\+Private\+Data\+Access}} (\mbox{\hyperlink{a01865}{A\+A\+X\+\_\+\+I\+Private\+Data\+Access}} $\ast$i\+Private\+Data\+Access)
+\begin{DoxyCompactList}\small\item\em Callback provided with an \mbox{\hyperlink{a01865}{A\+A\+X\+\_\+\+I\+Private\+Data\+Access}}. Override this method to access the algorithm\textquotesingle{}s private data using the \mbox{\hyperlink{a01865}{A\+A\+X\+\_\+\+I\+Private\+Data\+Access}} interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a01473_a4a3e96ae0ad1f0be1813b27657f66fd9}\label{a01473_a4a3e96ae0ad1f0be1813b27657f66fd9}} 
+\index{AAX\_CEffectDirectData@{AAX\_CEffectDirectData}!AAX\_CEffectDirectData@{AAX\_CEffectDirectData}}
+\index{AAX\_CEffectDirectData@{AAX\_CEffectDirectData}!AAX\_CEffectDirectData@{AAX\_CEffectDirectData}}
+\subsubsection{\texorpdfstring{AAX\_CEffectDirectData()}{AAX\_CEffectDirectData()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data\+::\+A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a01473_a8dd2b1e2a6464cd59319047185e4e899}\label{a01473_a8dd2b1e2a6464cd59319047185e4e899}} 
+\index{AAX\_CEffectDirectData@{AAX\_CEffectDirectData}!````~AAX\_CEffectDirectData@{$\sim$AAX\_CEffectDirectData}}
+\index{````~AAX\_CEffectDirectData@{$\sim$AAX\_CEffectDirectData}!AAX\_CEffectDirectData@{AAX\_CEffectDirectData}}
+\subsubsection{\texorpdfstring{$\sim$AAX\_CEffectDirectData()}{~AAX\_CEffectDirectData()}}
+{\footnotesize\ttfamily virtual A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data\+::$\sim$\+A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a01473_ad89ee93781539d8df3b0710a186c7e0d}\label{a01473_ad89ee93781539d8df3b0710a186c7e0d}} 
+\index{AAX\_CEffectDirectData@{AAX\_CEffectDirectData}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!AAX\_CEffectDirectData@{AAX\_CEffectDirectData}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{i\+Controller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Non-\/virtual implementation of A\+A\+X\+\_\+\+I\+Efect\+Direct\+Data\+::\+Initialize() 
+
+This implementation initializes all private \mbox{\hyperlink{a01473}{A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data}} members and calls \mbox{\hyperlink{a01473_ac33b9e51d38ffc375df379018abd5899}{Initialize\+\_\+\+Private\+Data\+Access()}}. For custom initialization, inherited classes should override \mbox{\hyperlink{a01473_ac33b9e51d38ffc375df379018abd5899}{Initialize\+\_\+\+Private\+Data\+Access()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i\+Controller} & Unknown pointer that resolves to an \mbox{\hyperlink{a01789}{A\+A\+X\+\_\+\+I\+Controller}}. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01661_adefbc617c71ea5ea6512fb79a116dbf7}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Effect\+Direct\+Data}}.
+
+\mbox{\Hypertarget{a01473_a49f02465aa623666f9e43a8646d9e56c}\label{a01473_a49f02465aa623666f9e43a8646d9e56c}} 
+\index{AAX\_CEffectDirectData@{AAX\_CEffectDirectData}!Uninitialize@{Uninitialize}}
+\index{Uninitialize@{Uninitialize}!AAX\_CEffectDirectData@{AAX\_CEffectDirectData}}
+\subsubsection{\texorpdfstring{Uninitialize()}{Uninitialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data\+::\+Uninitialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main uninitialization. 
+
+Called when the interface is destroyed. 
+
+Implements \mbox{\hyperlink{a01661_ad56406a13dd691db6f1117ab97cfc90a}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Effect\+Direct\+Data}}.
+
+\mbox{\Hypertarget{a01473_a3ed665cfbece195524e208e61b4d1937}\label{a01473_a3ed665cfbece195524e208e61b4d1937}} 
+\index{AAX\_CEffectDirectData@{AAX\_CEffectDirectData}!TimerWakeup@{TimerWakeup}}
+\index{TimerWakeup@{TimerWakeup}!AAX\_CEffectDirectData@{AAX\_CEffectDirectData}}
+\subsubsection{\texorpdfstring{TimerWakeup()}{TimerWakeup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data\+::\+Timer\+Wakeup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{i\+Data\+Access\+Interface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Non-\/virtual implementation of A\+A\+X\+\_\+\+I\+Efect\+Direct\+Data\+::\+Timer\+Wakeup() 
+
+This implementation interprets the \mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} and forwards the resulting \mbox{\hyperlink{a01865}{A\+A\+X\+\_\+\+I\+Private\+Data\+Access}} to \mbox{\hyperlink{a01473_addd263d3a410d5c26148cee306cc7297}{Timer\+Wakeup\+\_\+\+Private\+Data\+Access()}}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i\+Data\+Access\+Interface} & Unknown pointer that resolves to an \mbox{\hyperlink{a01865}{A\+A\+X\+\_\+\+I\+Private\+Data\+Access}}. This interface is only valid for the duration of this method\textquotesingle{}s execution and is discarded when the method returns. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01661_afb4fa2c566547d7bd303166cf50741bb}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Effect\+Direct\+Data}}.
+
+\mbox{\Hypertarget{a01473_a33ddee1a300bb3f2584fa224975d362b}\label{a01473_a33ddee1a300bb3f2584fa224975d362b}} 
+\index{AAX\_CEffectDirectData@{AAX\_CEffectDirectData}!Controller@{Controller}}
+\index{Controller@{Controller}!AAX\_CEffectDirectData@{AAX\_CEffectDirectData}}
+\subsubsection{\texorpdfstring{Controller()}{Controller()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01789}{A\+A\+X\+\_\+\+I\+Controller}}$\ast$ A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data\+::\+Controller (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns a pointer to the plug-\/in\textquotesingle{}s controller interface. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000013}{Todo}}]Change to Get\+Controller to match other A\+A\+X\+\_\+\+C\+Effect modules \end{DoxyRefDesc}
+\mbox{\Hypertarget{a01473_a774a00f86f4851001f735f161187b05f}\label{a01473_a774a00f86f4851001f735f161187b05f}} 
+\index{AAX\_CEffectDirectData@{AAX\_CEffectDirectData}!EffectParameters@{EffectParameters}}
+\index{EffectParameters@{EffectParameters}!AAX\_CEffectDirectData@{AAX\_CEffectDirectData}}
+\subsubsection{\texorpdfstring{EffectParameters()}{EffectParameters()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01825}{A\+A\+X\+\_\+\+I\+Effect\+Parameters}}$\ast$ A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data\+::\+Effect\+Parameters (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns a pointer to the plug-\/in\textquotesingle{}s data model interface. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000014}{Todo}}]Change to Get\+Controller to match other A\+A\+X\+\_\+\+C\+Effect modules \end{DoxyRefDesc}
+\mbox{\Hypertarget{a01473_ac33b9e51d38ffc375df379018abd5899}\label{a01473_ac33b9e51d38ffc375df379018abd5899}} 
+\index{AAX\_CEffectDirectData@{AAX\_CEffectDirectData}!Initialize\_PrivateDataAccess@{Initialize\_PrivateDataAccess}}
+\index{Initialize\_PrivateDataAccess@{Initialize\_PrivateDataAccess}!AAX\_CEffectDirectData@{AAX\_CEffectDirectData}}
+\subsubsection{\texorpdfstring{Initialize\_PrivateDataAccess()}{Initialize\_PrivateDataAccess()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data\+::\+Initialize\+\_\+\+Private\+Data\+Access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Initialization routine for classes that inherit from \mbox{\hyperlink{a01473}{A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data}}. This method is called by the default \mbox{\hyperlink{a01473_ad89ee93781539d8df3b0710a186c7e0d}{Initialize()}} implementation after all internal members have been initialized, and provides a safe location in which to perform any additional initialization tasks. 
+
+\mbox{\Hypertarget{a01473_addd263d3a410d5c26148cee306cc7297}\label{a01473_addd263d3a410d5c26148cee306cc7297}} 
+\index{AAX\_CEffectDirectData@{AAX\_CEffectDirectData}!TimerWakeup\_PrivateDataAccess@{TimerWakeup\_PrivateDataAccess}}
+\index{TimerWakeup\_PrivateDataAccess@{TimerWakeup\_PrivateDataAccess}!AAX\_CEffectDirectData@{AAX\_CEffectDirectData}}
+\subsubsection{\texorpdfstring{TimerWakeup\_PrivateDataAccess()}{TimerWakeup\_PrivateDataAccess()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data\+::\+Timer\+Wakeup\+\_\+\+Private\+Data\+Access (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01865}{A\+A\+X\+\_\+\+I\+Private\+Data\+Access}} $\ast$}]{i\+Private\+Data\+Access }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Callback provided with an \mbox{\hyperlink{a01865}{A\+A\+X\+\_\+\+I\+Private\+Data\+Access}}. Override this method to access the algorithm\textquotesingle{}s private data using the \mbox{\hyperlink{a01865}{A\+A\+X\+\_\+\+I\+Private\+Data\+Access}} interface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i\+Private\+Data\+Access} & Pointer to an \mbox{\hyperlink{a01865}{A\+A\+X\+\_\+\+I\+Private\+Data\+Access}} interface. This interface is only valid for the duration of this method. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00422}{A\+A\+X\+\_\+\+C\+Effect\+Direct\+Data.\+h}}\end{DoxyCompactItemize}

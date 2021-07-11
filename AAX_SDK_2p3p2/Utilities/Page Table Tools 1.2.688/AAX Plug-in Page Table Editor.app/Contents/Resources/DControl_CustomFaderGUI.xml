@@ -1,0 +1,3827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view type="View" id="MainView">
+    <bounds x="0" y="0" width="1146" height="653"/>
+    <image id="background" src="images/background_main.png" stretch="true"/>
+    
+	<view type="View" id="PageTableTypeView">
+        <bounds x="0" y="0" width="355" height="30"/>
+        <image id="background" src="images/background_toolbar.png" stretch="true"/>
+        <intercepts_mouse value="false"/>
+        
+        <view type="PiTA_SectionButton" id="PageTableTypeCheckBox">
+            <bounds x="7" y="4" width="91" height="22"/>
+            <image_list id="state">
+                <image id="" src="images/dcontrol_cf_pt_type_bksf.png"/>
+                <image id="" src="images/dcontrol_cf_pt_type_pctl.png"/>
+            </image_list>
+            <image id="disabled" alpha="255" src="images/dcontrol_cf_pt_type.png"/>
+            <range min="0" max="1" segments="2"/>
+            <tooltip string="PageTable type (Tab)"/>
+        </view>
+    </view>
+	
+    <view type="View" id="ToolbarView">
+        <bounds x="0" y="30" width="355" height="38"/>
+        <image id="background" src="images/control_surface_toolbar.png"/>
+        <intercepts_mouse value="false"/>
+        
+        <view type="StaticText" id="PageOfLabel">
+            <bounds x="7" y="9" width="95" height="20"/>
+            <font typeface="Arial" height="14" bold="0" italic="0" underlined="0"/>
+            <color id="text" red="238" green="238" blue="238" alpha="255"/>
+            <justification horizontal="left" vertical="center"/>
+            <text string="Page   (of   )"/>
+            <intercepts_mouse value="false"/>
+        </view>
+        
+        <view type="Button" id="PrevPageButton">
+            <bounds x="108" y="12" width="9" height="13"/>
+            <image_list id="state" stretch="true">
+                <image id="" src="images/left_arrow.png"/>
+                <image id="" src="images/left_arrow_lit.png"/>
+            </image_list>
+            <tooltip string="Previous page (&#8984; + &#8592;)"/>
+        </view>
+        
+        <view type="Popup" id="PagePopup">
+            <bounds x="119" y="9" width="26" height="20"/>
+            <font typeface="Arial" height="14" bold="0" italic="0" underlined="0"/>
+            <color id="text" red="238" green="238" blue="238" alpha="255"/>
+            <justification horizontal="left" vertical="bottom"/>
+        </view>
+        
+        <view type="Button" id="NextPageButton">
+            <bounds x="147" y="12" width="9" height="13"/>
+            <image_list id="state" stretch="true">
+                <image id="" src="images/right_arrow.png"/>
+                <image id="" src="images/right_arrow_lit.png"/>
+            </image_list>
+            <tooltip string="Next page (&#8984; + &#8594;)"/>
+        </view>
+        
+        <view type="Button" id="InsertButton">
+            <bounds x="161" y="8" width="28" height="22"/>
+            <image_list id="state" stretch="true">
+                <image id="" src=""/>
+                <image id="" src="images/insert_page_lit.png"/>
+            </image_list>
+            <tooltip string="Create new page (&#8984; + N) "/>
+        </view>
+        
+        <view type="Button" id="DuplicateButton">
+            <bounds x="194" y="8" width="28" height="22"/>
+            <image_list id="state" stretch="true">
+                <image id="" src=""/>
+                <image id="" src="images/duplicate_page_lit.png"/>
+            </image_list>
+            <tooltip string="Duplicate page (&#8984; + D)"/>
+        </view>
+        
+        <view type="Button" id="DeleteButton">
+            <bounds x="227" y="8" width="28" height="22"/>
+            <image_list id="state" stretch="true">
+                <image id="" src=""/>
+                <image id="" src="images/delete_page_lit.png"/>
+            </image_list>
+            <tooltip string="Delete page (&#8984; + R)"/>
+        </view>
+        
+        <view type="Button" id="ShowAbbreviatedNamesCheckBox">
+            <bounds x="260" y="8" width="46" height="22"/>
+            <image_list id="state" stretch="true">
+                <image id="" src=""/>
+                <image id="" src="images/abbreviations_lit.png"/>
+            </image_list>
+            <tooltip string="Show abbreviated names"/>
+        </view>
+		
+		<view type="Button" id="HelpButton">
+			<bounds x="332" y="11" width="20" height="18"/>
+			<font typeface="Arial" height="14" bold="1" italic="0" underlined="0"/>
+			<color id="text" red="238" green="238" blue="238" alpha="255"/>
+			<text string=" ? "/>
+			<image_list id="state" stretch="true">
+				<image id="" src="images/button.png"/>
+				<image id="" src=""/>
+			</image_list>
+		</view>
+		
+    </view>
+
+    <view type="TableList" id="ParametersList">
+        <bounds x="850" y="0" width="296" height="653"/>
+        <header height="24">
+            <header_item title_string="Type" width="30" minWidth="30" maxWidth="30"/>
+            <header_item title_string="Parameter Name" width="155" minWidth="155"/>
+            <header_item title_string="Assignment Page" width="100" minWidth="100"/>
+        </header>
+    </view>
+    
+	<view type="View" id="ScrollingViewContainer">
+        <bounds x="0" y="68" width="840" height="585"/>
+        <intercepts_mouse value="false"/>
+		
+		<view type="View" id="ScrollingView">
+			<bounds x="0" y="0" width="840" height="1082"/>
+			<intercepts_mouse value="false"/>
+	
+			<!-- ======================================================================== -->
+			<!--                                8 Cells View                              -->
+			<!-- ======================================================================== -->
+			<view type="View" id="8CellsView06">
+				<bounds x="0" y="0" width="840" height="167"/>
+				<intercepts_mouse value="false"/>
+				
+				<view type="StaticText" id="IndexView">
+					<bounds x="0" y="0" width="40" height="20"/>
+					<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+					<color id="text" red="164" green="164" blue="164" alpha="255"/>
+					<justification horizontal="left" vertical="center"/>
+					<text string="41-48"/>
+					<intercepts_mouse value="false"/>
+				</view>
+				
+				<!-- Surface encoder cell 41 -->
+				<view type="View" id="CellView41">
+					<bounds x="5" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob411">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView41">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob412">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob41">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob41"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch411">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView41">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch412">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch41">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch41"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton41">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 42 -->
+				<view type="View" id="CellView42">
+					<bounds x="109" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob421">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView42">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob422">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob42">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob42"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch421">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView42">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch422">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch42">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch42"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton42">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 43 -->
+				<view type="View" id="CellView43">
+					<bounds x="213" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob431">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView43">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob432">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob43">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob43"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch431">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView43">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch432">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch43">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch43"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton43">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 44 -->
+				<view type="View" id="CellView44">
+					<bounds x="317" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob441">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView44">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob442">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob44">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob44"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch441">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView44">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch442">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch44">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch44"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton44">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 45 -->
+				<view type="View" id="CellView45">
+					<bounds x="421" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob451">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView45">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob452">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob45">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob45"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch451">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView45">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch452">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch45">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch45"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton45">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 46 -->
+				<view type="View" id="CellView46">
+					<bounds x="525" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob461">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView46">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob462">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob46">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob46"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch461">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView46">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch462">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch46">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch46"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton46">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 47 -->
+				<view type="View" id="CellView47">
+					<bounds x="629" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob471">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView47">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob472">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob47">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob47"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch471">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView47">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch472">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch47">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch47"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton47">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 48 -->
+				<view type="View" id="CellView48">
+					<bounds x="733" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob481">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView48">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob482">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob48">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob48"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch481">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView48">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch482">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch48">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch48"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton48">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+			</view>
+
+			<view type="View" id="DelimiterView01">
+				<bounds x="0" y="177" width="840" height="2"/>
+				<image id="background" src="images/delimiter.png" stretch="true"/>
+				<intercepts_mouse value="false"/>
+			</view>
+			
+			<!-- ======================================================================== -->
+			<!--                                8 Cells View                              -->
+			<!-- ======================================================================== -->
+			<view type="View" id="8CellsView05">
+				<bounds x="0" y="182" width="840" height="167"/>
+				<intercepts_mouse value="false"/>
+				
+				<view type="StaticText" id="IndexView">
+					<bounds x="0" y="0" width="40" height="20"/>
+					<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+					<color id="text" red="164" green="164" blue="164" alpha="255"/>
+					<justification horizontal="left" vertical="center"/>
+					<text string="33-40"/>
+					<intercepts_mouse value="false"/>
+				</view>
+				
+				<!-- Surface encoder cell 33 -->
+				<view type="View" id="CellView33">
+					<bounds x="5" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob331">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView33">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob332">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob33">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob33"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch331">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView33">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch332">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch33">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch33"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton33">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 34 -->
+				<view type="View" id="CellView34">
+					<bounds x="109" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob341">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView34">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob342">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob34">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob34"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch341">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView34">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch342">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch34">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch34"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton34">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 35 -->
+				<view type="View" id="CellView35">
+					<bounds x="213" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob351">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView35">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob352">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob35">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob35"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch351">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView35">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch352">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch35">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch35"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton35">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 36 -->
+				<view type="View" id="CellView36">
+					<bounds x="317" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob361">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView36">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob362">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob36">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob36"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch361">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView36">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch362">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch36">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch36"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton36">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 37 -->
+				<view type="View" id="CellView37">
+					<bounds x="421" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob371">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView37">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob372">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob37">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob37"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch371">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView37">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch372">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch37">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch37"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton37">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 38 -->
+				<view type="View" id="CellView38">
+					<bounds x="525" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob381">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView38">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob382">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob38">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob38"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch381">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView38">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch382">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch38">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch38"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton38">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 39 -->
+				<view type="View" id="CellView39">
+					<bounds x="629" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob391">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView39">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob392">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob39">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob07"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch391">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView39">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch392">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch39">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch39"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton39">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 40 -->
+				<view type="View" id="CellView40">
+					<bounds x="733" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob401">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView40">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob402">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob40">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob40"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch401">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView40">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch402">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch40">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch40"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton40">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+			</view>
+			
+			<view type="View" id="DelimiterView02">
+				<bounds x="0" y="359" width="840" height="2"/>
+				<image id="background" src="images/delimiter.png" stretch="true"/>
+				<intercepts_mouse value="false"/>
+			</view>
+			
+			<!-- ======================================================================== -->
+			<!--                                8 Cells View                              -->
+			<!-- ======================================================================== -->
+			<view type="View" id="8CellsView04">
+				<bounds x="0" y="364" width="840" height="167"/>
+				<intercepts_mouse value="false"/>
+				
+				<view type="StaticText" id="IndexView">
+					<bounds x="0" y="0" width="40" height="20"/>
+					<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+					<color id="text" red="164" green="164" blue="164" alpha="255"/>
+					<justification horizontal="left" vertical="center"/>
+					<text string="25-32"/>
+					<intercepts_mouse value="false"/>
+				</view>
+				
+				<!-- Surface encoder cell 25 -->
+				<view type="View" id="CellView25">
+					<bounds x="5" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob251">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView25">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob252">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob25">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob25"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch251">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView25">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch252">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch25">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch25"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton25">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 26 -->
+				<view type="View" id="CellView26">
+					<bounds x="109" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob261">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView26">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob262">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob26">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob26"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch261">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView26">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch262">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch26">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch26"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton26">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 27 -->
+				<view type="View" id="CellView27">
+					<bounds x="213" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob271">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView27">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob272">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob27">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob27"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch271">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView27">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch272">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch27">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch27"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton27">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 28 -->
+				<view type="View" id="CellView28">
+					<bounds x="317" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob281">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView28">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob282">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob28">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob28"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch281">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView28">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch282">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch28">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch28"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton28">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 29 -->
+				<view type="View" id="CellView29">
+					<bounds x="421" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob291">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView29">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob292">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob29">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob29"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch291">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView29">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch292">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch29">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch29"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton29">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 30 -->
+				<view type="View" id="CellView30">
+					<bounds x="525" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob301">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView30">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob302">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob30">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob30"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch301">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView30">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch302">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch30">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch30"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton30">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 31 -->
+				<view type="View" id="CellView31">
+					<bounds x="629" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob311">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView31">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob312">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob31">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob31"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch311">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView31">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch312">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch31">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch31"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton31">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 32 -->
+				<view type="View" id="CellView32">
+					<bounds x="733" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob321">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView32">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob322">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob32">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob32"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch321">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView32">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch322">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch32">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch32"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton32">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+			</view>
+			
+			<view type="View" id="DelimiterView03">
+				<bounds x="0" y="541" width="840" height="2"/>
+				<image id="background" src="images/delimiter.png" stretch="true"/>
+				<intercepts_mouse value="false"/>
+			</view>
+			
+			<!-- ======================================================================== -->
+			<!--                                8 Cells View                              -->
+			<!-- ======================================================================== -->
+			<view type="View" id="8CellsView03">
+				<bounds x="0" y="546" width="840" height="167"/>
+				<intercepts_mouse value="false"/>
+				
+				<view type="StaticText" id="IndexView">
+					<bounds x="0" y="0" width="40" height="20"/>
+					<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+					<color id="text" red="164" green="164" blue="164" alpha="255"/>
+					<justification horizontal="left" vertical="center"/>
+					<text string="17-24"/>
+					<intercepts_mouse value="false"/>
+				</view>
+				
+				<!-- Surface encoder cell 17 -->
+				<view type="View" id="CellView17">
+					<bounds x="5" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob171">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView17">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob172">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob17">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob17"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch171">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView17">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch172">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch17">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch17"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton17">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 18 -->
+				<view type="View" id="CellView18">
+					<bounds x="109" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob181">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView18">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob182">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob18">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob18"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch181">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView18">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch182">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch18">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch18"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton18">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 19 -->
+				<view type="View" id="CellView19">
+					<bounds x="213" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob191">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView19">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob192">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob19">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob19"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch191">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView19">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch192">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch19">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch19"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton19">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 20 -->
+				<view type="View" id="CellView20">
+					<bounds x="317" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob201">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView20">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob202">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob20">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob20"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch201">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView20">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch202">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch20">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch20"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton20">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 21 -->
+				<view type="View" id="CellView21">
+					<bounds x="421" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob211">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView21">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob212">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob21">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob21"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch211">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView21">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch212">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch21">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch21"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton21">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 22 -->
+				<view type="View" id="CellView22">
+					<bounds x="525" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob221">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView22">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob222">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob22">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob22"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch221">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView22">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch222">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch22">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch22"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton22">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 23 -->
+				<view type="View" id="CellView23">
+					<bounds x="629" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob231">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView23">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob232">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob23">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob23"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch231">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView23">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch232">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch23">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch23"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton23">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 24 -->
+				<view type="View" id="CellView24">
+					<bounds x="733" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob241">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView24">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob242">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob24">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob24"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch241">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView24">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch242">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch24">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch24"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton24">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+			</view>
+			
+			<view type="View" id="DelimiterView04">
+				<bounds x="0" y="723" width="840" height="2"/>
+				<image id="background" src="images/delimiter.png" stretch="true"/>
+				<intercepts_mouse value="false"/>
+			</view>
+			
+			<!-- ======================================================================== -->
+			<!--                                8 Cells View                              -->
+			<!-- ======================================================================== -->
+			<view type="View" id="8CellsView02">
+				<bounds x="0" y="728" width="840" height="167"/>
+				<intercepts_mouse value="false"/>
+				
+				<view type="StaticText" id="IndexView">
+					<bounds x="0" y="0" width="40" height="20"/>
+					<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+					<color id="text" red="164" green="164" blue="164" alpha="255"/>
+					<justification horizontal="left" vertical="center"/>
+					<text string="9-16"/>
+					<intercepts_mouse value="false"/>
+				</view>
+				
+				<!-- Surface encoder cell 09 -->
+				<view type="View" id="CellView09">
+					<bounds x="5" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob091">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView09">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob092">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob09">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob09"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch091">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView09">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch092">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch09">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch09"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton09">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 10 -->
+				<view type="View" id="CellView10">
+					<bounds x="109" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob101">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView10">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob102">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob10">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob10"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch101">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView10">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch102">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch10">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch10"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton10">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 11 -->
+				<view type="View" id="CellView11">
+					<bounds x="213" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob111">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView11">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob112">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob11">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob11"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch111">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView11">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch112">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch11">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch11"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton11">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 12 -->
+				<view type="View" id="CellView12">
+					<bounds x="317" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob121">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView12">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob122">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob12">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob12"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch121">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView12">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch122">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch12">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch12"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton12">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 13 -->
+				<view type="View" id="CellView13">
+					<bounds x="421" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob131">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView13">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob132">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob13">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob13"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch131">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView13">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch132">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch13">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch13"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton13">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 14 -->
+				<view type="View" id="CellView14">
+					<bounds x="525" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob141">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView14">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob142">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob14">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob14"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch141">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView14">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch142">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch14">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch14"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton14">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 15 -->
+				<view type="View" id="CellView15">
+					<bounds x="629" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob151">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView15">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob152">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob15">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob15"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch151">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView15">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch152">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch15">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch15"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton15">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 16 -->
+				<view type="View" id="CellView16">
+					<bounds x="733" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob161">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView16">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob162">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob16">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob16"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch161">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView16">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch162">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch16">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch16"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton16">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+			</view>
+			
+			<view type="View" id="DelimiterView05">
+				<bounds x="0" y="905" width="840" height="2"/>
+				<image id="background" src="images/delimiter.png" stretch="true"/>
+				<intercepts_mouse value="false"/>
+			</view>
+			
+			<!-- ======================================================================== -->
+			<!--                                8 Cells View                              -->
+			<!-- ======================================================================== -->
+			<view type="View" id="8CellsView01">
+				<bounds x="0" y="910" width="840" height="167"/>
+				<intercepts_mouse value="false"/>
+				
+				<view type="StaticText" id="IndexView">
+					<bounds x="0" y="0" width="40" height="20"/>
+					<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+					<color id="text" red="164" green="164" blue="164" alpha="255"/>
+					<justification horizontal="left" vertical="center"/>
+					<text string="1-8"/>
+					<intercepts_mouse value="false"/>
+				</view>
+				
+				<!-- Surface encoder cell 01 -->
+				<view type="View" id="CellView01">
+					<bounds x="5" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob011">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView01">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob012">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob01">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob01"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch011">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView01">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch012">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch01">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch01"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton01">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 02 -->
+				<view type="View" id="CellView02">
+					<bounds x="109" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob021">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView02">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob022">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob02">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob02"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch021">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView02">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch022">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch02">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch02"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton02">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 03 -->
+				<view type="View" id="CellView03">
+					<bounds x="213" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob031">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView03">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob032">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob03">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob03"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch031">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView03">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch032">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch03">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch03"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton03">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 04 -->
+				<view type="View" id="CellView04">
+					<bounds x="317" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob041">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView04">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob042">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob04">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob04"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch041">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView04">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch042">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch04">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch04"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton04">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 05 -->
+				<view type="View" id="CellView05">
+					<bounds x="421" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob051">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView05">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob052">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob05">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob05"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch051">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView05">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch052">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch05">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch05"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton05">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 06 -->
+				<view type="View" id="CellView06">
+					<bounds x="525" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob061">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView06">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob062">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob06">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob06"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch061">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView06">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch062">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch06">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch06"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton06">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 07 -->
+				<view type="View" id="CellView07">
+					<bounds x="629" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob071">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView07">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob072">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob07">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob07"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch071">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView07">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch072">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch07">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch07"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton07">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+				
+				<!-- Surface encoder cell 08 -->
+				<view type="View" id="CellView08">
+					<bounds x="733" y="5" width="102" height="162"/>
+					<intercepts_mouse value="false"/>
+					
+					<view type="Button" id="ClickZoneKnob081">
+						<bounds x="24" y="0" width="53" height="53"/>
+						<image_list id="state">
+							<image id="" src="images/knob.png"/>
+							<image id="" src="images/knob_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="27" alpha="64"/>
+					</view>
+					<view type="View" id="KnobView08">
+						<bounds x="0" y="58" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneKnob082">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="Knob08">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="Knob08"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneSelSwitch081">
+						<bounds x="17" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_sel.png"/>
+							<image id="" src="images/button_sel_lit.png"/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+					<view type="View" id="SelView08">
+						<bounds x="0" y="132" width="102" height="30"/>
+						<image id="background" src="images/background_cell.png" x="-5" y="-15"/>
+						<intercepts_mouse value="false"/>
+						
+						<view type="Button" id="ClickZoneSelSwitch082">
+							<bounds x="0" y="0" width="102" height="30"/>
+							<drag_n_drop thickness="15" alpha="64"/>
+						</view>
+						<view type="StaticText" id="SelSwitch08">
+							<bounds x="2" y="2" width="98" height="26"/>
+							<font typeface="Arial" height="12" bold="0" italic="0" underlined="0"/>
+							<color id="text" red="253" green="254" blue="59" alpha="255"/>
+							<justification horizontal="left" vertical="center"/>
+							<text string="SelSwitch08"/>
+							<intercepts_mouse value="false"/>
+							<highlight thickness="3"/>
+						</view>
+					</view>
+					
+					<view type="Button" id="ClickZoneInOutButton08">
+						<bounds x="56" y="98" width="29" height="29"/>
+						<image_list id="state">
+							<image id="" src="images/button_in.png"/>
+							<image id="" src=""/>
+						</image_list>
+						<toggles value="true"/>
+						<drag_n_drop thickness="15" alpha="64"/>
+					</view>
+				</view>
+			</view>
+
+		</view>
+	</view>
+
+	<view type="Button" id="ScrollUpZone">
+		<bounds x="0" y="68" width="840" height="5"/>
+		<intercepts_mouse value="true"/>
+		<drag_n_drop thickness="3" alpha="64"/>
+	</view>
+
+	<view type="Button" id="ScrollDownZone">
+		<bounds x="0" y="648" width="840" height="5"/>
+		<intercepts_mouse value="true"/>
+		<drag_n_drop thickness="3" alpha="64"/>
+	</view>
+
+</view>

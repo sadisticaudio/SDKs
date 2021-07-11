@@ -1,0 +1,5 @@
+# AAX Plug-In Page Table Editor
+# DigiTrace config file
+
+DTF_AAXH_CLIENT=file@DTP_LOWEST
+DTF_AAXHOST=file@DTP_LOWEST

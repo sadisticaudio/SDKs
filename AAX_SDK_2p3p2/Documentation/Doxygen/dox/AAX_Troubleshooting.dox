@@ -1,0 +1,80 @@
+/*===================================================================================================
+AAX_Troubleshooting.dox
+
+Copyright 2019 by Avid Technology, Inc. 
+All rights reserved.
+
+===================================================================================================*/
+
+
+/** @defgroup AAX_Troubleshooting Troubleshooting
+	@ingroup AdditionalInformation
+	
+	@brief How to solve common issues
+	
+	@section troubleshooting_contents Contents
+	
+		@li @ref troubleshooting_signature
+	
+	
+	@section troubleshooting_signature Plug-In Fails to Load in Shipping Pro Tools
+		
+		If your plug-in fails to load in shipping Pro Tools with the message "The following plug-ins failed to load because they are not valid 64 bit AAX plug-ins" then the most likely reason is that the plug-in does not have a valid digital signature.
+		
+		Your %AAX plug-ins will not be compatible with shipping versions of Pro Tools until they are digitally signed using tools provided by PACE Anti-Piracy, Inc. As an %AAX developer you can receive these tools free of charge. Read the \ref subsection__digital_signature_ section of the \ref AAX_Pro_Tools_Guide to learn about the digital signing requirements for compatibility with Pro Tools.
+		
+		\nodox Image files must be copied to the /output/html directory \endnodox
+		<IMG width="30%" alt="Digital signature check failure error" src="signature_check_failed.png" />
+		<DIV CLASS="imagecaption"></DIV>
+		
+		To verify whether this failure is due to an invalid digital signature vs. some other library loading failure, check the Pro Tools @ref AAX_DigiTrace_Guide "log file". A failure caused by an invalid digital signature will result in log lines like the following:
+		
+		@verbatim
+Sys_PACE::GetDigitalSignature - looking for Eden dsig for path "/Applications/ProTools/Plug-Ins/DemoGain_example.aaxplugin/"
+Sys_PACE::GetDigitalSignature - dsig error name /Applications/ProTools/Plug-Ins/DemoGain_example.aaxplugin/ 0 
+legacy Dsig check disabled??
+Sys_PACE::GetDigitalSignature - did NOT get valid dsig /Applications/ProTools/Plug-Ins/DemoGain_example.aaxplugin/
+Plug-In Binary "DemoGain_example.aaxplugin" failed to load with err = -7054.
+Plug-In Binary "DemoGain_example.aaxplugin" 1.0 : Failed to load.
+		@endverbatim
+		
+		Another way to check whether a plug-in's digital signature is invalid is to test the plug-in in a Pro Tools developer build or with the @ref DSH_Guide "DigiShell" utility. If the plug-in successfully loads and runs in these tools but not in a shipping build of Pro Tools then it is very likely that the problem is in the plug-in's digital signature.
+		
+		If you are having an issue running the signing tools then please check this list of the most common failure points:
+
+		<OL>
+			<LI CLASS="List">
+				Bad command line arguments for @c wraptool
+			</LI>
+			<LI CLASS="List">
+				An invalid developer certificate
+			</LI>
+			<LI CLASS="List">
+				An expired developer certificate
+			</LI>
+			<LI CLASS="List">
+				The Eden Tools license is not activated to your iLok USB key
+			</LI>
+			<LI CLASS="List">
+				Your code signing certificate is not installed on your iLok USB key
+			</LI>
+			<LI CLASS="List">
+				For Mac, the Xcode command line tools are not installed on your signing system
+			</LI>
+			<LI CLASS="List">
+				The plug-in bundle itself is malformed and will not load
+			</LI>
+			<LI CLASS="List">
+				The plug-in bundle is being modified at some point after being signed, thereby invalidating its digital signature
+			</LI>
+		</OL>
+		
+		If a digital signature was successfully applied to an %AAX plug-in at one point in the build process but now the plug-in fails to load due to a bad signature then the most likely reason is that someone or something has tampered the signature or the .aaxplugin bundle thereby invalidating the signature.
+		
+		Several things can cause this, for example symlinks not being preserved when copying the plug-in, an actual tampering of the plug-in, or corruption of the plug-in binary to name a few. Note that the %AAX digital signature covers the entire .aaxplugin bundle so any actions which affect the contents of this bundle in any way after signing will invalidate the bundle's digital signature.
+		
+		If the failure is occurring on an isolated system then replacing the .aaxplugin which has an invalidated signature with an original, untampered copy (e.g. via a reinstall) should resolve this issue.
+		
+		
+	
+*/

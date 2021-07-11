@@ -1,0 +1,83 @@
+\hypertarget{a01821}{}\section{A\+A\+X\+\_\+\+I\+Effect\+G\+UI Class Reference}
+\label{a01821}\index{AAX\_IEffectGUI@{AAX\_IEffectGUI}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+I\+Effect\+G\+U\+I.\+h$>$}
+
+
+
+Inheritance diagram for A\+A\+X\+\_\+\+I\+Effect\+G\+UI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{a01820}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+A\+X\+\_\+\+I\+Effect\+G\+UI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{a01819}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+The interface for a A\+AX Plug-\/in\textquotesingle{}s user interface. 
+
+\begin{DoxyRefDesc}{\+:\+Implemented by the Plug-\/\+In}
+\item[\mbox{\hyperlink{a00791__aax_plugin_implementation000002}{\+:\+Implemented by the Plug-\/\+In}}]\end{DoxyRefDesc}
+
+
+This is the interface for an instance of a plug-\/in\textquotesingle{}s G\+UI that gets exposed to the host application. You need to inherit from this interface and override all of the virtual functions to create a plug-\/in G\+UI.
+
+To create the G\+UI for an A\+AX plug-\/in it is required that you inherit from this interface and override all of the virtual functions from \mbox{\hyperlink{a01665}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Effect\+G\+UI}}. In nearly all cases you will be able to take advantage of the implementations in the A\+AX library\textquotesingle{}s \mbox{\hyperlink{a01477}{A\+A\+X\+\_\+\+C\+Effect\+G\+UI}} class and only override the few specific methods that you want to explicitly customize.
+
+\begin{DoxyNote}{Note}
+This class always inherits from the latest version of the interface and thus requires any subclass to implement all the methods in the latest version of the interface. 
+\end{DoxyNote}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a01821_a8b48b2f7798aa1ad2ebb38a93ad409b9}{A\+C\+F\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+U\+N\+K\+N\+O\+WN}} () A\+C\+F\+M\+E\+T\+H\+OD(Internal\+Query\+Interface)(const \mbox{\hyperlink{a00269_a59df0b41744eee7a066787aaedf97f67}{acf\+I\+ID}} \&riid
+\item 
+\mbox{\hyperlink{a01821_abee8b669ca6136a80364127f144d24c3}{A\+A\+X\+\_\+\+D\+E\+L\+E\+TE}} (\mbox{\hyperlink{a01821}{A\+A\+X\+\_\+\+I\+Effect\+G\+UI}} \&operator=(const \mbox{\hyperlink{a01821}{A\+A\+X\+\_\+\+I\+Effect\+G\+UI}} \&))
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$$\ast$ \mbox{\hyperlink{a01821_afcb1be35487e2a63f50ef2bc56f74c3a}{ppv\+Obj\+Out}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a01821_a8b48b2f7798aa1ad2ebb38a93ad409b9}\label{a01821_a8b48b2f7798aa1ad2ebb38a93ad409b9}} 
+\index{AAX\_IEffectGUI@{AAX\_IEffectGUI}!ACF\_DECLARE\_STANDARD\_UNKNOWN@{ACF\_DECLARE\_STANDARD\_UNKNOWN}}
+\index{ACF\_DECLARE\_STANDARD\_UNKNOWN@{ACF\_DECLARE\_STANDARD\_UNKNOWN}!AAX\_IEffectGUI@{AAX\_IEffectGUI}}
+\subsubsection{\texorpdfstring{ACF\_DECLARE\_STANDARD\_UNKNOWN()}{ACF\_DECLARE\_STANDARD\_UNKNOWN()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+I\+Effect\+G\+U\+I\+::\+A\+C\+F\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+U\+N\+K\+N\+O\+WN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+\mbox{\Hypertarget{a01821_abee8b669ca6136a80364127f144d24c3}\label{a01821_abee8b669ca6136a80364127f144d24c3}} 
+\index{AAX\_IEffectGUI@{AAX\_IEffectGUI}!AAX\_DELETE@{AAX\_DELETE}}
+\index{AAX\_DELETE@{AAX\_DELETE}!AAX\_IEffectGUI@{AAX\_IEffectGUI}}
+\subsubsection{\texorpdfstring{AAX\_DELETE()}{AAX\_DELETE()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+I\+Effect\+G\+U\+I\+::\+A\+A\+X\+\_\+\+D\+E\+L\+E\+TE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01821}{A\+A\+X\+\_\+\+I\+Effect\+G\+UI}} \&}]{operator = {\ttfamily (const~\mbox{\hyperlink{a01821}{A\+A\+X\+\_\+\+I\+Effect\+G\+UI}}~\&)} }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{a01821_afcb1be35487e2a63f50ef2bc56f74c3a}\label{a01821_afcb1be35487e2a63f50ef2bc56f74c3a}} 
+\index{AAX\_IEffectGUI@{AAX\_IEffectGUI}!ppvObjOut@{ppvObjOut}}
+\index{ppvObjOut@{ppvObjOut}!AAX\_IEffectGUI@{AAX\_IEffectGUI}}
+\subsubsection{\texorpdfstring{ppvObjOut}{ppvObjOut}}
+{\footnotesize\ttfamily void$\ast$$\ast$ A\+A\+X\+\_\+\+I\+Effect\+G\+U\+I\+::ppv\+Obj\+Out}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00596}{A\+A\+X\+\_\+\+I\+Effect\+G\+U\+I.\+h}}\end{DoxyCompactItemize}

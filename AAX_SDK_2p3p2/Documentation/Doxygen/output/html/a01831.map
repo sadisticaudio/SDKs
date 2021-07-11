@@ -1,0 +1,7 @@
+<map id="AAX_IHostProcessor" name="AAX_IHostProcessor">
+<area shape="rect" id="node1" title="Base class for the host processor interface." alt="" coords="120,225,266,251"/>
+<area shape="rect" id="node2" href="$a01697.html" title="Supplemental interface for an AAX host processing component." alt="" coords="5,152,202,177"/>
+<area shape="rect" id="node3" href="$a01693.html" title="Versioned interface for an AAX host processing component." alt="" coords="17,79,190,104"/>
+<area shape="rect" id="node4" href="$a01409.html" title="COM compatible IUnknown C++ interface." alt="" coords="50,5,157,31"/>
+<area shape="rect" id="node5" title=" " alt="" coords="226,152,339,177"/>
+</map>

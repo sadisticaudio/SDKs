@@ -1,0 +1,153 @@
+\hypertarget{a01529}{}\section{A\+A\+X\+\_\+\+C\+Packet\+Dispatcher Class Reference}
+\label{a01529}\index{AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+C\+Packet\+Dispatcher.\+h$>$}
+
+
+
+\subsection{Description}
+Helper class for managing A\+AX packet posting. 
+
+This optional class can be used to associate individual parameters with custom update callbacks. The update callbacks for all \char`\"{}dirty\char`\"{} parameters are triggered whenever \mbox{\hyperlink{a01529_aec68e7f8f440e394a3e4ab698a5f06f9}{A\+A\+X\+\_\+\+C\+Packet\+Dispatcher\+::\+Dispatch()}} is called. The resulting coefficient data is then posted to the \mbox{\hyperlink{a01789}{A\+A\+X\+\_\+\+I\+Controller}} automatically by the packet dispatcher.
+
+The packet dispatcher supports many-\/to-\/one relationships between parameters and handler callbacks, so a single callback may be registered for several related parameters.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{a01481_a2e302fd758d39a6a855023bf825fe148}{A\+A\+X\+\_\+\+C\+Effect\+Parameters\+::\+Effect\+Init()}} 
+\end{DoxySeeAlso}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a01529_a1b9b60206849807c11045fb865a4dd49}{A\+A\+X\+\_\+\+C\+Packet\+Dispatcher}} ()
+\item 
+\mbox{\hyperlink{a01529_a1eb3ce17e895e30106316c33bc44307f}{$\sim$\+A\+A\+X\+\_\+\+C\+Packet\+Dispatcher}} ()
+\item 
+void \mbox{\hyperlink{a01529_abc64d59b8b9f652013ccf848987ea797}{Initialize}} (\mbox{\hyperlink{a01789}{A\+A\+X\+\_\+\+I\+Controller}} $\ast$i\+Plug\+In, \mbox{\hyperlink{a01825}{A\+A\+X\+\_\+\+I\+Effect\+Parameters}} $\ast$i\+Effect\+Parameters)
+\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01529_a1848f0bfa473b54e9ee8e32872c89cb1}{Register\+Packet}} (\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} param\+ID, \mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}} port\+ID, const \mbox{\hyperlink{a01521}{A\+A\+X\+\_\+\+I\+Packet\+Handler}} $\ast$i\+Handler)
+\item 
+{\footnotesize template$<$class T\+Worker , typename Func $>$ }\\\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01529_af83ca953818597116ef11a345eef2e36}{Register\+Packet}} (\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} param\+ID, \mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}} port\+ID, T\+Worker $\ast$i\+Pt2\+Object, Func inf\+Pt)
+\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01529_a767959a133afaa2e44bfafc79d0b5c69}{Register\+Packet}} (\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} param\+ID, \mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}} port\+ID)
+\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01529_a6d4254a842eeee46a227ec761619efb5}{Set\+Dirty}} (\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} param\+ID, bool i\+Dirty=true)
+\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01529_aec68e7f8f440e394a3e4ab698a5f06f9}{Dispatch}} ()
+\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01529_afa837e03b555f3093144838bddd558f3}{Generate\+Single\+Value\+Packet}} (\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} i\+Param, \mbox{\hyperlink{a01513}{A\+A\+X\+\_\+\+C\+Packet}} \&io\+Packet)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a01529_a1b9b60206849807c11045fb865a4dd49}\label{a01529_a1b9b60206849807c11045fb865a4dd49}} 
+\index{AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}!AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}}
+\index{AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}!AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}}
+\subsubsection{\texorpdfstring{AAX\_CPacketDispatcher()}{AAX\_CPacketDispatcher()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+C\+Packet\+Dispatcher\+::\+A\+A\+X\+\_\+\+C\+Packet\+Dispatcher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a01529_a1eb3ce17e895e30106316c33bc44307f}\label{a01529_a1eb3ce17e895e30106316c33bc44307f}} 
+\index{AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}!````~AAX\_CPacketDispatcher@{$\sim$AAX\_CPacketDispatcher}}
+\index{````~AAX\_CPacketDispatcher@{$\sim$AAX\_CPacketDispatcher}!AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}}
+\subsubsection{\texorpdfstring{$\sim$AAX\_CPacketDispatcher()}{~AAX\_CPacketDispatcher()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+C\+Packet\+Dispatcher\+::$\sim$\+A\+A\+X\+\_\+\+C\+Packet\+Dispatcher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a01529_abc64d59b8b9f652013ccf848987ea797}\label{a01529_abc64d59b8b9f652013ccf848987ea797}} 
+\index{AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void A\+A\+X\+\_\+\+C\+Packet\+Dispatcher\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01789}{A\+A\+X\+\_\+\+I\+Controller}} $\ast$}]{i\+Plug\+In,  }\item[{\mbox{\hyperlink{a01825}{A\+A\+X\+\_\+\+I\+Effect\+Parameters}} $\ast$}]{i\+Effect\+Parameters }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a01529_a1848f0bfa473b54e9ee8e32872c89cb1}\label{a01529_a1848f0bfa473b54e9ee8e32872c89cb1}} 
+\index{AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}!RegisterPacket@{RegisterPacket}}
+\index{RegisterPacket@{RegisterPacket}!AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}}
+\subsubsection{\texorpdfstring{RegisterPacket()}{RegisterPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+C\+Packet\+Dispatcher\+::\+Register\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{param\+ID,  }\item[{\mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}}}]{port\+ID,  }\item[{const \mbox{\hyperlink{a01521}{A\+A\+X\+\_\+\+I\+Packet\+Handler}} $\ast$}]{i\+Handler }\end{DoxyParamCaption})}
+
+
+
+Referenced by Register\+Packet().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a01529_a1848f0bfa473b54e9ee8e32872c89cb1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a01529_af83ca953818597116ef11a345eef2e36}\label{a01529_af83ca953818597116ef11a345eef2e36}} 
+\index{AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}!RegisterPacket@{RegisterPacket}}
+\index{RegisterPacket@{RegisterPacket}!AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}}
+\subsubsection{\texorpdfstring{RegisterPacket()}{RegisterPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T\+Worker , typename Func $>$ \\
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+C\+Packet\+Dispatcher\+::\+Register\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{param\+ID,  }\item[{\mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}}}]{port\+ID,  }\item[{T\+Worker $\ast$}]{i\+Pt2\+Object,  }\item[{Func}]{inf\+Pt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+References Register\+Packet().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a01529_af83ca953818597116ef11a345eef2e36_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a01529_a767959a133afaa2e44bfafc79d0b5c69}\label{a01529_a767959a133afaa2e44bfafc79d0b5c69}} 
+\index{AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}!RegisterPacket@{RegisterPacket}}
+\index{RegisterPacket@{RegisterPacket}!AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}}
+\subsubsection{\texorpdfstring{RegisterPacket()}{RegisterPacket()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+C\+Packet\+Dispatcher\+::\+Register\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{param\+ID,  }\item[{\mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}}}]{port\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+References Generate\+Single\+Value\+Packet(), and Register\+Packet().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a01529_a767959a133afaa2e44bfafc79d0b5c69_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a01529_a6d4254a842eeee46a227ec761619efb5}\label{a01529_a6d4254a842eeee46a227ec761619efb5}} 
+\index{AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}!SetDirty@{SetDirty}}
+\index{SetDirty@{SetDirty}!AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}}
+\subsubsection{\texorpdfstring{SetDirty()}{SetDirty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+C\+Packet\+Dispatcher\+::\+Set\+Dirty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{param\+ID,  }\item[{bool}]{i\+Dirty = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a01529_aec68e7f8f440e394a3e4ab698a5f06f9}\label{a01529_aec68e7f8f440e394a3e4ab698a5f06f9}} 
+\index{AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}!Dispatch@{Dispatch}}
+\index{Dispatch@{Dispatch}!AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}}
+\subsubsection{\texorpdfstring{Dispatch()}{Dispatch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+C\+Packet\+Dispatcher\+::\+Dispatch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a01529_afa837e03b555f3093144838bddd558f3}\label{a01529_afa837e03b555f3093144838bddd558f3}} 
+\index{AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}!GenerateSingleValuePacket@{GenerateSingleValuePacket}}
+\index{GenerateSingleValuePacket@{GenerateSingleValuePacket}!AAX\_CPacketDispatcher@{AAX\_CPacketDispatcher}}
+\subsubsection{\texorpdfstring{GenerateSingleValuePacket()}{GenerateSingleValuePacket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+C\+Packet\+Dispatcher\+::\+Generate\+Single\+Value\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{i\+Param,  }\item[{\mbox{\hyperlink{a01513}{A\+A\+X\+\_\+\+C\+Packet}} \&}]{io\+Packet }\end{DoxyParamCaption})}
+
+
+
+Referenced by Register\+Packet().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a01529_afa837e03b555f3093144838bddd558f3_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00452}{A\+A\+X\+\_\+\+C\+Packet\+Dispatcher.\+h}}\end{DoxyCompactItemize}

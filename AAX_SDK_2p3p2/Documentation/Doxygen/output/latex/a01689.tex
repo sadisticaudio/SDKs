@@ -1,0 +1,89 @@
+\hypertarget{a01689}{}\section{A\+A\+X\+\_\+\+I\+A\+C\+F\+Feature\+Info Class Reference}
+\label{a01689}\index{AAX\_IACFFeatureInfo@{AAX\_IACFFeatureInfo}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+I\+A\+C\+F\+Feature\+Info.\+h$>$}
+
+
+
+Inheritance diagram for A\+A\+X\+\_\+\+I\+A\+C\+F\+Feature\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{a01688}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+A\+X\+\_\+\+I\+A\+C\+F\+Feature\+Info\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{a01687}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+Information about host support for a particular feature
+
+Acquired using \mbox{\hyperlink{a01649_ae4b0144bfdfdbd5881150c20eef1c48f}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Description\+Host\+::\+Acquire\+Feature\+Properties()}}
+
+This interface is shared between multiple features. The specific feature which this object represents is the feature whose ID was used in the call to acquire this interface.
+
+See the feature U\+ID documentation for which properties support additional property map data
+
+I\+ID\+: \mbox{\hyperlink{a00683_a4bc11f4b2a3f9c7ca9162c6b3689978e}{I\+I\+D\+\_\+\+I\+A\+A\+X\+Feature\+Info\+V1}}
+
+\begin{DoxyNote}{Note}
+Do not {\ttfamily \mbox{\hyperlink{a01409_a8b7f0ae9c78d007ca76aa462ebe53135}{Query\+Interface()}}} for \mbox{\hyperlink{a00683_a4bc11f4b2a3f9c7ca9162c6b3689978e}{I\+I\+D\+\_\+\+I\+A\+A\+X\+Feature\+Info\+V1}} since this does not indicate which specific feature is being requested. Instead, use \mbox{\hyperlink{a01793_aa0d9e27d0207113f98c217d870bfa5e9}{A\+A\+X\+\_\+\+I\+Description\+Host\+::\+Acquire\+Feature\+Properties()}} 
+\end{DoxyNote}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01689_a5973ec7e7dbb4cb566df58cfacdfcafd}{Support\+Level}} (\mbox{\hyperlink{a00491_aca7bf42860665d5da66f4ac342e761b3}{A\+A\+X\+\_\+\+E\+Support\+Level}} $\ast$o\+Support\+Level) const =0
+\item 
+virtual \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01689_a6ea3222257cdc9395ad5a766d4130df8}{Acquire\+Properties}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$$\ast$out\+Properties)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a01689_a5973ec7e7dbb4cb566df58cfacdfcafd}\label{a01689_a5973ec7e7dbb4cb566df58cfacdfcafd}} 
+\index{AAX\_IACFFeatureInfo@{AAX\_IACFFeatureInfo}!SupportLevel@{SupportLevel}}
+\index{SupportLevel@{SupportLevel}!AAX\_IACFFeatureInfo@{AAX\_IACFFeatureInfo}}
+\subsubsection{\texorpdfstring{SupportLevel()}{SupportLevel()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+I\+A\+C\+F\+Feature\+Info\+::\+Support\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00491_aca7bf42860665d5da66f4ac342e761b3}{A\+A\+X\+\_\+\+E\+Support\+Level}} $\ast$}]{o\+Support\+Level }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+
+
+Determine the level of support for this feature by the host
+
+\begin{DoxyNote}{Note}
+The host will not provide an underlying \mbox{\hyperlink{a01689}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Feature\+Info}} interface for features which it does not recognize at all, resulting in a \mbox{\hyperlink{a00494_a5f8c7439f3a706c4f8315a9609811937a647cce13fa531e3a46c6eab694048a9c}{A\+A\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+U\+L\+L\+\_\+\+O\+B\+J\+E\+CT}} error code
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{a01829_a5f105b85ef855eb8c3da0ff06325b018}{A\+A\+X\+\_\+\+I\+Feature\+Info\+::\+Support\+Level()}} Determine the level of support for this feature by the host
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+The host will not provide an underlying \mbox{\hyperlink{a01689}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Feature\+Info}} interface for features which it does not recognize at all, resulting in a \mbox{\hyperlink{a00494_a5f8c7439f3a706c4f8315a9609811937a647cce13fa531e3a46c6eab694048a9c}{A\+A\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+U\+L\+L\+\_\+\+O\+B\+J\+E\+CT}} error code 
+\end{DoxyNote}
+\mbox{\Hypertarget{a01689_a6ea3222257cdc9395ad5a766d4130df8}\label{a01689_a6ea3222257cdc9395ad5a766d4130df8}} 
+\index{AAX\_IACFFeatureInfo@{AAX\_IACFFeatureInfo}!AcquireProperties@{AcquireProperties}}
+\index{AcquireProperties@{AcquireProperties}!AAX\_IACFFeatureInfo@{AAX\_IACFFeatureInfo}}
+\subsubsection{\texorpdfstring{AcquireProperties()}{AcquireProperties()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+I\+A\+C\+F\+Feature\+Info\+::\+Acquire\+Properties (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$$\ast$}]{out\+Properties }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+{\ttfamily out\+Properties} must support \mbox{\hyperlink{a01745}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Property\+Map}} const methods
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{a01829_ab74a4576cd4e87baa01d046dfa0c752e}{A\+A\+X\+\_\+\+I\+Feature\+Info\+::\+Acquire\+Properties()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00533}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Feature\+Info.\+h}}\end{DoxyCompactItemize}

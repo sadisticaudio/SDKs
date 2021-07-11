@@ -1,0 +1,5 @@
+<map id="AAX::SafeLog" name="AAX::SafeLog">
+<area shape="rect" id="node1" title="Double&#45;precision safe log function. Returns zero for input values that are &lt;= 0.0." alt="" coords="227,44,332,69"/>
+<area shape="rect" id="node2" href="$a01497.html#a363e09fe8517d4a5ecb151483f011752" title="Converts a normalized value to a real value." alt="" coords="5,5,179,44"/>
+<area shape="rect" id="node3" href="$a01497.html#abcc5e51eebe04ff347de512a103880de" title="Normalizes a real parameter value." alt="" coords="5,68,179,107"/>
+</map>

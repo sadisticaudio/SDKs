@@ -1,0 +1,53 @@
+\hypertarget{a00779}{}\section{A\+A\+X\+\_\+\+Random\+Gen.\+h File Reference}
+\label{a00779}\index{AAX\_RandomGen.h@{AAX\_RandomGen.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Platform\+Optimization\+Constants.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Constants.\+h\char`\"{}}\newline
+
+
+\subsection{Description}
+Functions for calculating pseudo-\/random numbers. 
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{a00852}{A\+AX}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00779_a037b85bd9c13c42dee11b4016fa2d90a}{A\+A\+X\+\_\+\+R\+A\+N\+D\+O\+M\+G\+E\+N\+\_\+H}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{a00852_af3435129d3c94c5f3d5e671943b9bbe2}{A\+A\+X\+::\+Get\+Int32\+R\+P\+DF}} (int32\+\_\+t $\ast$i\+Seed)
+\item 
+int32\+\_\+t \mbox{\hyperlink{a00852_ad12251899137d551b9f652b1ffee2f99}{A\+A\+X\+::\+Get\+Fast\+Int32\+R\+P\+DF}} (int32\+\_\+t $\ast$i\+Seed)
+\begin{DoxyCompactList}\small\item\em C\+A\+LL\+: Calculate pseudo-\/random 32 bit number based on linear congruential method. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{a00852_a5a91375167236862abc93ad879639cab}{A\+A\+X\+::\+Get\+R\+P\+D\+F\+With\+Amplitude\+One\+Half}} (int32\+\_\+t $\ast$i\+Seed)
+\item 
+float \mbox{\hyperlink{a00852_a51d7a263d9053276c6cef1dbd2018ebe}{A\+A\+X\+::\+Get\+R\+P\+D\+F\+With\+Amplitude\+One}} (int32\+\_\+t $\ast$i\+Seed)
+\item 
+float \mbox{\hyperlink{a00852_a145cc6d06cd682e2d234d07ce939760e}{A\+A\+X\+::\+Get\+Fast\+R\+P\+D\+F\+With\+Amplitude\+One}} (int32\+\_\+t $\ast$i\+Seed)
+\item 
+float \mbox{\hyperlink{a00852_a42cc414ea1b868e26c591041a66ad8af}{A\+A\+X\+::\+Get\+T\+P\+D\+F\+With\+Amplitude\+One}} (int32\+\_\+t $\ast$i\+Seed)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{a00852_a0c975151f0d47cc80eef9ff5a7c80125}{A\+A\+X\+::c\+Seed\+Divisor}} = 1/127773.\+0f
+\item 
+const int32\+\_\+t \mbox{\hyperlink{a00852_a143d659ccb62ae0807e9902e751b14cf}{A\+A\+X\+::c\+Initial\+Seed\+Value}} =0x00\+F54321
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{a00779_a037b85bd9c13c42dee11b4016fa2d90a}\label{a00779_a037b85bd9c13c42dee11b4016fa2d90a}} 
+\index{AAX\_RandomGen.h@{AAX\_RandomGen.h}!AAX\_RANDOMGEN\_H@{AAX\_RANDOMGEN\_H}}
+\index{AAX\_RANDOMGEN\_H@{AAX\_RANDOMGEN\_H}!AAX\_RandomGen.h@{AAX\_RandomGen.h}}
+\subsubsection{\texorpdfstring{AAX\_RANDOMGEN\_H}{AAX\_RANDOMGEN\_H}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+R\+A\+N\+D\+O\+M\+G\+E\+N\+\_\+H}
+

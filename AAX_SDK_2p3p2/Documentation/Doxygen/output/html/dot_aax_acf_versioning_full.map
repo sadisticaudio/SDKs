@@ -1,0 +1,9 @@
+<map id="aax_acf_versioning" name="aax_acf_versioning">
+<area shape="rect" id="node1" href="\ref IACFUnknown" title="IACFUnknown" alt="" coords="205,27,312,76"/>
+<area shape="rect" id="node3" href="\ref AAX_IACFEffectParameters" title="AAX_IACFEffectParameters" alt="" coords="56,148,245,197"/>
+<area shape="rect" id="node4" href="\ref AAX_IACFController" title="AAX_IACFController" alt="" coords="270,148,413,197"/>
+<area shape="rect" id="node5" href="\ref AAX_IEffectParameters" title="AAX_IEffectParameters" alt="" coords="30,269,192,319"/>
+<area shape="rect" id="node6" href="\ref AAX_CEffectParameters" title="AAX_CEffectParameters" alt="" coords="27,391,195,440"/>
+<area shape="rect" id="node8" href="\ref AAX_IController" title="AAX_IController" alt="" coords="222,269,338,319"/>
+<area shape="rect" id="clust1" href="\ref CommonInterface_DataModel" title="AAX Effect" alt="" coords="16,259,352,601"/>
+</map>

@@ -1,0 +1,57 @@
+\hypertarget{a00840}{}\section{Other Extensions}
+\label{a00840}\index{Other Extensions@{Other Extensions}}
+
+
+\subsection{ }
+\subsection*{M\+I\+DI logging utilities}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00840_ga5b2751acd531f46a0e4dd68cd0863f46}{A\+A\+X\+::\+As\+String\+M\+I\+D\+I\+Stream\+\_\+\+Debug}} (const \mbox{\hyperlink{a01433}{A\+A\+X\+\_\+\+C\+Midi\+Stream}} \&in\+Stream, char $\ast$out\+Buffer, int32\+\_\+t in\+Buffer\+Size)
+\end{DoxyCompactItemize}
+\subsection*{Filesystem utilities}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{a00840_ga0bf6aab757ecbd440276bb001de89f19}{A\+A\+X\+::\+Get\+Path\+To\+Plug\+In\+Bundle}} (const char $\ast$i\+Bundle\+Name, int i\+Max\+Length, char $\ast$o\+Module\+Name)
+\begin{DoxyCompactList}\small\item\em Retrieve the file path of the .aaxplugin bundle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{a00840_ga5b2751acd531f46a0e4dd68cd0863f46}\label{a00840_ga5b2751acd531f46a0e4dd68cd0863f46}} 
+\index{Other Extensions@{Other Extensions}!AsStringMIDIStream\_Debug@{AsStringMIDIStream\_Debug}}
+\index{AsStringMIDIStream\_Debug@{AsStringMIDIStream\_Debug}!Other Extensions@{Other Extensions}}
+\subsubsection{\texorpdfstring{AsStringMIDIStream\_Debug()}{AsStringMIDIStream\_Debug()}}
+{\footnotesize\ttfamily void A\+A\+X\+::\+As\+String\+M\+I\+D\+I\+Stream\+\_\+\+Debug (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a01433}{A\+A\+X\+\_\+\+C\+Midi\+Stream}} \&}]{in\+Stream,  }\item[{char $\ast$}]{out\+Buffer,  }\item[{int32\+\_\+t}]{in\+Buffer\+Size }\end{DoxyParamCaption})}
+
+Print a M\+I\+DI stream as a C-\/string
+
+Sets an empty string in release builds \mbox{\Hypertarget{a00840_ga0bf6aab757ecbd440276bb001de89f19}\label{a00840_ga0bf6aab757ecbd440276bb001de89f19}} 
+\index{Other Extensions@{Other Extensions}!GetPathToPlugInBundle@{GetPathToPlugInBundle}}
+\index{GetPathToPlugInBundle@{GetPathToPlugInBundle}!Other Extensions@{Other Extensions}}
+\subsubsection{\texorpdfstring{GetPathToPlugInBundle()}{GetPathToPlugInBundle()}}
+{\footnotesize\ttfamily bool A\+A\+X\+::\+Get\+Path\+To\+Plug\+In\+Bundle (\begin{DoxyParamCaption}\item[{const char $\ast$}]{i\+Bundle\+Name,  }\item[{int}]{i\+Max\+Length,  }\item[{char $\ast$}]{o\+Module\+Name }\end{DoxyParamCaption})}
+
+
+
+Retrieve the file path of the .aaxplugin bundle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i\+Bundle\+Name} & 
+\begin{DoxyItemize}
+\item OS X\+: The {\ttfamily C\+F\+Bundle\+Identifier} value set in the plug-\/in\textquotesingle{}s .plist file
+\item Other\+: This parameter is ignored 
+\end{DoxyItemize}\\
+\hline
+\mbox{\texttt{ in}}  & {\em i\+Max\+Length} & \\
+\hline
+\mbox{\texttt{ out}}  & {\em o\+Module\+Name} & A preallocated buffer of size {\ttfamily i\+Max\+Length} \\
+\hline
+\end{DoxyParams}
+Collaboration diagram for Other Extensions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{a00840}
+\end{center}
+\end{figure}

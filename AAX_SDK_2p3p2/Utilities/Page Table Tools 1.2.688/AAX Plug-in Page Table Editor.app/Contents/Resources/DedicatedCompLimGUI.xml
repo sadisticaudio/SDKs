@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view type="View" id="MainView">
+    <bounds x="0" y="0" width="728" height="390"/>
+    <image id="background" src="images/background_main.png" stretch="true"/>
+
+    <view type="TableList" id="ParametersList">
+        <bounds x="432" y="0" width="296" height="390"/>
+        <header height="24">
+            <header_item title_string="Type" width="30" minWidth="30" maxWidth="30"/>
+            <header_item title_string="Parameter Name" width="155" minWidth="155"/>
+            <header_item title_string="Assignment Page" width="100" minWidth="100"/>
+        </header>
+    </view>
+    
+    <view type="TableList" id="LayoutSlotsList">
+        <bounds x="0" y="0" width="431" height="390"/>
+        <header height="24">
+            <header_item title_string="Type" width="30" minWidth="30" maxWidth="30"/>
+            <header_item title_string="Parameter Name" width="155" minWidth="155"/>
+            <header_item title_string="Function" width="155" minWidth="155"/>
+            <header_item title_string="Abbreviation" width="80" minWidth="80"/>
+        </header>
+    </view>
+    
+</view>

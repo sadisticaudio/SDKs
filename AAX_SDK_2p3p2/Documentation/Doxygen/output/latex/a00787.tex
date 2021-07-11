@@ -1,0 +1,192 @@
+
+\begin{DoxyRefList}
+\item[Class \mbox{\hyperlink{a01477}{A\+A\+X\+\_\+\+C\+Effect\+G\+UI}} ]\label{a00787__porting_notes000005}%
+\Hypertarget{a00787__porting_notes000005}%
+ The default implementations in this class are mostly derived from their equivalent implementations in C\+Process and C\+Effect\+Process. For additional C\+Process-\/derived implementations, see \mbox{\hyperlink{a01481}{A\+A\+X\+\_\+\+C\+Effect\+Parameters}}. 
+\item[Class \mbox{\hyperlink{a01481}{A\+A\+X\+\_\+\+C\+Effect\+Parameters}} ]\label{a00787__porting_notes000006}%
+\Hypertarget{a00787__porting_notes000006}%
+ The default implementations in this class are mostly derived from their equivalent implementations in C\+Process and C\+Effect\+Process. For additional C\+Process-\/derived implementations, see \mbox{\hyperlink{a01477}{A\+A\+X\+\_\+\+C\+Effect\+G\+UI}}. 
+\item[Member \mbox{\hyperlink{a01485_a158b4edd5d55f71037cc7c8b8f8464d0}{A\+A\+X\+\_\+\+C\+Host\+Processor::Analyze\+Audio}} (const float $\ast$const in\+Audio\+Ins \mbox{[}\mbox{]}, int32\+\_\+t in\+Audio\+In\+Count, int32\+\_\+t $\ast$io\+Window\+Size) A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE]\label{a00787__porting_notes000009}%
+\Hypertarget{a00787__porting_notes000009}%
+ Ported from Audio\+Suite\textquotesingle{}s {\ttfamily Analyze\+Audio}(bool {\ttfamily is\+Master\+Bypassed}) method 
+\item[Member \mbox{\hyperlink{a01485_a8beff35a046a1b3c780b1ecc1ded7e6e}{A\+A\+X\+\_\+\+C\+Host\+Processor::Init\+Output\+Bounds}} (int64\+\_\+t i\+Src\+Start, int64\+\_\+t i\+Src\+End, int64\+\_\+t $\ast$o\+Dst\+Start, int64\+\_\+t $\ast$o\+Dst\+End) A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE]\label{a00787__porting_notes000007}%
+\Hypertarget{a00787__porting_notes000007}%
+ D\+AE no longer makes use of the m\+Start\+Bound and m\+End\+Bounds member variables that existed in the legacy R\+T\+A\+S/\+T\+DM S\+DK. Use {\ttfamily o\+Dst\+Start} and {\ttfamily o\+Dst\+End} instead (preferably by overriding \mbox{\hyperlink{a01485_a4d793e60071069e6f98c4d841d37ac96}{Translate\+Output\+Bounds()}}.) 
+\item[Member \mbox{\hyperlink{a01485_a66e6a701d8dd7d69accde128cb98b342}{A\+A\+X\+\_\+\+C\+Host\+Processor::Render\+Audio}} (const float $\ast$const in\+Audio\+Ins \mbox{[}\mbox{]}, int32\+\_\+t in\+Audio\+In\+Count, float $\ast$const i\+Audio\+Outs \mbox{[}\mbox{]}, int32\+\_\+t i\+Audio\+Out\+Count, int32\+\_\+t $\ast$io\+Window\+Size) A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE]\label{a00787__porting_notes000008}%
+\Hypertarget{a00787__porting_notes000008}%
+ This method is a replacement for the Audio\+Suite {\ttfamily Process\+Audio} method 
+\item[Class \mbox{\hyperlink{a01429}{A\+A\+X\+\_\+\+C\+Midi\+Packet}} ]\label{a00787__porting_notes000003}%
+\Hypertarget{a00787__porting_notes000003}%
+ Corresponds to Direct\+Midi\+Packet in the legacy S\+DK  
+\item[Class \mbox{\hyperlink{a01433}{A\+A\+X\+\_\+\+C\+Midi\+Stream}} ]\label{a00787__porting_notes000004}%
+\Hypertarget{a00787__porting_notes000004}%
+ Corresponds to Direct\+Midi\+Node in the legacy S\+DK  
+\item[Member \mbox{\hyperlink{a00491_a5e1dffce35d05990dbbad651702678e4a2be91828f8c1dac20ab5dff136fc1fce}{A\+A\+X\+\_\+e\+M\+I\+D\+I\+Node\+Type\+\_\+\+Global}} ]\label{a00787__porting_notes000029}%
+\Hypertarget{a00787__porting_notes000029}%
+ Corresponds to R\+T\+AS Shared Buffer global nodes in the legacy S\+DK  
+\item[Member \mbox{\hyperlink{a00491_a5e1dffce35d05990dbbad651702678e4ae57de2b04978fe2e75f5bdeb034bda44}{A\+A\+X\+\_\+e\+M\+I\+D\+I\+Node\+Type\+\_\+\+Local\+Input}} ]\label{a00787__porting_notes000027}%
+\Hypertarget{a00787__porting_notes000027}%
+ Corresponds to R\+T\+AS Buffered M\+I\+DI input nodes in the legacy S\+DK  
+\item[Member \mbox{\hyperlink{a00491_a5e1dffce35d05990dbbad651702678e4acc1b5f2109c508b20a65b5e0fdcd643f}{A\+A\+X\+\_\+e\+M\+I\+D\+I\+Node\+Type\+\_\+\+Local\+Output}} ]\label{a00787__porting_notes000028}%
+\Hypertarget{a00787__porting_notes000028}%
+ Corresponds to R\+T\+AS Buffered M\+I\+DI output nodes in the legacy S\+DK  
+\item[Member \mbox{\hyperlink{a00491_afab5ea2cfd731fc8f163b6caa685406ea8ca3f7d5e93eecf945682f6fc55f5263}{A\+A\+X\+\_\+e\+Notification\+Event\+\_\+\+A\+S\+Preview\+State}} ]\label{a00787__porting_notes000021}%
+\Hypertarget{a00787__porting_notes000021}%
+ Replacement for {\ttfamily Set\+Preview\+State()}  
+\item[Member \mbox{\hyperlink{a00491_aa169208a2ce713fa021e20deb2eaf608a99ca84cc3dae0f125082d36893a12bcd}{A\+A\+X\+\_\+e\+Page\+Table\+\_\+\+E\+Q\+\_\+\+Band\+\_\+\+Type}} ]\label{a00787__porting_notes000024}%
+\Hypertarget{a00787__porting_notes000024}%
+ converted from {\ttfamily e\+Digi\+\_\+\+Page\+Table\+\_\+\+E\+Q\+\_\+\+Band\+\_\+\+Type} in the legacy S\+DK 
+\item[Member \mbox{\hyperlink{a00491_aa169208a2ce713fa021e20deb2eaf608ac5a06a293b7706191d3371813c47e999}{A\+A\+X\+\_\+e\+Page\+Table\+\_\+\+E\+Q\+\_\+\+In\+Circuit\+Polarity}} ]\label{a00787__porting_notes000025}%
+\Hypertarget{a00787__porting_notes000025}%
+ converted from {\ttfamily e\+Digi\+\_\+\+Page\+Table\+\_\+\+E\+Q\+\_\+\+In\+Circuit\+Polarity} in the legacy S\+DK 
+\item[Member \mbox{\hyperlink{a00491_aa169208a2ce713fa021e20deb2eaf608a1a0d975a333d3aee81b22f878697e9c4}{A\+A\+X\+\_\+e\+Page\+Table\+\_\+\+Use\+Alternate\+Control}} ]\label{a00787__porting_notes000026}%
+\Hypertarget{a00787__porting_notes000026}%
+ converted from {\ttfamily e\+Digi\+\_\+\+Page\+Table\+\_\+\+Use\+Alternate\+Control} in the legacy S\+DK 
+\item[Member \mbox{\hyperlink{a00491_a193b89c4e2c5b57f2c4d7d5b5782fe87}{A\+A\+X\+\_\+\+E\+Parameter\+Type}} ]\label{a00787__porting_notes000010}%
+\Hypertarget{a00787__porting_notes000010}%
+ Values must match unnamed type enum in Fic\+T\+D\+M\+Control.\+h 
+\item[Member \mbox{\hyperlink{a00491_a4cd0f189daa9a60cf36883c56344bb2eade82e7d1b5012a76837b70c1a9b92168}{A\+A\+X\+\_\+e\+Parameter\+Type\+\_\+\+Continuous}} ]\label{a00787__porting_notes000023}%
+\Hypertarget{a00787__porting_notes000023}%
+ Matches {\ttfamily k\+D\+A\+E\+\_\+\+Continuous\+Values}  
+\item[Member \mbox{\hyperlink{a00491_a4cd0f189daa9a60cf36883c56344bb2ea2a3c9939ef1fa8b8f729152c35c42740}{A\+A\+X\+\_\+e\+Parameter\+Type\+\_\+\+Discrete}} ]\label{a00787__porting_notes000022}%
+\Hypertarget{a00787__porting_notes000022}%
+ Matches {\ttfamily k\+D\+A\+E\+\_\+\+Discrete\+Values}  
+\item[Member \mbox{\hyperlink{a00491_aa169208a2ce713fa021e20deb2eaf608}{A\+A\+X\+\_\+\+E\+Parameter\+Value\+Info\+Selector}} ]\label{a00787__porting_notes000011}%
+\Hypertarget{a00787__porting_notes000011}%
+ converted from {\ttfamily E\+Control\+Value\+Info} in the legacy S\+DK  
+\item[Member \mbox{\hyperlink{a00491_a86f7310877399d9d4d2ea4863d472476a18ce96adcc5420f19c7247bde5718490}{A\+A\+X\+\_\+e\+Plug\+In\+Strings\+\_\+\+All\+Selected\+Regions\+Analysis}} ]\label{a00787__porting_notes000016}%
+\Hypertarget{a00787__porting_notes000016}%
+ Was plugin\+Strings\+\_\+\+All\+Selected\+Regions\+Analysis in the R\+T\+A\+S/\+T\+DM S\+DK  
+\item[Member \mbox{\hyperlink{a00491_a86f7310877399d9d4d2ea4863d472476a452cb68d82f40ff3464752eed92543ed}{A\+A\+X\+\_\+e\+Plug\+In\+Strings\+\_\+\+Analysis}} ]\label{a00787__porting_notes000012}%
+\Hypertarget{a00787__porting_notes000012}%
+ Was plugin\+Strings\+\_\+\+Analysis in the R\+T\+A\+S/\+T\+DM S\+DK  
+\item[Member \mbox{\hyperlink{a00491_a86f7310877399d9d4d2ea4863d472476a9b49eb0306daf949d9bf4a5d4b22ada0}{A\+A\+X\+\_\+e\+Plug\+In\+Strings\+\_\+\+Bypass}} ]\label{a00787__porting_notes000020}%
+\Hypertarget{a00787__porting_notes000020}%
+ Was plugin\+Strings\+\_\+\+Bypass in the R\+T\+A\+S/\+T\+DM S\+DK  
+\item[Member \mbox{\hyperlink{a00491_a86f7310877399d9d4d2ea4863d472476ab33b745bc2c47f9c95bad0125ff6c816}{A\+A\+X\+\_\+e\+Plug\+In\+Strings\+\_\+\+Clip\+Name}} ]\label{a00787__porting_notes000017}%
+\Hypertarget{a00787__porting_notes000017}%
+ Was plugin\+Strings\+\_\+\+Region\+Name in the R\+T\+A\+S/\+T\+DM S\+DK  
+\item[Member \mbox{\hyperlink{a00491_a86f7310877399d9d4d2ea4863d472476ace28c7a0863e1adef165d0f3b52a9660}{A\+A\+X\+\_\+e\+Plug\+In\+Strings\+\_\+\+Mono\+Mode}} ]\label{a00787__porting_notes000013}%
+\Hypertarget{a00787__porting_notes000013}%
+ Was plugin\+Strings\+\_\+\+Mono\+Mode in the R\+T\+A\+S/\+T\+DM S\+DK  
+\item[Member \mbox{\hyperlink{a00491_a86f7310877399d9d4d2ea4863d472476a4e05ed47ae75ef3c99ed7b5599da6e53}{A\+A\+X\+\_\+e\+Plug\+In\+Strings\+\_\+\+Multi\+Input\+Mode}} ]\label{a00787__porting_notes000014}%
+\Hypertarget{a00787__porting_notes000014}%
+ Was plugin\+Strings\+\_\+\+Multi\+Input\+Mode in the R\+T\+A\+S/\+T\+DM S\+DK  
+\item[Member \mbox{\hyperlink{a00491_a86f7310877399d9d4d2ea4863d472476a28ef93b11664703ce99624d99b2d163c}{A\+A\+X\+\_\+e\+Plug\+In\+Strings\+\_\+\+Process}} ]\label{a00787__porting_notes000019}%
+\Hypertarget{a00787__porting_notes000019}%
+ Was plugin\+Strings\+\_\+\+Process in the R\+T\+A\+S/\+T\+DM S\+DK  
+\item[Member \mbox{\hyperlink{a00491_a86f7310877399d9d4d2ea4863d472476a2524774deef9e82058134126dc729a5a}{A\+A\+X\+\_\+e\+Plug\+In\+Strings\+\_\+\+Progress}} ]\label{a00787__porting_notes000018}%
+\Hypertarget{a00787__porting_notes000018}%
+ Was plugin\+Strings\+\_\+\+Progress in the R\+T\+A\+S/\+T\+DM S\+DK  
+\item[Member \mbox{\hyperlink{a00491_a86f7310877399d9d4d2ea4863d472476ae3a832bfc597a707358610647b3f51c3}{A\+A\+X\+\_\+e\+Plug\+In\+Strings\+\_\+\+Region\+By\+Region\+Analysis}} ]\label{a00787__porting_notes000015}%
+\Hypertarget{a00787__porting_notes000015}%
+ Was plugin\+Strings\+\_\+\+Region\+By\+Region\+Analysis in the R\+T\+A\+S/\+T\+DM S\+DK  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0d}{A\+A\+X\+\_\+\+E\+Property}} ]\label{a00787__porting_notes000039}%
+\Hypertarget{a00787__porting_notes000039}%
+ These property I\+Ds are somewhat analogous to the plugin\+Gestalt system in the legacy S\+DK, and several \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0d}{A\+A\+X\+\_\+\+E\+Property}} values correlate directly with a corresponding legacy plug-\/in gestalt.
+
+\label{a00787__porting_notes000040}%
+\Hypertarget{a00787__porting_notes000040}%
+ To ensure session interchange compatibility, make sure the 4 character I\+Ds for \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da996465cca29a2a15291d1c788ac5728c}{A\+A\+X\+\_\+e\+Property\+\_\+\+Manufacturer\+ID}}, \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da3a41fcdff5af1a4fd19dcbca7b1ba6f3}{A\+A\+X\+\_\+e\+Property\+\_\+\+Product\+ID}}, \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da89ca3dd6e96895cda14976c1b1ceb826}{A\+A\+X\+\_\+e\+Property\+\_\+\+Plug\+In\+I\+D\+\_\+\+Native}}, and \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0dad3344696b8298a8b254add3d039ea927}{A\+A\+X\+\_\+e\+Property\+\_\+\+Plug\+In\+I\+D\+\_\+\+Audio\+Suite}} are identical to the legacy S\+DK\textquotesingle{}s counterpart. 
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da9524773361ca8e712bef3547e8c46c9b}{A\+A\+X\+\_\+e\+Property\+\_\+\+Allow\+Preview\+Without\+Analysis}} ]\label{a00787__porting_notes000050}%
+\Hypertarget{a00787__porting_notes000050}%
+ Was plugin\+Gestalt\+\_\+\+Analyze\+On\+The\+Fly  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da6819867a9e86913e59decf318416d755}{A\+A\+X\+\_\+e\+Property\+\_\+\+Can\+Bypass}} ]\label{a00787__porting_notes000046}%
+\Hypertarget{a00787__porting_notes000046}%
+ Was plugin\+Gestalt\+\_\+\+Can\+Bypass. 
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da95054276be8782d93437cd74669366d0}{A\+A\+X\+\_\+e\+Property\+\_\+\+Continuous\+Only}} ]\label{a00787__porting_notes000053}%
+\Hypertarget{a00787__porting_notes000053}%
+ Was plugin\+Gestalt\+\_\+\+Continuous\+Only  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0dadd8839e5678c8880215e318197cc8d3a}{A\+A\+X\+\_\+e\+Property\+\_\+\+Destination\+Track}} ]\label{a00787__porting_notes000051}%
+\Hypertarget{a00787__porting_notes000051}%
+ Was plugin\+Gestalt\+\_\+\+Destination\+Track  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da854fdc19ab908b67aa3bc1f4262aa288}{A\+A\+X\+\_\+e\+Property\+\_\+\+Disable\+Preview}} ]\label{a00787__porting_notes000055}%
+\Hypertarget{a00787__porting_notes000055}%
+ Was plugin\+Gestalt\+\_\+\+Disable\+Preview  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0daaf6b47f0861af74ef5c5bb316481b97d}{A\+A\+X\+\_\+e\+Property\+\_\+\+Doesnt\+Incr\+Output\+Sample}} ]\label{a00787__porting_notes000056}%
+\Hypertarget{a00787__porting_notes000056}%
+ Was plugin\+Gestalt\+\_\+\+Doesnt\+Incr\+Output\+Sample  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da996465cca29a2a15291d1c788ac5728c}{A\+A\+X\+\_\+e\+Property\+\_\+\+Manufacturer\+ID}} ]\label{a00787__porting_notes000041}%
+\Hypertarget{a00787__porting_notes000041}%
+ For legacy plug-\/in session compatibility, this ID should match the Manufacturer ID used in the corresponding legacy plug-\/ins.  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0daa15cf3edd899af4a98fa18fcdfdeb9d6}{A\+A\+X\+\_\+e\+Property\+\_\+\+Multi\+Input\+Mode\+Only}} ]\label{a00787__porting_notes000054}%
+\Hypertarget{a00787__porting_notes000054}%
+ Was plugin\+Gestalt\+\_\+\+Multi\+Input\+Mode\+Only  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da38a26f7d914d391cef1f71acfb98a2ec}{A\+A\+X\+\_\+e\+Property\+\_\+\+Needs\+Output\+Dithered}} ]\label{a00787__porting_notes000057}%
+\Hypertarget{a00787__porting_notes000057}%
+ Was plugin\+Gestalt\+\_\+\+Needs\+Output\+Dithered  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da5a2bacb421fc36f890a121f01a9e72ba}{A\+A\+X\+\_\+e\+Property\+\_\+\+Optional\+Analysis}} ]\label{a00787__porting_notes000049}%
+\Hypertarget{a00787__porting_notes000049}%
+ Was plugin\+Gestalt\+\_\+\+Optional\+Analysis  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0dad3344696b8298a8b254add3d039ea927}{A\+A\+X\+\_\+e\+Property\+\_\+\+Plug\+In\+I\+D\+\_\+\+Audio\+Suite}} ]\label{a00787__porting_notes000044}%
+\Hypertarget{a00787__porting_notes000044}%
+ For legacy plug-\/in session compatibility, this ID should match the Type ID used in the corresponding legacy Audio\+Suite plug-\/in Types.  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da89ca3dd6e96895cda14976c1b1ceb826}{A\+A\+X\+\_\+e\+Property\+\_\+\+Plug\+In\+I\+D\+\_\+\+Native}} ]\label{a00787__porting_notes000043}%
+\Hypertarget{a00787__porting_notes000043}%
+ For legacy plug-\/in session compatibility, this ID should match the Type ID used in the corresponding legacy R\+T\+AS plug-\/in Types.  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da75f174df4efbeca86eaada126c1d9214}{A\+A\+X\+\_\+e\+Property\+\_\+\+Plug\+In\+I\+D\+\_\+\+TI}} ]\label{a00787__porting_notes000045}%
+\Hypertarget{a00787__porting_notes000045}%
+ For legacy plug-\/in session compatibility, this ID should match the Type ID used in the corresponding legacy T\+DM plug-\/in Types.  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da3a41fcdff5af1a4fd19dcbca7b1ba6f3}{A\+A\+X\+\_\+e\+Property\+\_\+\+Product\+ID}} ]\label{a00787__porting_notes000042}%
+\Hypertarget{a00787__porting_notes000042}%
+ For legacy plug-\/in session compatibility, this ID should match the Product ID used in the corresponding legacy plug-\/in.  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0daa59caaf3d7c3e195a32b8cb09a9baac2}{A\+A\+X\+\_\+e\+Property\+\_\+\+Requests\+All\+Track\+Data}} ]\label{a00787__porting_notes000052}%
+\Hypertarget{a00787__porting_notes000052}%
+ Was plugin\+Gestalt\+\_\+\+Requests\+All\+Track\+Data  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da925c49bb79454b33bf1d5f4cb09d373f}{A\+A\+X\+\_\+e\+Property\+\_\+\+Requires\+Analysis}} ]\label{a00787__porting_notes000048}%
+\Hypertarget{a00787__porting_notes000048}%
+ Was plugin\+Gestalt\+\_\+\+Requires\+Analysis  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da6d42a3a901f36b74e7b9b8a84d4d5298}{A\+A\+X\+\_\+e\+Property\+\_\+\+Supports\+Save\+Restore}} ]\label{a00787__porting_notes000058}%
+\Hypertarget{a00787__porting_notes000058}%
+ Was plugin\+Gestalt\+\_\+\+Supports\+Save\+Restore  
+\item[Member \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0dab0bbaabe0a03b37e5a69f04a6f306076}{A\+A\+X\+\_\+e\+Property\+\_\+\+Uses\+Random\+Access}} ]\label{a00787__porting_notes000047}%
+\Hypertarget{a00787__porting_notes000047}%
+ Was plugin\+Gestalt\+\_\+\+Uses\+Random\+Access  
+\item[Class \mbox{\hyperlink{a01665}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Effect\+G\+UI}} ]\label{a00787__porting_notes000030}%
+\Hypertarget{a00787__porting_notes000030}%
+ In the legacy plug-\/in S\+DK, these methods were found in C\+Process and C\+Effect\+Process. For additional C\+Process methods, see \mbox{\hyperlink{a01825}{A\+A\+X\+\_\+\+I\+Effect\+Parameters}}. 
+\item[Member \mbox{\hyperlink{a01665_a3922a4b9fef09e88440d7655422c2b96}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Effect\+G\+UI::Set\+Control\+Highlight\+Info}} (A\+A\+X\+\_\+\+C\+Param\+ID i\+Parameter\+ID, A\+A\+X\+\_\+\+C\+Boolean i\+Is\+Highlighted, A\+A\+X\+\_\+\+E\+Highlight\+Color i\+Color)=0]\label{a00787__porting_notes000031}%
+\Hypertarget{a00787__porting_notes000031}%
+ This method was re-\/named from {\ttfamily Set\+Control\+Highlite\+Info()}, its name in the legacy plug-\/in S\+DK. 
+\item[Member \mbox{\hyperlink{a01669_aa986711cd372febcaae803e86ae08f63}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Effect\+Parameters::Get\+Chunk\+Size}} (A\+A\+X\+\_\+\+C\+Type\+ID i\+Chunk\+ID, uint32\+\_\+t $\ast$o\+Size) const =0]\label{a00787__porting_notes000035}%
+\Hypertarget{a00787__porting_notes000035}%
+ In \mbox{\hyperlink{a00852}{A\+AX}}, the value provided by \mbox{\hyperlink{a01669_aa986711cd372febcaae803e86ae08f63}{Get\+Chunk\+Size()}} should {\itshape N\+OT} include the size of the chunk header. The value should {\itshape O\+N\+LY} reflect the size of the chunk\textquotesingle{}s data. 
+\item[Member \mbox{\hyperlink{a01669_ac122e1a693296b059dca4350a5ff1dfe}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Effect\+Parameters::Get\+Parameter\+Orientation}} (A\+A\+X\+\_\+\+C\+Param\+ID i\+Parameter\+ID, A\+A\+X\+\_\+\+E\+Parameter\+Orientation $\ast$o\+Parameter\+Orientation) const =0]\label{a00787__porting_notes000032}%
+\Hypertarget{a00787__porting_notes000032}%
+ \mbox{\hyperlink{a01669_ac122e1a693296b059dca4350a5ff1dfe}{A\+A\+X\+\_\+\+I\+Effect\+Parameters\+::\+Get\+Parameter\+Orientation()}} corresponds to the Get\+Control\+Orientation() method in the legacy R\+T\+A\+S/\+T\+DM S\+DK. 
+\item[Member \mbox{\hyperlink{a01669_add995f2eb5a3967c48dd9f3e21f003aa}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Effect\+Parameters::Get\+Parameter\+String\+From\+Value}} (A\+A\+X\+\_\+\+C\+Param\+ID i\+Parameter\+ID, double i\+Value, \mbox{\hyperlink{a01873}{A\+A\+X\+\_\+\+I\+String}} $\ast$o\+Value\+String, int32\+\_\+t i\+Max\+Length) const =0]\label{a00787__porting_notes000034}%
+\Hypertarget{a00787__porting_notes000034}%
+ This method corresponds to C\+Process\+::\+Map\+Control\+Val\+To\+String() in the R\+T\+A\+S/\+T\+DM S\+DK 
+\item[Member \mbox{\hyperlink{a01669_a54bb12c9798e4f9a3a5b5d6f30ace992}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Effect\+Parameters::Get\+Parameter\+Value\+From\+String}} (A\+A\+X\+\_\+\+C\+Param\+ID i\+Parameter\+ID, double $\ast$o\+Value, const \mbox{\hyperlink{a01873}{A\+A\+X\+\_\+\+I\+String}} \&i\+Value\+String) const =0]\label{a00787__porting_notes000033}%
+\Hypertarget{a00787__porting_notes000033}%
+ This method corresponds to C\+Process\+::\+Map\+Control\+String\+To\+Val() in the R\+T\+A\+S/\+T\+DM S\+DK 
+\item[Class \mbox{\hyperlink{a01693}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Host\+Processor}} ]\label{a00787__porting_notes000036}%
+\Hypertarget{a00787__porting_notes000036}%
+ This interface provides offline processing features analogous to the legacy Audio\+Suite plug-\/in architecture 
+\item[Class \mbox{\hyperlink{a01777}{A\+A\+X\+\_\+\+I\+Collection}} ]\label{a00787__porting_notes000037}%
+\Hypertarget{a00787__porting_notes000037}%
+ The information in \mbox{\hyperlink{a01777}{A\+A\+X\+\_\+\+I\+Collection}} is roughly analogous to the information provided by C\+Process\+Group in the legacy plug-\/in library 
+\item[Class \mbox{\hyperlink{a01825}{A\+A\+X\+\_\+\+I\+Effect\+Parameters}} ]\label{a00787__porting_notes000038}%
+\Hypertarget{a00787__porting_notes000038}%
+ In the legacy plug-\/in S\+DK, these methods were found in C\+Process and {\ttfamily C\+Effect\+Process}. For additional {\ttfamily C\+Process} methods, see \mbox{\hyperlink{a01821}{A\+A\+X\+\_\+\+I\+Effect\+G\+UI}}. 
+\item[File \mbox{\hyperlink{a00674}{A\+A\+X\+\_\+\+Slider\+Conversions.h}} ]\label{a00787__porting_notes000059}%
+\Hypertarget{a00787__porting_notes000059}%
+ These utilities may be required in order to maintain settings chunk compatibility with plug-\/ins that were ported from the legacy R\+T\+A\+S/\+T\+DM format. 
+\item[Class \mbox{\hyperlink{a01417}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk\+Header}} ]\label{a00787__porting_notes000002}%
+\Hypertarget{a00787__porting_notes000002}%
+ To ensure compatibility with T\+D\+M/\+R\+T\+AS plug-\/ins whose implementation requires {\ttfamily f\+Size} to be equal to the size of the chunk\textquotesingle{}s header plus its data, A\+AE performs some behind-\/the-\/scenes record keeping. ~\newline
+ ~\newline
+ The following actions are only taken for A\+AX plug-\/ins, so, e.\+g., if a chunk is stored by an R\+T\+AS or T\+DM plug-\/in that reports data+header size in {\ttfamily f\+Size} and this chunk is then loaded by the A\+AX version of the plug-\/in, the header size will be cached as-\/is from the legacy plug-\/in and will be subtracted out before the chunk data is passed to the A\+AX plug-\/in. If a chunk is stored by an A\+AX plug-\/in and is then loaded by a legacy plug-\/in, the legacy plug-\/in will receive the cached plug-\/in header with {\ttfamily f\+Size} equal to the data+header size. ~\newline
+ ~\newline
+ These are the special actions that A\+AE takes to ensure backwards-\/compatibility when handling A\+AX chunk data\+:
+\begin{DoxyItemize}
+\item When A\+AE retrieves the size of a chunk from an A\+AX plug-\/in using \mbox{\hyperlink{a01669_aa986711cd372febcaae803e86ae08f63}{Get\+Chunk\+Size()}}, it adds the chunk header size to the amount of memory that it allocates for the chunk ~\newline
+
+\item When A\+AE retrieves a chunk from an A\+AX plug-\/in using \mbox{\hyperlink{a01669_ab977041a440a9cd6f3e631c059ee8b99}{Get\+Chunk()}}, it adds the chunk header size to {\ttfamily f\+Chunk\+Size} before caching the chunk ~\newline
+
+\item Before calling \mbox{\hyperlink{a01669_a2d780ebc594683e24302871b809602e8}{Set\+Chunk()}} or \mbox{\hyperlink{a01669_a1e86f849e970c9998313fc7d451ccf85}{Compare\+Active\+Chunk()}}, A\+AE subtracts the chunk header size from the cached chunk\textquotesingle{}s header\textquotesingle{}s {\ttfamily f\+Chunk\+Size} member 
+\end{DoxyItemize}
+\item[Module \mbox{\hyperlink{a00807}{Additional\+Features\+\_\+\+Meters}} ]\label{a00787__porting_notes000001}%
+\Hypertarget{a00787__porting_notes000001}%
+ The gain-\/reduction meter handling for A\+AX plug-\/ins is different from that for R\+T\+A\+S/\+T\+DM plug-\/ins. A\+AX plug-\/ins must invert their gain-\/reduction meter values manually before reporting these values from the audio processing callback. The A\+AX host will always thin reported meter data using a \char`\"{}max\char`\"{} operation, and will later invert gain-\/reduction meter values before they are available to the plug-\/in G\+UI or to control surfaces. 
+\end{DoxyRefList}

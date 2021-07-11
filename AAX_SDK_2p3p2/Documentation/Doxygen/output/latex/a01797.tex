@@ -1,0 +1,54 @@
+\hypertarget{a01797}{}\section{A\+A\+X\+\_\+\+I\+Display\+Delegate\+Base Class Reference}
+\label{a01797}\index{AAX\_IDisplayDelegateBase@{AAX\_IDisplayDelegateBase}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+I\+Display\+Delegate.\+h$>$}
+
+
+
+Inheritance diagram for A\+A\+X\+\_\+\+I\+Display\+Delegate\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a01796}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+Defines the display behavior for a parameter. 
+
+This interface represents a delegate class to be used in conjunction with \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}}. \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} delegates all conversion operations between strings and real parameter values to classes that meet this interface. You can think of \mbox{\hyperlink{a01881}{A\+A\+X\+\_\+\+I\+Taper\+Delegate}} subclasses as simple string serialization routines that enable a specific string conversions for an arbitrary parameter.
+
+For more information about how parameter delegates operate, see the \mbox{\hyperlink{a01881}{A\+A\+X\+\_\+\+I\+Taper\+Delegate}} and \mbox{\hyperlink{a00814}{Parameter Manager}} documentation.
+
+\begin{DoxyNote}{Note}
+This class is {\itshape not} part of the A\+AX A\+BI and must not be passed between the plug-\/in and the host. 
+\end{DoxyNote}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{a01797_a0fdaa922b4356fb4a246053bb441a840}{$\sim$\+A\+A\+X\+\_\+\+I\+Display\+Delegate\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a01797_a0fdaa922b4356fb4a246053bb441a840}\label{a01797_a0fdaa922b4356fb4a246053bb441a840}} 
+\index{AAX\_IDisplayDelegateBase@{AAX\_IDisplayDelegateBase}!````~AAX\_IDisplayDelegateBase@{$\sim$AAX\_IDisplayDelegateBase}}
+\index{````~AAX\_IDisplayDelegateBase@{$\sim$AAX\_IDisplayDelegateBase}!AAX\_IDisplayDelegateBase@{AAX\_IDisplayDelegateBase}}
+\subsubsection{\texorpdfstring{$\sim$AAX\_IDisplayDelegateBase()}{~AAX\_IDisplayDelegateBase()}}
+{\footnotesize\ttfamily virtual A\+A\+X\+\_\+\+I\+Display\+Delegate\+Base\+::$\sim$\+A\+A\+X\+\_\+\+I\+Display\+Delegate\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual destructor. 
+
+\begin{DoxyNote}{Note}
+This destructor M\+U\+ST be virtual to prevent memory leaks. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00581}{A\+A\+X\+\_\+\+I\+Display\+Delegate.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{a00428}{}\section{A\+A\+X\+\_\+\+C\+Effect\+Parameters.\+h File Reference}
+\label{a00428}\index{AAX\_CEffectParameters.h@{AAX\_CEffectParameters.h}}
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+I\+Effect\+Parameters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+I\+Page\+Table.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+C\+String.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+C\+Chunk\+Data\+Parser.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+C\+Parameter\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+C\+Packet\+Dispatcher.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+
+
+\subsection{Description}
+A default implementation of the A\+A\+X\+\_\+\+Ieffect\+Parameters interface. 
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{a01481}{A\+A\+X\+\_\+\+C\+Effect\+Parameters}}
+\begin{DoxyCompactList}\small\item\em Default implementation of the \mbox{\hyperlink{a01825}{A\+A\+X\+\_\+\+I\+Effect\+Parameters}} interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{a00428_a4306a7c219b052f8d50910b40247805f}{Normalized\+To\+Int32}} (double normalized\+Value)
+\item 
+double \mbox{\hyperlink{a00428_aae1cabc9311a708ba440fc539607e68b}{Int32\+To\+Normalized}} (int32\+\_\+t value)
+\item 
+double \mbox{\hyperlink{a00428_aa07cfc71944518e3d089d18eabdfa4aa}{Bool\+To\+Normalized}} (bool value)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} \mbox{\hyperlink{a00428_a5b9f7125f80d7c522dc67dd9a3af3b8c}{c\+Preview\+ID}}
+\item 
+\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} \mbox{\hyperlink{a00428_a749f638fe14300285783bde128dfd390}{c\+Default\+Master\+Bypass\+ID}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{a00428_a4306a7c219b052f8d50910b40247805f}\label{a00428_a4306a7c219b052f8d50910b40247805f}} 
+\index{AAX\_CEffectParameters.h@{AAX\_CEffectParameters.h}!NormalizedToInt32@{NormalizedToInt32}}
+\index{NormalizedToInt32@{NormalizedToInt32}!AAX\_CEffectParameters.h@{AAX\_CEffectParameters.h}}
+\subsubsection{\texorpdfstring{NormalizedToInt32()}{NormalizedToInt32()}}
+{\footnotesize\ttfamily int32\+\_\+t Normalized\+To\+Int32 (\begin{DoxyParamCaption}\item[{double}]{normalized\+Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a00428_aae1cabc9311a708ba440fc539607e68b}\label{a00428_aae1cabc9311a708ba440fc539607e68b}} 
+\index{AAX\_CEffectParameters.h@{AAX\_CEffectParameters.h}!Int32ToNormalized@{Int32ToNormalized}}
+\index{Int32ToNormalized@{Int32ToNormalized}!AAX\_CEffectParameters.h@{AAX\_CEffectParameters.h}}
+\subsubsection{\texorpdfstring{Int32ToNormalized()}{Int32ToNormalized()}}
+{\footnotesize\ttfamily double Int32\+To\+Normalized (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a00428_aa07cfc71944518e3d089d18eabdfa4aa}\label{a00428_aa07cfc71944518e3d089d18eabdfa4aa}} 
+\index{AAX\_CEffectParameters.h@{AAX\_CEffectParameters.h}!BoolToNormalized@{BoolToNormalized}}
+\index{BoolToNormalized@{BoolToNormalized}!AAX\_CEffectParameters.h@{AAX\_CEffectParameters.h}}
+\subsubsection{\texorpdfstring{BoolToNormalized()}{BoolToNormalized()}}
+{\footnotesize\ttfamily double Bool\+To\+Normalized (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{a00428_a5b9f7125f80d7c522dc67dd9a3af3b8c}\label{a00428_a5b9f7125f80d7c522dc67dd9a3af3b8c}} 
+\index{AAX\_CEffectParameters.h@{AAX\_CEffectParameters.h}!cPreviewID@{cPreviewID}}
+\index{cPreviewID@{cPreviewID}!AAX\_CEffectParameters.h@{AAX\_CEffectParameters.h}}
+\subsubsection{\texorpdfstring{cPreviewID}{cPreviewID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} c\+Preview\+ID}
+
+\mbox{\Hypertarget{a00428_a749f638fe14300285783bde128dfd390}\label{a00428_a749f638fe14300285783bde128dfd390}} 
+\index{AAX\_CEffectParameters.h@{AAX\_CEffectParameters.h}!cDefaultMasterBypassID@{cDefaultMasterBypassID}}
+\index{cDefaultMasterBypassID@{cDefaultMasterBypassID}!AAX\_CEffectParameters.h@{AAX\_CEffectParameters.h}}
+\subsubsection{\texorpdfstring{cDefaultMasterBypassID}{cDefaultMasterBypassID}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} c\+Default\+Master\+Bypass\+ID}
+

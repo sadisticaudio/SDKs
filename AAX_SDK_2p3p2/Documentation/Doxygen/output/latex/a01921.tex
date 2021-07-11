@@ -1,0 +1,137 @@
+\hypertarget{a01921}{}\section{A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate Class Reference}
+\label{a01921}\index{AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate.\+h$>$}
+
+
+
+Inheritance diagram for A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{a01920}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{a01919}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+Version-\/managed concrete \mbox{\hyperlink{a01837}{Host Processor delegate}} class. \subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a01921_ab50f9b08bc0d0ab6696ad3081aa790d8}{A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unknown)
+\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01921_a030e6742a3aa468a50faccb77329a557}{Get\+Audio}} (const float $\ast$const in\+Audio\+Ins \mbox{[}$\,$\mbox{]}, int32\+\_\+t in\+Audio\+In\+Count, int64\+\_\+t in\+Location, int32\+\_\+t $\ast$io\+Num\+Samples) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em C\+A\+LL\+: Randomly access audio from the timeline. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{a01921_a31d793b6a43eb642446f6149621bcdf9}{Get\+Side\+Chain\+Input\+Num}} () \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em C\+A\+LL\+: Returns the index of the side chain input buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01921_aeb3eb18f1c9562a31173d600dad9b251}{Force\+Analyze}} () \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em C\+A\+LL\+: Request an analysis pass. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01921_a5e72699c0dafb133a2dfabf63ba8f56a}{Force\+Process}} () \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em C\+A\+LL\+: Request a process pass. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a01921_ab50f9b08bc0d0ab6696ad3081aa790d8}\label{a01921_ab50f9b08bc0d0ab6696ad3081aa790d8}} 
+\index{AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}!AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}}
+\index{AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}!AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}}
+\subsubsection{\texorpdfstring{AAX\_VHostProcessorDelegate()}{AAX\_VHostProcessorDelegate()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate\+::\+A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unknown }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a01921_a030e6742a3aa468a50faccb77329a557}\label{a01921_a030e6742a3aa468a50faccb77329a557}} 
+\index{AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}!GetAudio@{GetAudio}}
+\index{GetAudio@{GetAudio}!AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}}
+\subsubsection{\texorpdfstring{GetAudio()}{GetAudio()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate\+::\+Get\+Audio (\begin{DoxyParamCaption}\item[{const float $\ast$const}]{in\+Audio\+Ins\mbox{[}$\,$\mbox{]},  }\item[{int32\+\_\+t}]{in\+Audio\+In\+Count,  }\item[{int64\+\_\+t}]{in\+Location,  }\item[{int32\+\_\+t $\ast$}]{io\+Num\+Samples }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+C\+A\+LL\+: Randomly access audio from the timeline. 
+
+Called from within \mbox{\hyperlink{a01693_a29f1352c77cdcce8dbac4d32f1a88887}{A\+A\+X\+\_\+\+I\+Host\+Processor\+::\+Render\+Audio()}}, this method fills a buffer of samples with randomly-\/accessed data from the current input processing region on the timeline, including any extra samples such as processing \char`\"{}handles\char`\"{}.
+
+\begin{DoxyNote}{Note}
+Plug-\/ins that use this feature must set \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0dab0bbaabe0a03b37e5a69f04a6f306076}{A\+A\+X\+\_\+e\+Property\+\_\+\+Uses\+Random\+Access}} to {\ttfamily true} 
+
+It is not possible to retrieve samples from outside of the current input processing region 
+
+Always check the return value of this method before using the randomly-\/accessed samples
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Audio\+Ins} & Timeline audio buffer(s). This must be set to {\ttfamily in\+Audio\+Ins} from \mbox{\hyperlink{a01693_a29f1352c77cdcce8dbac4d32f1a88887}{A\+A\+X\+\_\+\+I\+Host\+Processor\+::\+Render\+Audio()}}\\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Audio\+In\+Count} & Number of buffers in {\ttfamily in\+Audio\+Ins}. This must be set to {\ttfamily in\+Audio\+In\+Count} from \mbox{\hyperlink{a01693_a29f1352c77cdcce8dbac4d32f1a88887}{A\+A\+X\+\_\+\+I\+Host\+Processor\+::\+Render\+Audio()}}\\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Location} & A sample location relative to the beginning of the currently processed region, e.\+g. a value of 0 corresponds to the timeline location returned by \mbox{\hyperlink{a01485_aec4fa455a4e8ecccc245ce30b596c7b4}{A\+A\+X\+\_\+\+C\+Host\+Processor\+::\+Get\+Src\+Start()}} \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em io\+Num\+Samples} & \begin{DoxyItemize}
+\item Input\+: The maximum number of samples to read. \item Output\+: The actual number of samples that were read from the timeline \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01837_ae083d877253163dd367f46c7c491e9e3}{A\+A\+X\+\_\+\+I\+Host\+Processor\+Delegate}}.
+
+\mbox{\Hypertarget{a01921_a31d793b6a43eb642446f6149621bcdf9}\label{a01921_a31d793b6a43eb642446f6149621bcdf9}} 
+\index{AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}!GetSideChainInputNum@{GetSideChainInputNum}}
+\index{GetSideChainInputNum@{GetSideChainInputNum}!AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}}
+\subsubsection{\texorpdfstring{GetSideChainInputNum()}{GetSideChainInputNum()}}
+{\footnotesize\ttfamily int32\+\_\+t A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate\+::\+Get\+Side\+Chain\+Input\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+C\+A\+LL\+: Returns the index of the side chain input buffer. 
+
+Called from within \mbox{\hyperlink{a01693_a29f1352c77cdcce8dbac4d32f1a88887}{A\+A\+X\+\_\+\+I\+Host\+Processor\+::\+Render\+Audio()}}, this method returns the index of the side chain input sample buffer within {\ttfamily in\+Audio\+Ins}. 
+
+Implements \mbox{\hyperlink{a01837_aaf6821f08105fd949aa9e78f3a1f7f50}{A\+A\+X\+\_\+\+I\+Host\+Processor\+Delegate}}.
+
+\mbox{\Hypertarget{a01921_aeb3eb18f1c9562a31173d600dad9b251}\label{a01921_aeb3eb18f1c9562a31173d600dad9b251}} 
+\index{AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}!ForceAnalyze@{ForceAnalyze}}
+\index{ForceAnalyze@{ForceAnalyze}!AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}}
+\subsubsection{\texorpdfstring{ForceAnalyze()}{ForceAnalyze()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate\+::\+Force\+Analyze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+C\+A\+LL\+: Request an analysis pass. 
+
+Call this method to request an analysis pass from within the plug-\/in. Most plug-\/ins should rely on the host to trigger analysis passes when appropriate. However, plug-\/ins that require an analysis pass a) outside of the context of host-\/driven render or analysis, or b) when internal plug-\/in data changes may need to call {\ttfamily \mbox{\hyperlink{a01921_aeb3eb18f1c9562a31173d600dad9b251}{Force\+Analyze()}}}. 
+
+Implements \mbox{\hyperlink{a01837_a8ab521c8f0902707a8e8d67d7886d4f4}{A\+A\+X\+\_\+\+I\+Host\+Processor\+Delegate}}.
+
+\mbox{\Hypertarget{a01921_a5e72699c0dafb133a2dfabf63ba8f56a}\label{a01921_a5e72699c0dafb133a2dfabf63ba8f56a}} 
+\index{AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}!ForceProcess@{ForceProcess}}
+\index{ForceProcess@{ForceProcess}!AAX\_VHostProcessorDelegate@{AAX\_VHostProcessorDelegate}}
+\subsubsection{\texorpdfstring{ForceProcess()}{ForceProcess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate\+::\+Force\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+C\+A\+LL\+: Request a process pass. 
+
+Call this method to request a process pass from within the plug-\/in. If \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0da925c49bb79454b33bf1d5f4cb09d373f}{A\+A\+X\+\_\+e\+Property\+\_\+\+Requires\+Analysis}} is defined, the resulting process pass will be preceded by an analysis pass. This method should only be used in rare circumstances by plug-\/ins that must launch processing outside of the normal host Audio\+Suite workflow. 
+
+Implements \mbox{\hyperlink{a01837_a09793675802a25886bc050cee4b9f843}{A\+A\+X\+\_\+\+I\+Host\+Processor\+Delegate}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00713}{A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate.\+h}}\end{DoxyCompactItemize}

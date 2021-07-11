@@ -1,0 +1,8 @@
+<map id="AAX::FastRound2Int32" name="AAX::FastRound2Int32">
+<area shape="rect" id="node1" title="Round to Int32." alt="" coords="515,55,672,80"/>
+<area shape="rect" id="node2" href="$a00852.html#ae690c060a5ff4cb96e77335231a29673" title=" " alt="" coords="304,5,467,31"/>
+<area shape="rect" id="node3" href="$a00852.html#a56cd923aeae2bd544f1fb43fff6b0b3d" title="Round to Int32." alt="" coords="306,55,464,80"/>
+<area shape="rect" id="node4" href="$a00852.html#ad2b2872b49146cf0859c403fea702a39" title="Float to Int conversion with truncation." alt="" coords="309,104,461,129"/>
+<area shape="rect" id="node5" href="$a01977.html#aaad992e09c837d96ad715092fbefd91d" title="Perform an extra fast table lookup :)" alt="" coords="19,65,242,104"/>
+<area shape="rect" id="node6" href="$a01977.html#a60e89d13066ca0606c8f71cf5313f0e3" title=" " alt="" coords="5,128,256,167"/>
+</map>

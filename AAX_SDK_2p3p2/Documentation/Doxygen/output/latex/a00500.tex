@@ -1,0 +1,194 @@
+\hypertarget{a00500}{}\section{A\+A\+X\+\_\+\+Exports.\+cpp File Reference}
+\label{a00500}\index{AAX\_Exports.cpp@{AAX\_Exports.cpp}}
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Init.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}acfunknown.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}acfresult.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00500_ac70085d71c555deff0dfb54c2b503f4c}{A\+A\+X\+\_\+\+E\+X\+P\+O\+RT}}~extern \char`\"{}C\char`\"{} \+\_\+\+\_\+declspec(dllexport) A\+C\+F\+R\+E\+S\+U\+LT \+\_\+\+\_\+stdcall
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00500_ac70085d71c555deff0dfb54c2b503f4c}{A\+A\+X\+\_\+\+E\+X\+P\+O\+RT}} \mbox{\hyperlink{a00500_aa455fa4d9a2236334d0fd959b4919788}{A\+C\+F\+Register\+Plugin}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host\+Void, I\+A\+C\+F\+Plugin\+Definition $\ast$$\ast$pp\+Plugin\+Definition\+Void)
+\begin{DoxyCompactList}\small\item\em The main plug-\/in registration method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00500_ac70085d71c555deff0dfb54c2b503f4c}{A\+A\+X\+\_\+\+E\+X\+P\+O\+RT}} \mbox{\hyperlink{a00500_a68950ea83fea9b46b8f3fef409355b71}{A\+C\+F\+Register\+Component}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host, acf\+U\+Int32 index, I\+A\+C\+F\+Component\+Definition $\ast$$\ast$pp\+Component\+Definition)
+\begin{DoxyCompactList}\small\item\em Registers a specific component in the D\+LL. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00500_ac70085d71c555deff0dfb54c2b503f4c}{A\+A\+X\+\_\+\+E\+X\+P\+O\+RT}} \mbox{\hyperlink{a00500_a63cbe0222beee199dad20c26e79ebeaa}{A\+C\+F\+Get\+Class\+Factory}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host, const acf\+C\+L\+S\+ID \&clsid, const \mbox{\hyperlink{a00269_a59df0b41744eee7a066787aaedf97f67}{acf\+I\+ID}} \&iid, void $\ast$$\ast$pp\+Out)
+\begin{DoxyCompactList}\small\item\em Gets the factory for a given class ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00500_ac70085d71c555deff0dfb54c2b503f4c}{A\+A\+X\+\_\+\+E\+X\+P\+O\+RT}} \mbox{\hyperlink{a00500_ae5327dbd8fd750c78eca3892831f4ad8}{A\+C\+F\+Can\+Unload\+Now}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host)
+\begin{DoxyCompactList}\small\item\em Determines whether or not the host may unload the D\+LL. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00500_ac70085d71c555deff0dfb54c2b503f4c}{A\+A\+X\+\_\+\+E\+X\+P\+O\+RT}} \mbox{\hyperlink{a00500_ada314f5040499160998c3c444fbe4dfd}{A\+C\+F\+Startup}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host)
+\begin{DoxyCompactList}\small\item\em D\+LL initialization routine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00500_ac70085d71c555deff0dfb54c2b503f4c}{A\+A\+X\+\_\+\+E\+X\+P\+O\+RT}} \mbox{\hyperlink{a00500_aba48dc247519ce7ecd2c064e928d9f18}{A\+C\+F\+Shutdown}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unk\+Host)
+\begin{DoxyCompactList}\small\item\em D\+LL shutdown routine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00500_ac70085d71c555deff0dfb54c2b503f4c}{A\+A\+X\+\_\+\+E\+X\+P\+O\+RT}} \mbox{\hyperlink{a00500_a2a47c5f7e29baf716a4c4956389e83c9}{A\+C\+F\+Get\+S\+D\+K\+Version}} (acf\+U\+Int64 $\ast$o\+S\+D\+K\+Version)
+\begin{DoxyCompactList}\small\item\em Returns the D\+LL\textquotesingle{}s S\+DK version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{a00500_ac70085d71c555deff0dfb54c2b503f4c}\label{a00500_ac70085d71c555deff0dfb54c2b503f4c}} 
+\index{AAX\_Exports.cpp@{AAX\_Exports.cpp}!AAX\_EXPORT@{AAX\_EXPORT}}
+\index{AAX\_EXPORT@{AAX\_EXPORT}!AAX\_Exports.cpp@{AAX\_Exports.cpp}}
+\subsubsection{\texorpdfstring{AAX\_EXPORT}{AAX\_EXPORT}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+E\+X\+P\+O\+RT~extern \char`\"{}C\char`\"{} \+\_\+\+\_\+declspec(dllexport) A\+C\+F\+R\+E\+S\+U\+LT \+\_\+\+\_\+stdcall}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{a00500_aa455fa4d9a2236334d0fd959b4919788}\label{a00500_aa455fa4d9a2236334d0fd959b4919788}} 
+\index{AAX\_Exports.cpp@{AAX\_Exports.cpp}!ACFRegisterPlugin@{ACFRegisterPlugin}}
+\index{ACFRegisterPlugin@{ACFRegisterPlugin}!AAX\_Exports.cpp@{AAX\_Exports.cpp}}
+\subsubsection{\texorpdfstring{ACFRegisterPlugin()}{ACFRegisterPlugin()}}
+{\footnotesize\ttfamily A\+C\+F\+A\+PI A\+C\+F\+Register\+Plugin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unk\+Host,  }\item[{I\+A\+C\+F\+Plugin\+Definition $\ast$$\ast$}]{pp\+Plugin\+Definition }\end{DoxyParamCaption})}
+
+
+
+The main plug-\/in registration method. 
+
+
+
+References A\+A\+X\+Register\+Plugin().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{a00500_aa455fa4d9a2236334d0fd959b4919788_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00500_a68950ea83fea9b46b8f3fef409355b71}\label{a00500_a68950ea83fea9b46b8f3fef409355b71}} 
+\index{AAX\_Exports.cpp@{AAX\_Exports.cpp}!ACFRegisterComponent@{ACFRegisterComponent}}
+\index{ACFRegisterComponent@{ACFRegisterComponent}!AAX\_Exports.cpp@{AAX\_Exports.cpp}}
+\subsubsection{\texorpdfstring{ACFRegisterComponent()}{ACFRegisterComponent()}}
+{\footnotesize\ttfamily A\+C\+F\+A\+PI A\+C\+F\+Register\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unk\+Host,  }\item[{acf\+U\+Int32}]{index,  }\item[{I\+A\+C\+F\+Component\+Definition $\ast$$\ast$}]{pp\+Component\+Definition }\end{DoxyParamCaption})}
+
+
+
+Registers a specific component in the D\+LL. 
+
+
+
+References A\+A\+X\+Register\+Component().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00500_a68950ea83fea9b46b8f3fef409355b71_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00500_a63cbe0222beee199dad20c26e79ebeaa}\label{a00500_a63cbe0222beee199dad20c26e79ebeaa}} 
+\index{AAX\_Exports.cpp@{AAX\_Exports.cpp}!ACFGetClassFactory@{ACFGetClassFactory}}
+\index{ACFGetClassFactory@{ACFGetClassFactory}!AAX\_Exports.cpp@{AAX\_Exports.cpp}}
+\subsubsection{\texorpdfstring{ACFGetClassFactory()}{ACFGetClassFactory()}}
+{\footnotesize\ttfamily A\+C\+F\+A\+PI A\+C\+F\+Get\+Class\+Factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unk\+Host,  }\item[{const acf\+C\+L\+S\+ID \&}]{clsid,  }\item[{const \mbox{\hyperlink{a00269_a59df0b41744eee7a066787aaedf97f67}{acf\+I\+ID}} \&}]{iid,  }\item[{void $\ast$$\ast$}]{pp\+Out }\end{DoxyParamCaption})}
+
+
+
+Gets the factory for a given class ID. 
+
+
+
+References A\+A\+X\+Get\+Class\+Factory().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{a00500_a63cbe0222beee199dad20c26e79ebeaa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00500_ae5327dbd8fd750c78eca3892831f4ad8}\label{a00500_ae5327dbd8fd750c78eca3892831f4ad8}} 
+\index{AAX\_Exports.cpp@{AAX\_Exports.cpp}!ACFCanUnloadNow@{ACFCanUnloadNow}}
+\index{ACFCanUnloadNow@{ACFCanUnloadNow}!AAX\_Exports.cpp@{AAX\_Exports.cpp}}
+\subsubsection{\texorpdfstring{ACFCanUnloadNow()}{ACFCanUnloadNow()}}
+{\footnotesize\ttfamily A\+C\+F\+A\+PI A\+C\+F\+Can\+Unload\+Now (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unk\+Host }\end{DoxyParamCaption})}
+
+
+
+Determines whether or not the host may unload the D\+LL. 
+
+
+
+References A\+A\+X\+Can\+Unload\+Now().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{a00500_ae5327dbd8fd750c78eca3892831f4ad8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00500_ada314f5040499160998c3c444fbe4dfd}\label{a00500_ada314f5040499160998c3c444fbe4dfd}} 
+\index{AAX\_Exports.cpp@{AAX\_Exports.cpp}!ACFStartup@{ACFStartup}}
+\index{ACFStartup@{ACFStartup}!AAX\_Exports.cpp@{AAX\_Exports.cpp}}
+\subsubsection{\texorpdfstring{ACFStartup()}{ACFStartup()}}
+{\footnotesize\ttfamily A\+C\+F\+A\+PI A\+C\+F\+Startup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unk\+Host }\end{DoxyParamCaption})}
+
+
+
+D\+LL initialization routine. 
+
+
+
+References A\+A\+X\+Startup().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{a00500_ada314f5040499160998c3c444fbe4dfd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00500_aba48dc247519ce7ecd2c064e928d9f18}\label{a00500_aba48dc247519ce7ecd2c064e928d9f18}} 
+\index{AAX\_Exports.cpp@{AAX\_Exports.cpp}!ACFShutdown@{ACFShutdown}}
+\index{ACFShutdown@{ACFShutdown}!AAX\_Exports.cpp@{AAX\_Exports.cpp}}
+\subsubsection{\texorpdfstring{ACFShutdown()}{ACFShutdown()}}
+{\footnotesize\ttfamily A\+C\+F\+A\+PI A\+C\+F\+Shutdown (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unk\+Host }\end{DoxyParamCaption})}
+
+
+
+D\+LL shutdown routine. 
+
+
+
+References A\+A\+X\+Shutdown().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{a00500_aba48dc247519ce7ecd2c064e928d9f18_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a00500_a2a47c5f7e29baf716a4c4956389e83c9}\label{a00500_a2a47c5f7e29baf716a4c4956389e83c9}} 
+\index{AAX\_Exports.cpp@{AAX\_Exports.cpp}!ACFGetSDKVersion@{ACFGetSDKVersion}}
+\index{ACFGetSDKVersion@{ACFGetSDKVersion}!AAX\_Exports.cpp@{AAX\_Exports.cpp}}
+\subsubsection{\texorpdfstring{ACFGetSDKVersion()}{ACFGetSDKVersion()}}
+{\footnotesize\ttfamily A\+C\+F\+A\+PI A\+C\+F\+Get\+S\+D\+K\+Version (\begin{DoxyParamCaption}\item[{acf\+U\+Int64 $\ast$}]{o\+S\+D\+K\+Version }\end{DoxyParamCaption})}
+
+
+
+Returns the D\+LL\textquotesingle{}s S\+DK version. 
+
+
+
+References A\+A\+X\+Get\+S\+D\+K\+Version().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{a00500_a2a47c5f7e29baf716a4c4956389e83c9_cgraph}
+\end{center}
+\end{figure}

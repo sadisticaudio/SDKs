@@ -1,0 +1,10 @@
+<map id="AAX_CUnitDisplayDelegateDecorator&lt; T &gt;" name="AAX_CUnitDisplayDelegateDecorator&lt; T &gt;">
+<area shape="rect" id="node1" title="A unit type decorator conforming to AAX_IDisplayDelegateDecorator." alt="" coords="132,267,318,305"/>
+<area shape="rect" id="node2" href="$a01805.html" title="The base class for all concrete display delegate decorators." alt="" coords="5,180,251,205"/>
+<area shape="rect" id="node3" href="$a01801.html" title="Classes for parameter value string conversion." alt="" coords="35,93,221,119"/>
+<area shape="rect" id="node4" href="$a01797.html" title="Defines the display behavior for a parameter." alt="" coords="35,12,221,37"/>
+<area shape="rect" id="node5" href="$a01573.html" title="A generic AAX string class with similar functionality to std::string" alt="" coords="274,180,374,205"/>
+<area shape="rect" id="node6" href="$a01873.html" title="A simple string container that can be passed across a binary boundary. This class,..." alt="" coords="261,93,355,119"/>
+<area shape="rect" id="node7" title="STL class." alt="" coords="379,93,458,119"/>
+<area shape="rect" id="node8" title="STL class." alt="" coords="356,5,481,44"/>
+</map>

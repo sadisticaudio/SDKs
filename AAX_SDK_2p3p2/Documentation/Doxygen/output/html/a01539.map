@@ -1,0 +1,10 @@
+<map id="AAX_CStatelessParameter" name="AAX_CStatelessParameter">
+<area shape="rect" id="node1" title="A stateless parameter implementation." alt="" coords="251,280,433,305"/>
+<area shape="rect" id="node2" href="$a01857.html" title="The base interface for all normalizable plug&#45;in parameters." alt="" coords="5,180,127,205"/>
+<area shape="rect" id="node3" href="$a01577.html" title="Helper class to store a collection of name abbreviations." alt="" coords="150,180,331,205"/>
+<area shape="rect" id="node4" href="$a01773.html" title="Interface allowing an AAX plug&#45;in to interact with the host&#39;s event system." alt="" coords="355,180,535,205"/>
+<area shape="rect" id="node5" href="$a01573.html" title="A generic AAX string class with similar functionality to std::string" alt="" coords="560,180,660,205"/>
+<area shape="rect" id="node6" href="$a01873.html" title="A simple string container that can be passed across a binary boundary. This class,..." alt="" coords="524,93,618,119"/>
+<area shape="rect" id="node7" title="STL class." alt="" coords="642,93,722,119"/>
+<area shape="rect" id="node8" title="STL class." alt="" coords="619,5,745,44"/>
+</map>

@@ -1,0 +1,201 @@
+\hypertarget{a00503}{}\section{A\+A\+X\+\_\+\+G\+U\+I\+Types.\+h File Reference}
+\label{a00503}\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+{\ttfamily \#include \char`\"{}A\+A\+X.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Pre\+Struct\+Alignment\+Helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Push2\+Byte\+Struct\+Alignment.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Post\+Struct\+Alignment\+Helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Pop\+Struct\+Alignment.\+h\char`\"{}}\newline
+
+
+\subsection{Description}
+Constants and other definitions used by A\+AX plug-\/in G\+U\+Is. 
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}}
+\begin{DoxyCompactList}\small\item\em Data structure representing a two-\/dimensional coordinate point. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{a01613}{A\+A\+X\+\_\+\+Rect}}
+\begin{DoxyCompactList}\small\item\em Data structure representing a rectangle in a two-\/dimensional coordinate plane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \mbox{\hyperlink{a00503_aace06b5ca898ac66c68fe5f5c598f0b6}{A\+A\+X\+\_\+\+Point}}
+\begin{DoxyCompactList}\small\item\em Data structure representing a two-\/dimensional coordinate point. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{a01613}{A\+A\+X\+\_\+\+Rect}} \mbox{\hyperlink{a00503_a85ca9d563f37484d29b66a2e4ec6598f}{A\+A\+X\+\_\+\+Rect}}
+\begin{DoxyCompactList}\small\item\em Data structure representing a rectangle in a two-\/dimensional coordinate plane. \end{DoxyCompactList}\item 
+typedef enum \mbox{\hyperlink{a00503_a89d5cb8c7fdb11f34e695fb0e057b764}{A\+A\+X\+\_\+\+E\+View\+Container\+\_\+\+Type}} \mbox{\hyperlink{a00503_ab4c36de253fc80b541eb51074c64caef}{A\+A\+X\+\_\+\+E\+View\+Container\+\_\+\+Type}}
+\begin{DoxyCompactList}\small\item\em Type of \mbox{\hyperlink{a01889}{view container}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{a00503_a89d5cb8c7fdb11f34e695fb0e057b764}{A\+A\+X\+\_\+\+E\+View\+Container\+\_\+\+Type}} \{ \mbox{\hyperlink{a00503_a89d5cb8c7fdb11f34e695fb0e057b764adf9ab6d93d9a35fcab5f7a0d24a2c308}{A\+A\+X\+\_\+e\+View\+Container\+\_\+\+Type\+\_\+\+N\+U\+LL}} = 0, 
+\mbox{\hyperlink{a00503_a89d5cb8c7fdb11f34e695fb0e057b764a7be25786681e17b1a30c62579ab8591a}{A\+A\+X\+\_\+e\+View\+Container\+\_\+\+Type\+\_\+\+N\+S\+View}} = 1, 
+\mbox{\hyperlink{a00503_a89d5cb8c7fdb11f34e695fb0e057b764aaabb8401d78697a273fe3983c3f23160}{A\+A\+X\+\_\+e\+View\+Container\+\_\+\+Type\+\_\+\+U\+I\+View}} = 2, 
+\mbox{\hyperlink{a00503_a89d5cb8c7fdb11f34e695fb0e057b764a98a127ce6e567cb18c07ac347bb09255}{A\+A\+X\+\_\+e\+View\+Container\+\_\+\+Type\+\_\+\+H\+W\+ND}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Type of \mbox{\hyperlink{a01889}{view container}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{a00503_a899f910710cb6ccc0a7558221b6662a2}{operator==}} (const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&p1, const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&p2)
+\item 
+bool \mbox{\hyperlink{a00503_a0eb2e452ed0865872e0f0862dee6ca29}{operator!=}} (const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&p1, const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&p2)
+\item 
+bool \mbox{\hyperlink{a00503_acf1fd6c19f55dafdee37e5ba34b24833}{operator$<$}} (const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&p1, const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&p2)
+\item 
+bool \mbox{\hyperlink{a00503_a3e748786f6aec65c75791b067f5158d3}{operator$<$=}} (const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&p1, const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&p2)
+\item 
+bool \mbox{\hyperlink{a00503_adc56c3178fe78676f64e658930a66afb}{operator$>$}} (const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&p1, const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&p2)
+\item 
+bool \mbox{\hyperlink{a00503_aab8ccb30f5a16c24a5364804fb28478c}{operator$>$=}} (const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&p1, const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&p2)
+\item 
+bool \mbox{\hyperlink{a00503_a94c3ae4ba9ec60e0ccb85c6b565908db}{operator==}} (const \mbox{\hyperlink{a01613}{A\+A\+X\+\_\+\+Rect}} \&r1, const \mbox{\hyperlink{a01613}{A\+A\+X\+\_\+\+Rect}} \&r2)
+\item 
+bool \mbox{\hyperlink{a00503_af834f4e14c1f9e811efa1921a520fdcb}{operator!=}} (const \mbox{\hyperlink{a01613}{A\+A\+X\+\_\+\+Rect}} \&r1, const \mbox{\hyperlink{a01613}{A\+A\+X\+\_\+\+Rect}} \&r2)
+\item 
+\mbox{\hyperlink{a00503_a58a6a1f6c9c669ba3cbd788d290f1109}{A\+A\+X\+\_\+\+E\+N\+U\+M\+\_\+\+S\+I\+Z\+E\+\_\+\+C\+H\+E\+CK}} (\mbox{\hyperlink{a00503_a89d5cb8c7fdb11f34e695fb0e057b764}{A\+A\+X\+\_\+\+E\+View\+Container\+\_\+\+Type}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{a00503_aace06b5ca898ac66c68fe5f5c598f0b6}\label{a00503_aace06b5ca898ac66c68fe5f5c598f0b6}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!AAX\_Point@{AAX\_Point}}
+\index{AAX\_Point@{AAX\_Point}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{AAX\_Point}{AAX\_Point}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}}  \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}}}
+
+
+
+Data structure representing a two-\/dimensional coordinate point. 
+
+Comparison operators give preference to {\ttfamily vert} \mbox{\Hypertarget{a00503_a85ca9d563f37484d29b66a2e4ec6598f}\label{a00503_a85ca9d563f37484d29b66a2e4ec6598f}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!AAX\_Rect@{AAX\_Rect}}
+\index{AAX\_Rect@{AAX\_Rect}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{AAX\_Rect}{AAX\_Rect}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{a01613}{A\+A\+X\+\_\+\+Rect}}  \mbox{\hyperlink{a01613}{A\+A\+X\+\_\+\+Rect}}}
+
+
+
+Data structure representing a rectangle in a two-\/dimensional coordinate plane. 
+
+\mbox{\Hypertarget{a00503_ab4c36de253fc80b541eb51074c64caef}\label{a00503_ab4c36de253fc80b541eb51074c64caef}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!AAX\_EViewContainer\_Type@{AAX\_EViewContainer\_Type}}
+\index{AAX\_EViewContainer\_Type@{AAX\_EViewContainer\_Type}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{AAX\_EViewContainer\_Type}{AAX\_EViewContainer\_Type}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{a00503_a89d5cb8c7fdb11f34e695fb0e057b764}{A\+A\+X\+\_\+\+E\+View\+Container\+\_\+\+Type}}  \mbox{\hyperlink{a00503_a89d5cb8c7fdb11f34e695fb0e057b764}{A\+A\+X\+\_\+\+E\+View\+Container\+\_\+\+Type}}}
+
+
+
+Type of \mbox{\hyperlink{a01889}{view container}}. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{a01889_a1715c042ed8412a2135f4d9e5109e8fb}{A\+A\+X\+\_\+\+I\+View\+Container\+::\+Get\+Type()}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{a00503_a89d5cb8c7fdb11f34e695fb0e057b764}\label{a00503_a89d5cb8c7fdb11f34e695fb0e057b764}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!AAX\_EViewContainer\_Type@{AAX\_EViewContainer\_Type}}
+\index{AAX\_EViewContainer\_Type@{AAX\_EViewContainer\_Type}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{AAX\_EViewContainer\_Type}{AAX\_EViewContainer\_Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{a00503_a89d5cb8c7fdb11f34e695fb0e057b764}{A\+A\+X\+\_\+\+E\+View\+Container\+\_\+\+Type}}}
+
+
+
+Type of \mbox{\hyperlink{a01889}{view container}}. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{a01889_a1715c042ed8412a2135f4d9e5109e8fb}{A\+A\+X\+\_\+\+I\+View\+Container\+::\+Get\+Type()}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AAX\_eViewContainer\_Type\_NULL@{AAX\_eViewContainer\_Type\_NULL}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!AAX\_eViewContainer\_Type\_NULL@{AAX\_eViewContainer\_Type\_NULL}}}\mbox{\Hypertarget{a00503_a89d5cb8c7fdb11f34e695fb0e057b764adf9ab6d93d9a35fcab5f7a0d24a2c308}\label{a00503_a89d5cb8c7fdb11f34e695fb0e057b764adf9ab6d93d9a35fcab5f7a0d24a2c308}} 
+A\+A\+X\+\_\+e\+View\+Container\+\_\+\+Type\+\_\+\+N\+U\+LL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AAX\_eViewContainer\_Type\_NSView@{AAX\_eViewContainer\_Type\_NSView}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!AAX\_eViewContainer\_Type\_NSView@{AAX\_eViewContainer\_Type\_NSView}}}\mbox{\Hypertarget{a00503_a89d5cb8c7fdb11f34e695fb0e057b764a7be25786681e17b1a30c62579ab8591a}\label{a00503_a89d5cb8c7fdb11f34e695fb0e057b764a7be25786681e17b1a30c62579ab8591a}} 
+A\+A\+X\+\_\+e\+View\+Container\+\_\+\+Type\+\_\+\+N\+S\+View&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AAX\_eViewContainer\_Type\_UIView@{AAX\_eViewContainer\_Type\_UIView}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!AAX\_eViewContainer\_Type\_UIView@{AAX\_eViewContainer\_Type\_UIView}}}\mbox{\Hypertarget{a00503_a89d5cb8c7fdb11f34e695fb0e057b764aaabb8401d78697a273fe3983c3f23160}\label{a00503_a89d5cb8c7fdb11f34e695fb0e057b764aaabb8401d78697a273fe3983c3f23160}} 
+A\+A\+X\+\_\+e\+View\+Container\+\_\+\+Type\+\_\+\+U\+I\+View&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AAX\_eViewContainer\_Type\_HWND@{AAX\_eViewContainer\_Type\_HWND}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!AAX\_eViewContainer\_Type\_HWND@{AAX\_eViewContainer\_Type\_HWND}}}\mbox{\Hypertarget{a00503_a89d5cb8c7fdb11f34e695fb0e057b764a98a127ce6e567cb18c07ac347bb09255}\label{a00503_a89d5cb8c7fdb11f34e695fb0e057b764a98a127ce6e567cb18c07ac347bb09255}} 
+A\+A\+X\+\_\+e\+View\+Container\+\_\+\+Type\+\_\+\+H\+W\+ND&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{a00503_a899f910710cb6ccc0a7558221b6662a2}\label{a00503_a899f910710cb6ccc0a7558221b6662a2}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!operator==@{operator==}}
+\index{operator==@{operator==}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{p1,  }\item[{const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+References A\+A\+X\+\_\+\+Point\+::horz, and A\+A\+X\+\_\+\+Point\+::vert.
+
+\mbox{\Hypertarget{a00503_a0eb2e452ed0865872e0f0862dee6ca29}\label{a00503_a0eb2e452ed0865872e0f0862dee6ca29}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{p1,  }\item[{const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{a00503_acf1fd6c19f55dafdee37e5ba34b24833}\label{a00503_acf1fd6c19f55dafdee37e5ba34b24833}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{p1,  }\item[{const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+References A\+A\+X\+\_\+\+Point\+::horz, and A\+A\+X\+\_\+\+Point\+::vert.
+
+\mbox{\Hypertarget{a00503_a3e748786f6aec65c75791b067f5158d3}\label{a00503_a3e748786f6aec65c75791b067f5158d3}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{p1,  }\item[{const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+References A\+A\+X\+\_\+\+Point\+::horz, and A\+A\+X\+\_\+\+Point\+::vert.
+
+\mbox{\Hypertarget{a00503_adc56c3178fe78676f64e658930a66afb}\label{a00503_adc56c3178fe78676f64e658930a66afb}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{p1,  }\item[{const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{a00503_aab8ccb30f5a16c24a5364804fb28478c}\label{a00503_aab8ccb30f5a16c24a5364804fb28478c}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{p1,  }\item[{const \mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{a00503_a94c3ae4ba9ec60e0ccb85c6b565908db}\label{a00503_a94c3ae4ba9ec60e0ccb85c6b565908db}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!operator==@{operator==}}
+\index{operator==@{operator==}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a01613}{A\+A\+X\+\_\+\+Rect}} \&}]{r1,  }\item[{const \mbox{\hyperlink{a01613}{A\+A\+X\+\_\+\+Rect}} \&}]{r2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+References A\+A\+X\+\_\+\+Rect\+::height, A\+A\+X\+\_\+\+Rect\+::left, A\+A\+X\+\_\+\+Rect\+::top, and A\+A\+X\+\_\+\+Rect\+::width.
+
+\mbox{\Hypertarget{a00503_af834f4e14c1f9e811efa1921a520fdcb}\label{a00503_af834f4e14c1f9e811efa1921a520fdcb}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a01613}{A\+A\+X\+\_\+\+Rect}} \&}]{r1,  }\item[{const \mbox{\hyperlink{a01613}{A\+A\+X\+\_\+\+Rect}} \&}]{r2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{a00503_a58a6a1f6c9c669ba3cbd788d290f1109}\label{a00503_a58a6a1f6c9c669ba3cbd788d290f1109}} 
+\index{AAX\_GUITypes.h@{AAX\_GUITypes.h}!AAX\_ENUM\_SIZE\_CHECK@{AAX\_ENUM\_SIZE\_CHECK}}
+\index{AAX\_ENUM\_SIZE\_CHECK@{AAX\_ENUM\_SIZE\_CHECK}!AAX\_GUITypes.h@{AAX\_GUITypes.h}}
+\subsubsection{\texorpdfstring{AAX\_ENUM\_SIZE\_CHECK()}{AAX\_ENUM\_SIZE\_CHECK()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+E\+N\+U\+M\+\_\+\+S\+I\+Z\+E\+\_\+\+C\+H\+E\+CK (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00503_a89d5cb8c7fdb11f34e695fb0e057b764}{A\+A\+X\+\_\+\+E\+View\+Container\+\_\+\+Type}}}]{ }\end{DoxyParamCaption})}
+

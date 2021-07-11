@@ -1,0 +1,41 @@
+\hypertarget{a00799}{}\section{G\+UI interface}
+\label{a00799}\index{GUI interface@{GUI interface}}
+
+
+\subsection{ }
+The interface for a A\+AX Plug-\/in\textquotesingle{}s user interface. 
+
+The \mbox{\hyperlink{a01821}{G\+UI interface}} includes methods for handling the plug-\/in\textquotesingle{}s G\+UI window and events.
+
+\begin{DoxyParagraph}{Accessing the window}
+
+\end{DoxyParagraph}
+In A\+AX, the plug-\/in\textquotesingle{}s window is provided as a native window pointer through the \mbox{\hyperlink{a01889}{A\+A\+X\+\_\+\+I\+View\+Container}} interface. The plug-\/in may also use this interface to forward events in its window back to the host for handling.
+
+\begin{DoxyParagraph}{Default implementation}
+
+\end{DoxyParagraph}
+A default implementation of the G\+UI interface, \mbox{\hyperlink{a01477}{A\+A\+X\+\_\+\+C\+Effect\+G\+UI}}, is compiled in to the A\+AX library. This class includes a few helper methods and other extensions to the base interface. Of particular note are several additional pure virtual methods that are used by this class to extend the G\+UI A\+PI, and which must be overridden by any inheriting class.
+
+\begin{DoxyParagraph}{Extensions}
+
+\end{DoxyParagraph}
+The A\+AX S\+DK includes several examples of how the basic G\+UI interface may be extended to support native or third-\/party G\+UI frameworks. These examples are not a core part of the S\+DK, but are provided to developers as a convenience when incorporating their own chosen G\+UI framework. \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{a01477}{A\+A\+X\+\_\+\+C\+Effect\+G\+UI}}
+\begin{DoxyCompactList}\small\item\em Default implementation of the \mbox{\hyperlink{a01821}{A\+A\+X\+\_\+\+I\+Effect\+G\+UI}} interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{a01665}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Effect\+G\+UI}}
+\begin{DoxyCompactList}\small\item\em The interface for a A\+AX Plug-\/in\textquotesingle{}s G\+UI (graphical user interface). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{a01821}{A\+A\+X\+\_\+\+I\+Effect\+G\+UI}}
+\begin{DoxyCompactList}\small\item\em The interface for a A\+AX Plug-\/in\textquotesingle{}s user interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{a01889}{A\+A\+X\+\_\+\+I\+View\+Container}}
+\begin{DoxyCompactList}\small\item\em Interface for the A\+AX host\textquotesingle{}s view of a single instance of an effect. Used both by clients of the A\+AX host and by effect components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+Collaboration diagram for G\+UI interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{a00799}
+\end{center}
+\end{figure}

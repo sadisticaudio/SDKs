@@ -1,0 +1,9 @@
+<map id="AAX_IDisplayDelegateDecorator&lt; T &gt;" name="AAX_IDisplayDelegateDecorator&lt; T &gt;">
+<area shape="rect" id="node1" title="The base class for all concrete display delegate decorators." alt="" coords="475,107,720,132"/>
+<area shape="rect" id="node4" href="$a01469.html" title="A percent decorator conforming to AAX_IDisplayDelegateDecorator." alt="" coords="775,5,982,44"/>
+<area shape="rect" id="node5" href="$a01549.html" title="A percent decorator conforming to AAX_IDisplayDelegateDecorator." alt="" coords="774,68,982,107"/>
+<area shape="rect" id="node6" href="$a01585.html" title="A unit type decorator conforming to AAX_IDisplayDelegateDecorator." alt="" coords="785,131,971,169"/>
+<area shape="rect" id="node7" href="$a01589.html" title="A unit prefix decorator conforming to AAX_IDisplayDelegateDecorator." alt="" coords="768,193,988,232"/>
+<area shape="rect" id="node2" href="$a01801.html" title="Classes for parameter value string conversion." alt="" coords="240,107,427,132"/>
+<area shape="rect" id="node3" href="$a01797.html" title="Defines the display behavior for a parameter." alt="" coords="5,107,192,132"/>
+</map>

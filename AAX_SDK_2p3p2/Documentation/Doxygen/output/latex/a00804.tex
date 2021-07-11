@@ -1,0 +1,41 @@
+\hypertarget{a00804}{}\section{Offline processing interface}
+\label{a00804}\index{Offline processing interface@{Offline processing interface}}
+
+
+\subsection{ }
+Advanced offline processing features. 
+
+{\itshape This interface represents an optional component that you can add to your plug-\/in in order to support extended features of the A\+AX S\+DK.}
+
+The Host\+Processor interface provides offline plug-\/ins with useful offline processing features such as random-\/access facilities and a non-\/processing analysis callback. For documentation, see the following classes\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{a01485}{Host processor module}}
+\item \mbox{\hyperlink{a01701}{Host processor delegate}}
+\end{DoxyItemize}
+
+To add this interface to your plug-\/in at describe time, register a \mbox{\hyperlink{a01813_ad1a286ef7cb869e6f79423dd774ec976}{Proc\+Ptr}} using the \mbox{\hyperlink{a00401_af0682195d377392ad356fd2b00c36892a04ce687ba05b8c7c2cce0b32d868f3db}{k\+A\+A\+X\+\_\+\+Proc\+Ptr\+I\+D\+\_\+\+Create\+\_\+\+Host\+Processor}} selector.
+
+\begin{DoxyNote}{Note}
+If your plug-\/in does not require the specific offline processing features provided by this interface then it should not register a host processor. Instead, register an offline version of the plug-\/in\textquotesingle{}s real-\/time algorithm using the \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0dad3344696b8298a8b254add3d039ea927}{A\+A\+X\+\_\+e\+Property\+\_\+\+Plug\+In\+I\+D\+\_\+\+Audio\+Suite}} property. 
+\end{DoxyNote}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{a01485}{A\+A\+X\+\_\+\+C\+Host\+Processor}}
+\begin{DoxyCompactList}\small\item\em Concrete implementation of the \mbox{\hyperlink{a01833}{A\+A\+X\+\_\+\+I\+Host\+Processor}} interface for non-\/real-\/time processing. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{a01693}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Host\+Processor}}
+\begin{DoxyCompactList}\small\item\em Versioned interface for an A\+AX host processing component. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{a01833}{A\+A\+X\+\_\+\+I\+Host\+Processor}}
+\begin{DoxyCompactList}\small\item\em Base class for the host processor interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{a01837}{A\+A\+X\+\_\+\+I\+Host\+Processor\+Delegate}}
+\begin{DoxyCompactList}\small\item\em Versioned interface for host methods specific to offline processing. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{a01921}{A\+A\+X\+\_\+\+V\+Host\+Processor\+Delegate}}
+\begin{DoxyCompactList}\small\item\em Version-\/managed concrete \mbox{\hyperlink{a01837}{Host Processor delegate}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+Collaboration diagram for Offline processing interface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{a00804}
+\end{center}
+\end{figure}

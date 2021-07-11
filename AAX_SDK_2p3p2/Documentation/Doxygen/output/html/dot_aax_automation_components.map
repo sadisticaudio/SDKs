@@ -1,0 +1,5 @@
+<map id="aax_automation_components" name="aax_automation_components">
+<area shape="rect" id="node1" href="\ref AAX_IParameter" title="&lt;f0&gt;Automatable parameters|&lt;f1&gt;Non&#45;automatable parameters" alt="" coords="282,69,477,118"/>
+<area shape="rect" id="node5" href="\ref advancedTopics_parameterUpdates_tokenProtocol" title="Event system" alt="" coords="600,130,701,179"/>
+<area shape="rect" id="node2" href="\ref AAX_Page_Table_Guide" title="&lt;f0&gt;Default page table (&#39;PgTL&#39;)|&lt;f1&gt;Surface&#45;specific page table" alt="" coords="288,142,470,191"/>
+</map>

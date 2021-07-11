@@ -1,0 +1,87 @@
+\hypertarget{a00844}{}\section{A\+AX Interfaces}
+\label{a00844}\index{AAX Interfaces@{AAX Interfaces}}
+Full list of A\+AX interfaces. 
+
+\hypertarget{aax_host_implementation}{}\subsubsection{Interfaces Implemented by the A\+A\+X Host}\label{aax_host_implementation}
+These interfaces are implemented by the A\+AX Host. References to the host-\/managed objects are provided to the plug-\/in through accessor methods, most commonly \mbox{\hyperlink{a01409_a8b7f0ae9c78d007ca76aa462ebe53135}{I\+A\+C\+F\+Unknown\+::\+Query\+Interface()}}.
+
+
+\begin{DoxyRefList}
+\item[Class \mbox{\hyperlink{a01773}{A\+A\+X\+\_\+\+I\+Automation\+Delegate}} ]\label{a00844__aax_host_implementation000001}%
+\Hypertarget{a00844__aax_host_implementation000001}%
+ 
+\item[Class \mbox{\hyperlink{a01777}{A\+A\+X\+\_\+\+I\+Collection}} ]\label{a00844__aax_host_implementation000002}%
+\Hypertarget{a00844__aax_host_implementation000002}%
+ 
+\item[Class \mbox{\hyperlink{a01781}{A\+A\+X\+\_\+\+I\+Component\+Descriptor}} ]\label{a00844__aax_host_implementation000003}%
+\Hypertarget{a00844__aax_host_implementation000003}%
+ 
+\item[Class \mbox{\hyperlink{a01789}{A\+A\+X\+\_\+\+I\+Controller}} ]\label{a00844__aax_host_implementation000004}%
+\Hypertarget{a00844__aax_host_implementation000004}%
+  
+\item[Class \mbox{\hyperlink{a01809}{A\+A\+X\+\_\+\+I\+Dma}} ]\label{a00844__aax_host_implementation000005}%
+\Hypertarget{a00844__aax_host_implementation000005}%
+ 
+\item[Class \mbox{\hyperlink{a01813}{A\+A\+X\+\_\+\+I\+Effect\+Descriptor}} ]\label{a00844__aax_host_implementation000006}%
+\Hypertarget{a00844__aax_host_implementation000006}%
+ 
+\item[Class \mbox{\hyperlink{a01837}{A\+A\+X\+\_\+\+I\+Host\+Processor\+Delegate}} ]\label{a00844__aax_host_implementation000007}%
+\Hypertarget{a00844__aax_host_implementation000007}%
+ 
+\item[Class \mbox{\hyperlink{a01841}{A\+A\+X\+\_\+\+I\+Host\+Services}} ]\label{a00844__aax_host_implementation000008}%
+\Hypertarget{a00844__aax_host_implementation000008}%
+ 
+\item[Class \mbox{\hyperlink{a01845}{A\+A\+X\+\_\+\+I\+M\+I\+D\+I\+Node}} ]\label{a00844__aax_host_implementation000009}%
+\Hypertarget{a00844__aax_host_implementation000009}%
+ 
+\item[Class \mbox{\hyperlink{a01865}{A\+A\+X\+\_\+\+I\+Private\+Data\+Access}} ]\label{a00844__aax_host_implementation000010}%
+\Hypertarget{a00844__aax_host_implementation000010}%
+ 
+\item[Class \mbox{\hyperlink{a01869}{A\+A\+X\+\_\+\+I\+Property\+Map}} ]\label{a00844__aax_host_implementation000011}%
+\Hypertarget{a00844__aax_host_implementation000011}%
+ 
+\item[Class \mbox{\hyperlink{a01885}{A\+A\+X\+\_\+\+I\+Transport}} ]\label{a00844__aax_host_implementation000012}%
+\Hypertarget{a00844__aax_host_implementation000012}%
+ 
+\item[Class \mbox{\hyperlink{a01889}{A\+A\+X\+\_\+\+I\+View\+Container}} ]\label{a00844__aax_host_implementation000013}%
+\Hypertarget{a00844__aax_host_implementation000013}%
+
+\end{DoxyRefList}\hypertarget{aax_plugin_implementation}{}\subsubsection{Interfaces Implemented by the A\+A\+X Plug-\/\+In}\label{aax_plugin_implementation}
+These interfaces must be implemented by the A\+AX plug-\/in. Default implementations are provided in the A\+AX Library via the {\ttfamily A\+A\+X\+\_\+C} classes. Plug-\/in classes may inherit from the {\ttfamily A\+A\+X\+\_\+C} classes to override the default behavior.
+
+
+\begin{DoxyRefList}
+\item[Class \mbox{\hyperlink{a01817}{A\+A\+X\+\_\+\+I\+Effect\+Direct\+Data}} ]\label{a00844__aax_plugin_implementation000001}%
+\Hypertarget{a00844__aax_plugin_implementation000001}%
+ 
+\item[Class \mbox{\hyperlink{a01821}{A\+A\+X\+\_\+\+I\+Effect\+G\+UI}} ]\label{a00844__aax_plugin_implementation000002}%
+\Hypertarget{a00844__aax_plugin_implementation000002}%
+ 
+\item[Class \mbox{\hyperlink{a01825}{A\+A\+X\+\_\+\+I\+Effect\+Parameters}} ]\label{a00844__aax_plugin_implementation000003}%
+\Hypertarget{a00844__aax_plugin_implementation000003}%
+ 
+\item[Class \mbox{\hyperlink{a01833}{A\+A\+X\+\_\+\+I\+Host\+Processor}} ]\label{a00844__aax_plugin_implementation000004}%
+\Hypertarget{a00844__aax_plugin_implementation000004}%
+
+\end{DoxyRefList}\hypertarget{aax_sdk_internal}{}\subsubsection{Interfaces internal to the A\+A\+X S\+DK}\label{aax_sdk_internal}
+These classes and interfaces are used internally within the A\+AX Library. References to objects implementing these classes are never passed between the plug-\/in and the A\+AX Host, and the A\+AX Host has no knowledge of these classes.
+
+
+\begin{DoxyRefList}
+\item[Class \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} ]\label{a00844__aax_sdk_internal000002}%
+\Hypertarget{a00844__aax_sdk_internal000002}%
+ 
+\item[Class \mbox{\hyperlink{a01853}{A\+A\+X\+\_\+\+I\+Parameter\+Value}} ]\label{a00844__aax_sdk_internal000001}%
+\Hypertarget{a00844__aax_sdk_internal000001}%
+ 
+\item[Class \mbox{\hyperlink{a01877}{A\+A\+X\+\_\+\+I\+Taper\+Delegate\+Base}} ]\label{a00844__aax_sdk_internal000003}%
+\Hypertarget{a00844__aax_sdk_internal000003}%
+
+\end{DoxyRefList}Collaboration diagram for A\+AX Interfaces\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{a00844}
+\end{center}
+\end{figure}

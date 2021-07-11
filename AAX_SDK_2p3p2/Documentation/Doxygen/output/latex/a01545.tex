@@ -1,0 +1,330 @@
+\hypertarget{a01545}{}\section{A\+A\+X\+\_\+\+C\+Parameter\+Manager Class Reference}
+\label{a01545}\index{AAX\_CParameterManager@{AAX\_CParameterManager}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+C\+Parameter\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for A\+A\+X\+\_\+\+C\+Parameter\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a01543}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+A container object for plug-\/in parameters. 
+
+This implementation uses a S\+TL vector to store a plug-\/in\textquotesingle{}s set of parameters. This class contains a real implementation of the \mbox{\hyperlink{a00814}{Parameter Manager}} (as opposed to a proxy.)
+
+For more information, see \mbox{\hyperlink{a00814}{Parameter Manager}}.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000018}{Todo}}]Should the Parameter Manager return error codes?\end{DoxyRefDesc}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a01545_a2464652c52cc61b437339a5268ee4f66}{A\+A\+X\+\_\+\+C\+Parameter\+Manager}} ()
+\item 
+\mbox{\hyperlink{a01545_a86e327094928b44b1ca11ef145d4f301}{$\sim$\+A\+A\+X\+\_\+\+C\+Parameter\+Manager}} ()
+\item 
+void \mbox{\hyperlink{a01545_ab7921f8b312d65917e3b38c5edfb57d8}{Initialize}} (\mbox{\hyperlink{a01773}{A\+A\+X\+\_\+\+I\+Automation\+Delegate}} $\ast$i\+Automation\+Delegate\+Unknown)
+\begin{DoxyCompactList}\small\item\em Initialize the parameter manager. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{a01545_a78b8c6b1545b42123c2b6ff4dad9b386}{Num\+Parameters}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of parameters in this instance of the parameter manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a01545_a1c37068e235b493a6aa2a57fa26379ba}{Remove\+Parameter\+By\+ID}} (\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} identifier)
+\begin{DoxyCompactList}\small\item\em Removes a parameter from the manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a01545_a6bbfed26d6dda840c89df90b66c196ac}{Remove\+All\+Parameters}} ()
+\begin{DoxyCompactList}\small\item\em Removes all parameters from the manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} $\ast$ \mbox{\hyperlink{a01545_a405918dfca50993f8c0b5259b3c5ee95}{Get\+Parameter\+By\+ID}} (\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} identifier)
+\begin{DoxyCompactList}\small\item\em Given a parameter ID, retrieves a reference to the requested parameter. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} $\ast$ \mbox{\hyperlink{a01545_abeaa97c1e5de198f4c4bc53a3d45de62}{Get\+Parameter\+By\+ID}} (\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} identifier) const
+\begin{DoxyCompactList}\small\item\em Given a parameter ID, retrieves a const reference to the requested parameter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} $\ast$ \mbox{\hyperlink{a01545_a65819f05cca51224d92ac0b620d2b354}{Get\+Parameter\+By\+Name}} (const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Given a parameter name, retrieves a reference to the requested parameter. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} $\ast$ \mbox{\hyperlink{a01545_aa5df52599721038b86b9c3bcf57b53e8}{Get\+Parameter\+By\+Name}} (const char $\ast$name) const
+\begin{DoxyCompactList}\small\item\em Given a parameter name, retrieves a const reference to the requested parameter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} $\ast$ \mbox{\hyperlink{a01545_aaee339546c6cf99e3b7c8a6061c7a4f3}{Get\+Parameter}} (int32\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Given a parameter index, retrieves a reference to the requested parameter. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} $\ast$ \mbox{\hyperlink{a01545_a473f13ba70dd8860e573bcf850fa7e05}{Get\+Parameter}} (int32\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Given a parameter index, retrieves a const reference to the requested parameter. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{a01545_ad4322f62f0ea9c9481979db4792715be}{Get\+Parameter\+Index}} (\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} identifier) const
+\item 
+void \mbox{\hyperlink{a01545_ae2f9631b33c012f7a8c042df9655b28c}{Add\+Parameter}} (\mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} $\ast$param)
+\item 
+void \mbox{\hyperlink{a01545_ac3a21fe1267f8fb276aa08e9f492c5ed}{Remove\+Parameter}} (\mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} $\ast$param)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a01773}{A\+A\+X\+\_\+\+I\+Automation\+Delegate}} $\ast$ \mbox{\hyperlink{a01545_a3c8bc6b5a9210cb9703798dd644a3d70}{m\+Automation\+Delegate}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} $\ast$ $>$ \mbox{\hyperlink{a01545_a59ea172cb668a4aaa990a66e2f67b0bb}{m\+Parameters}}
+\item 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} $\ast$ $>$ \mbox{\hyperlink{a01545_a172b774237eadfd83d1ffa6b3d80bf09}{m\+Parameters\+Map}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a01545_a2464652c52cc61b437339a5268ee4f66}\label{a01545_a2464652c52cc61b437339a5268ee4f66}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{AAX\_CParameterManager()}{AAX\_CParameterManager()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+A\+A\+X\+\_\+\+C\+Parameter\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a01545_a86e327094928b44b1ca11ef145d4f301}\label{a01545_a86e327094928b44b1ca11ef145d4f301}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!````~AAX\_CParameterManager@{$\sim$AAX\_CParameterManager}}
+\index{````~AAX\_CParameterManager@{$\sim$AAX\_CParameterManager}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{$\sim$AAX\_CParameterManager()}{~AAX\_CParameterManager()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::$\sim$\+A\+A\+X\+\_\+\+C\+Parameter\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a01545_ab7921f8b312d65917e3b38c5edfb57d8}\label{a01545_ab7921f8b312d65917e3b38c5edfb57d8}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily void A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01773}{A\+A\+X\+\_\+\+I\+Automation\+Delegate}} $\ast$}]{i\+Automation\+Delegate\+Unknown }\end{DoxyParamCaption})}
+
+
+
+Initialize the parameter manager. 
+
+Called when plug-\/in instance is first instantiated. This method will initialize the plug-\/in\textquotesingle{}s automation delegate, among other set-\/up tasks.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i\+Automation\+Delegate\+Unknown} & A reference to the plug-\/in\textquotesingle{}s \mbox{\hyperlink{a01773}{A\+A\+X\+\_\+\+I\+Automation\+Delegate}} interface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a01545_a78b8c6b1545b42123c2b6ff4dad9b386}\label{a01545_a78b8c6b1545b42123c2b6ff4dad9b386}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!NumParameters@{NumParameters}}
+\index{NumParameters@{NumParameters}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{NumParameters()}{NumParameters()}}
+{\footnotesize\ttfamily int32\+\_\+t A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Num\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of parameters in this instance of the parameter manager. 
+
+\mbox{\Hypertarget{a01545_a1c37068e235b493a6aa2a57fa26379ba}\label{a01545_a1c37068e235b493a6aa2a57fa26379ba}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!RemoveParameterByID@{RemoveParameterByID}}
+\index{RemoveParameterByID@{RemoveParameterByID}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{RemoveParameterByID()}{RemoveParameterByID()}}
+{\footnotesize\ttfamily void A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Remove\+Parameter\+By\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{identifier }\end{DoxyParamCaption})}
+
+
+
+Removes a parameter from the manager. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000019}{Todo}}]Should this method return success/failure code?\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em identifier} & ID of the parameter that will be removed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a01545_a6bbfed26d6dda840c89df90b66c196ac}\label{a01545_a6bbfed26d6dda840c89df90b66c196ac}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!RemoveAllParameters@{RemoveAllParameters}}
+\index{RemoveAllParameters@{RemoveAllParameters}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{RemoveAllParameters()}{RemoveAllParameters()}}
+{\footnotesize\ttfamily void A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Remove\+All\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes all parameters from the manager. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000020}{Todo}}]Should this method return success/failure code? \end{DoxyRefDesc}
+\mbox{\Hypertarget{a01545_a405918dfca50993f8c0b5259b3c5ee95}\label{a01545_a405918dfca50993f8c0b5259b3c5ee95}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!GetParameterByID@{GetParameterByID}}
+\index{GetParameterByID@{GetParameterByID}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{GetParameterByID()}{GetParameterByID()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}}$\ast$ A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Get\+Parameter\+By\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{identifier }\end{DoxyParamCaption})}
+
+
+
+Given a parameter ID, retrieves a reference to the requested parameter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em identifier} & ID of the parameter that will be retrieved \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by A\+A\+X\+\_\+\+C\+Monolithic\+Parameters\+::\+Update\+Parameter\+Normalized\+Value().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a01545_a405918dfca50993f8c0b5259b3c5ee95_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a01545_abeaa97c1e5de198f4c4bc53a3d45de62}\label{a01545_abeaa97c1e5de198f4c4bc53a3d45de62}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!GetParameterByID@{GetParameterByID}}
+\index{GetParameterByID@{GetParameterByID}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{GetParameterByID()}{GetParameterByID()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}}$\ast$ A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Get\+Parameter\+By\+ID (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{identifier }\end{DoxyParamCaption}) const}
+
+
+
+Given a parameter ID, retrieves a const reference to the requested parameter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em identifier} & ID of the parameter that will be retrieved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a01545_a65819f05cca51224d92ac0b620d2b354}\label{a01545_a65819f05cca51224d92ac0b620d2b354}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!GetParameterByName@{GetParameterByName}}
+\index{GetParameterByName@{GetParameterByName}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{GetParameterByName()}{GetParameterByName()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}}$\ast$ A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Get\+Parameter\+By\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Given a parameter name, retrieves a reference to the requested parameter. 
+
+\begin{DoxyNote}{Note}
+Parameter names may be ambiguous
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of the parameter that will be retrieved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a01545_aa5df52599721038b86b9c3bcf57b53e8}\label{a01545_aa5df52599721038b86b9c3bcf57b53e8}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!GetParameterByName@{GetParameterByName}}
+\index{GetParameterByName@{GetParameterByName}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{GetParameterByName()}{GetParameterByName()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}}$\ast$ A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Get\+Parameter\+By\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Given a parameter name, retrieves a const reference to the requested parameter. 
+
+\begin{DoxyNote}{Note}
+Parameter names may be ambiguous
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & ID of the parameter that will be retrieved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a01545_aaee339546c6cf99e3b7c8a6061c7a4f3}\label{a01545_aaee339546c6cf99e3b7c8a6061c7a4f3}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!GetParameter@{GetParameter}}
+\index{GetParameter@{GetParameter}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{GetParameter()}{GetParameter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}}$\ast$ A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Get\+Parameter (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Given a parameter index, retrieves a reference to the requested parameter. 
+
+Parameter indices are incremented in the order that parameters are added to the manager. See \mbox{\hyperlink{a01545_ae2f9631b33c012f7a8c042df9655b28c}{Add\+Parameter()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & Index of the parameter that will be retrieved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a01545_a473f13ba70dd8860e573bcf850fa7e05}\label{a01545_a473f13ba70dd8860e573bcf850fa7e05}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!GetParameter@{GetParameter}}
+\index{GetParameter@{GetParameter}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{GetParameter()}{GetParameter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}}$\ast$ A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Get\+Parameter (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Given a parameter index, retrieves a const reference to the requested parameter. 
+
+Parameter indices are incremented in the order that parameters are added to the manager. See \mbox{\hyperlink{a01545_ae2f9631b33c012f7a8c042df9655b28c}{Add\+Parameter()}}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & Index of the parameter that will be retrieved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a01545_ad4322f62f0ea9c9481979db4792715be}\label{a01545_ad4322f62f0ea9c9481979db4792715be}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!GetParameterIndex@{GetParameterIndex}}
+\index{GetParameterIndex@{GetParameterIndex}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{GetParameterIndex()}{GetParameterIndex()}}
+{\footnotesize\ttfamily int32\+\_\+t A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Get\+Parameter\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{identifier }\end{DoxyParamCaption}) const}
+
+Given a parameter ID, retrieves the index for the specified parameter
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em identifier} & ID of the parameter that will be retrieved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a01545_ae2f9631b33c012f7a8c042df9655b28c}\label{a01545_ae2f9631b33c012f7a8c042df9655b28c}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!AddParameter@{AddParameter}}
+\index{AddParameter@{AddParameter}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{AddParameter()}{AddParameter()}}
+{\footnotesize\ttfamily void A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Add\+Parameter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} $\ast$}]{param }\end{DoxyParamCaption})}
+
+Adds a parameter to the manager
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000021}{Todo}}]Should this method return success/failure code?\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em param} & Reference to the parameter that will be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a01545_ac3a21fe1267f8fb276aa08e9f492c5ed}\label{a01545_ac3a21fe1267f8fb276aa08e9f492c5ed}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!RemoveParameter@{RemoveParameter}}
+\index{RemoveParameter@{RemoveParameter}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{RemoveParameter()}{RemoveParameter()}}
+{\footnotesize\ttfamily void A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::\+Remove\+Parameter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}} $\ast$}]{param }\end{DoxyParamCaption})}
+
+Removes a parameter to the manager
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000022}{Todo}}]Should this method return success/failure code?\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em param} & Reference to the parameter that will be removed \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{a01545_a3c8bc6b5a9210cb9703798dd644a3d70}\label{a01545_a3c8bc6b5a9210cb9703798dd644a3d70}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!mAutomationDelegate@{mAutomationDelegate}}
+\index{mAutomationDelegate@{mAutomationDelegate}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{mAutomationDelegate}{mAutomationDelegate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01773}{A\+A\+X\+\_\+\+I\+Automation\+Delegate}}$\ast$ A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::m\+Automation\+Delegate\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{a01545_a59ea172cb668a4aaa990a66e2f67b0bb}\label{a01545_a59ea172cb668a4aaa990a66e2f67b0bb}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!mParameters@{mParameters}}
+\index{mParameters@{mParameters}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{mParameters}{mParameters}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}}$\ast$$>$ A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::m\+Parameters\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{a01545_a172b774237eadfd83d1ffa6b3d80bf09}\label{a01545_a172b774237eadfd83d1ffa6b3d80bf09}} 
+\index{AAX\_CParameterManager@{AAX\_CParameterManager}!mParametersMap@{mParametersMap}}
+\index{mParametersMap@{mParametersMap}!AAX\_CParameterManager@{AAX\_CParameterManager}}
+\subsubsection{\texorpdfstring{mParametersMap}{mParametersMap}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, \mbox{\hyperlink{a01857}{A\+A\+X\+\_\+\+I\+Parameter}}$\ast$$>$ A\+A\+X\+\_\+\+C\+Parameter\+Manager\+::m\+Parameters\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00458}{A\+A\+X\+\_\+\+C\+Parameter\+Manager.\+h}}\end{DoxyCompactItemize}

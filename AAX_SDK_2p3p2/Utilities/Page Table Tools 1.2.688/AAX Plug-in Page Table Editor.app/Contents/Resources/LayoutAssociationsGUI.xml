@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view type="View" id="MainView">
+    <bounds x="0" y="0" width="680" height="480"/>
+    <image id="background" src="images/background_main.png" stretch="true"/>
+
+    <view type="TableList" id="AssociationsList">
+        <bounds x="10" y="10" width="660" height="460"/>
+        <header height="24">
+            <header_item title_string="Plug-In Variant" width="360" minWidth="360"/>
+            <header_item title_string="Table" width="289" minWidth="289"/>
+        </header>
+    </view>
+	
+	<!--
+    <view type="Button" id="ValidateButton">
+        <bounds x="10" y="446" width="75" height="24"/>
+        <font typeface="Arial" height="14" bold="0" italic="0" underlined="0"/>
+        <color id="text" red="238" green="238" blue="238" alpha="255"/>
+        <justification horizontal="center" vertical="center"/>
+        <text string="Validate"/>
+        <image_list id="state" stretch="true">
+            <image id="" src="images/button.png"/>
+            <image id="" src=""/>
+        </image_list>
+    </view>
+	-->
+    
+</view>

@@ -1,0 +1,138 @@
+\hypertarget{a01593}{}\section{A\+AX\+::Exception\+::Any Class Reference}
+\label{a01593}\index{AAX::Exception::Any@{AAX::Exception::Any}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+Exception.\+h$>$}
+
+
+
+Inheritance diagram for A\+AX\+::Exception\+::Any\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{a01592}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+Base class for A\+AX exceptions
+
+This class is defined within the A\+AX Library and is always handled within the A\+AX plug-\/in. Objects of this class are never passed between the plug-\/in and the A\+AX host.
+
+The definition of this class may change between versions of the A\+AX S\+DK. This class does not include any form of version safety for cross-\/version compatibility.
+
+\begin{DoxyWarning}{Warning}
+Do not use multiple inheritance in any sub-\/classes within the \mbox{\hyperlink{a01593}{A\+A\+X\+::\+Exception\+::\+Any}} inheritance tree
+
+Never pass exceptions across the library boundary to the A\+AX host 
+\end{DoxyWarning}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{a01593_ac8a5ec0e754e887a46d89bc715f21913}{$\sim$\+Any}} ()
+\item 
+{\footnotesize template$<$class C $>$ }\\\mbox{\hyperlink{a01593_a35c51844258ed1c71259e98128fa1b49}{Any}} (const C \&in\+What)
+\item 
+{\footnotesize template$<$class C1 , class C2 , class C3 $>$ }\\\mbox{\hyperlink{a01593_a9578bed0d27f81be2908f93f19034474}{Any}} (const C1 \&in\+What, const C2 \&in\+Function, const C3 \&in\+Line)
+\item 
+\mbox{\hyperlink{a01593}{Any}} \& \mbox{\hyperlink{a01593_a249c609f463a981013d5799e9e86b08e}{operator=}} (const \mbox{\hyperlink{a01593}{Any}} \&in\+Other)
+\item 
+\mbox{\hyperlink{a01593_a9de3a5ad28f7b36c0930dcb71c585855}{A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+V\+E\+\_\+\+C\+T\+OR}} (\mbox{\hyperlink{a01593}{Any}})
+\item 
+\mbox{\hyperlink{a01593_a4a698473997da5ebf0c0092618715234}{A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+V\+E\+\_\+\+O\+P\+ER}} (\mbox{\hyperlink{a01593}{Any}})
+\item 
+const std\+::string \& \mbox{\hyperlink{a01593_a3ceff81ddcd5c9694d1f3e0f01616563}{What}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{a01593_a7ce275788cf887eb3f668f0c5de970d0}{Desc}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{a01593_a0fb60f64c722aedd6fb90d8c38f66c8a}{Function}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{a01593_acb449c037d3ff8e221ba86a72cda93c8}{Line}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a01593_ac8a5ec0e754e887a46d89bc715f21913}\label{a01593_ac8a5ec0e754e887a46d89bc715f21913}} 
+\index{AAX::Exception::Any@{AAX::Exception::Any}!````~Any@{$\sim$Any}}
+\index{````~Any@{$\sim$Any}!AAX::Exception::Any@{AAX::Exception::Any}}
+\subsubsection{\texorpdfstring{$\sim$Any()}{~Any()}}
+{\footnotesize\ttfamily virtual A\+A\+X\+::\+Exception\+::\+Any\+::$\sim$\+Any (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{a01593_a35c51844258ed1c71259e98128fa1b49}\label{a01593_a35c51844258ed1c71259e98128fa1b49}} 
+\index{AAX::Exception::Any@{AAX::Exception::Any}!Any@{Any}}
+\index{Any@{Any}!AAX::Exception::Any@{AAX::Exception::Any}}
+\subsubsection{\texorpdfstring{Any()}{Any()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+A\+A\+X\+::\+Exception\+::\+Any\+::\+Any (\begin{DoxyParamCaption}\item[{const C \&}]{in\+What }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Explicit conversion from a string-\/like object \mbox{\Hypertarget{a01593_a9578bed0d27f81be2908f93f19034474}\label{a01593_a9578bed0d27f81be2908f93f19034474}} 
+\index{AAX::Exception::Any@{AAX::Exception::Any}!Any@{Any}}
+\index{Any@{Any}!AAX::Exception::Any@{AAX::Exception::Any}}
+\subsubsection{\texorpdfstring{Any()}{Any()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class C1 , class C2 , class C3 $>$ \\
+A\+A\+X\+::\+Exception\+::\+Any\+::\+Any (\begin{DoxyParamCaption}\item[{const C1 \&}]{in\+What,  }\item[{const C2 \&}]{in\+Function,  }\item[{const C3 \&}]{in\+Line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Explicit conversion from a string-\/like object with function name and line number 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a01593_a249c609f463a981013d5799e9e86b08e}\label{a01593_a249c609f463a981013d5799e9e86b08e}} 
+\index{AAX::Exception::Any@{AAX::Exception::Any}!operator=@{operator=}}
+\index{operator=@{operator=}!AAX::Exception::Any@{AAX::Exception::Any}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a01593}{Any}}\& A\+A\+X\+::\+Exception\+::\+Any\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a01593}{Any}} \&}]{in\+Other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{a01593_a9de3a5ad28f7b36c0930dcb71c585855}\label{a01593_a9de3a5ad28f7b36c0930dcb71c585855}} 
+\index{AAX::Exception::Any@{AAX::Exception::Any}!AAX\_DEFAULT\_MOVE\_CTOR@{AAX\_DEFAULT\_MOVE\_CTOR}}
+\index{AAX\_DEFAULT\_MOVE\_CTOR@{AAX\_DEFAULT\_MOVE\_CTOR}!AAX::Exception::Any@{AAX::Exception::Any}}
+\subsubsection{\texorpdfstring{AAX\_DEFAULT\_MOVE\_CTOR()}{AAX\_DEFAULT\_MOVE\_CTOR()}}
+{\footnotesize\ttfamily A\+A\+X\+::\+Exception\+::\+Any\+::\+A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+V\+E\+\_\+\+C\+T\+OR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01593}{Any}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a01593_a4a698473997da5ebf0c0092618715234}\label{a01593_a4a698473997da5ebf0c0092618715234}} 
+\index{AAX::Exception::Any@{AAX::Exception::Any}!AAX\_DEFAULT\_MOVE\_OPER@{AAX\_DEFAULT\_MOVE\_OPER}}
+\index{AAX\_DEFAULT\_MOVE\_OPER@{AAX\_DEFAULT\_MOVE\_OPER}!AAX::Exception::Any@{AAX::Exception::Any}}
+\subsubsection{\texorpdfstring{AAX\_DEFAULT\_MOVE\_OPER()}{AAX\_DEFAULT\_MOVE\_OPER()}}
+{\footnotesize\ttfamily A\+A\+X\+::\+Exception\+::\+Any\+::\+A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+V\+E\+\_\+\+O\+P\+ER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01593}{Any}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a01593_a3ceff81ddcd5c9694d1f3e0f01616563}\label{a01593_a3ceff81ddcd5c9694d1f3e0f01616563}} 
+\index{AAX::Exception::Any@{AAX::Exception::Any}!What@{What}}
+\index{What@{What}!AAX::Exception::Any@{AAX::Exception::Any}}
+\subsubsection{\texorpdfstring{What()}{What()}}
+{\footnotesize\ttfamily const std\+::string\& A\+A\+X\+::\+Exception\+::\+Any\+::\+What (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Referenced by A\+A\+X\+::\+As\+String().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{a01593_a3ceff81ddcd5c9694d1f3e0f01616563_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{a01593_a7ce275788cf887eb3f668f0c5de970d0}\label{a01593_a7ce275788cf887eb3f668f0c5de970d0}} 
+\index{AAX::Exception::Any@{AAX::Exception::Any}!Desc@{Desc}}
+\index{Desc@{Desc}!AAX::Exception::Any@{AAX::Exception::Any}}
+\subsubsection{\texorpdfstring{Desc()}{Desc()}}
+{\footnotesize\ttfamily const std\+::string\& A\+A\+X\+::\+Exception\+::\+Any\+::\+Desc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{a01593_a0fb60f64c722aedd6fb90d8c38f66c8a}\label{a01593_a0fb60f64c722aedd6fb90d8c38f66c8a}} 
+\index{AAX::Exception::Any@{AAX::Exception::Any}!Function@{Function}}
+\index{Function@{Function}!AAX::Exception::Any@{AAX::Exception::Any}}
+\subsubsection{\texorpdfstring{Function()}{Function()}}
+{\footnotesize\ttfamily const std\+::string\& A\+A\+X\+::\+Exception\+::\+Any\+::\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{a01593_acb449c037d3ff8e221ba86a72cda93c8}\label{a01593_acb449c037d3ff8e221ba86a72cda93c8}} 
+\index{AAX::Exception::Any@{AAX::Exception::Any}!Line@{Line}}
+\index{Line@{Line}!AAX::Exception::Any@{AAX::Exception::Any}}
+\subsubsection{\texorpdfstring{Line()}{Line()}}
+{\footnotesize\ttfamily const std\+::string\& A\+A\+X\+::\+Exception\+::\+Any\+::\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00497}{A\+A\+X\+\_\+\+Exception.\+h}}\end{DoxyCompactItemize}

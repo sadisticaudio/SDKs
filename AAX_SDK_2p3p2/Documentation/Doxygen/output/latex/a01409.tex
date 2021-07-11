@@ -1,0 +1,91 @@
+\hypertarget{a01409}{}\section{I\+A\+C\+F\+Unknown Interface Reference}
+\label{a01409}\index{IACFUnknown@{IACFUnknown}}
+
+
+Inheritance diagram for I\+A\+C\+F\+Unknown\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a01408}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+C\+OM compatible I\+Unknown C++ interface. 
+
+\begin{DoxyRemark}{Remarks}
+The methods of the \mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} interface, implemented by all A\+CF objects, supports general inter-\/object protocol negotiation via the {\ttfamily Query\+Interface} method, and object lifetime management with the Add\+Ref and Release methods.
+\end{DoxyRemark}
+\begin{DoxyNote}{Note}
+Because Add\+Ref and Release are not required to return accurate values, callers of these methods must not use the return values to determine if an object is still valid or has been destroyed. (Standard M$\ast$cr$\ast$s$\ast$ft disclaimer)
+\end{DoxyNote}
+For further information please refer to the Microsoft documentation for I\+Unknown.
+
+\begin{DoxyNote}{Note}
+This class will work only with compilers that can produce C\+O\+M-\/compatible object layouts for C++ classes. egcs can not do this. Metrowerks can do this (if you subclass from \+\_\+\+\_\+comobject). 
+\end{DoxyNote}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual B\+E\+G\+I\+N\+\_\+\+A\+C\+F\+I\+N\+T\+E\+R\+F\+A\+CE A\+C\+F\+R\+E\+S\+U\+LT A\+C\+F\+M\+E\+T\+H\+O\+D\+C\+A\+L\+L\+T\+Y\+PE \mbox{\hyperlink{a01409_a8b7f0ae9c78d007ca76aa462ebe53135}{Query\+Interface}} (const \mbox{\hyperlink{a00269_a59df0b41744eee7a066787aaedf97f67}{acf\+I\+ID}} \&iid, void $\ast$$\ast$pp\+Out)=0
+\begin{DoxyCompactList}\small\item\em Returns pointers to supported interfaces. \end{DoxyCompactList}\item 
+virtual acf\+U\+Int32 A\+C\+F\+M\+E\+T\+H\+O\+D\+C\+A\+L\+L\+T\+Y\+PE \mbox{\hyperlink{a01409_aa9c7a5b9dff341092b7b86bb9b3a58fb}{Add\+Ref}} (void)=0
+\begin{DoxyCompactList}\small\item\em Increments reference count. \end{DoxyCompactList}\item 
+virtual acf\+U\+Int32 A\+C\+F\+M\+E\+T\+H\+O\+D\+C\+A\+L\+L\+T\+Y\+PE \mbox{\hyperlink{a01409_afabd38cec0a9ed37f1d3e8644a70ac41}{Release}} (void)=0
+\begin{DoxyCompactList}\small\item\em Decrements reference count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a01409_a8b7f0ae9c78d007ca76aa462ebe53135}\label{a01409_a8b7f0ae9c78d007ca76aa462ebe53135}} 
+\index{IACFUnknown@{IACFUnknown}!QueryInterface@{QueryInterface}}
+\index{QueryInterface@{QueryInterface}!IACFUnknown@{IACFUnknown}}
+\subsubsection{\texorpdfstring{QueryInterface()}{QueryInterface()}}
+{\footnotesize\ttfamily virtual B\+E\+G\+I\+N\+\_\+\+A\+C\+F\+I\+N\+T\+E\+R\+F\+A\+CE A\+C\+F\+R\+E\+S\+U\+LT A\+C\+F\+M\+E\+T\+H\+O\+D\+C\+A\+L\+L\+T\+Y\+PE I\+A\+C\+F\+Unknown\+::\+Query\+Interface (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00269_a59df0b41744eee7a066787aaedf97f67}{acf\+I\+ID}} \&}]{iid,  }\item[{void $\ast$$\ast$}]{pp\+Out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns pointers to supported interfaces. 
+
+\begin{DoxyRemark}{Remarks}
+The Query\+Interface method gives a client access to alternate interfaces implemented by an object. The returned interface pointer will have already had its reference count incremented so the caller will be required to call the Release method. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em iid} & Identifier of the requested interface \\
+\hline
+{\em pp\+Out} & Address of variable that receives the interface pointer associated with iid. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a01409_aa9c7a5b9dff341092b7b86bb9b3a58fb}\label{a01409_aa9c7a5b9dff341092b7b86bb9b3a58fb}} 
+\index{IACFUnknown@{IACFUnknown}!AddRef@{AddRef}}
+\index{AddRef@{AddRef}!IACFUnknown@{IACFUnknown}}
+\subsubsection{\texorpdfstring{AddRef()}{AddRef()}}
+{\footnotesize\ttfamily virtual acf\+U\+Int32 A\+C\+F\+M\+E\+T\+H\+O\+D\+C\+A\+L\+L\+T\+Y\+PE I\+A\+C\+F\+Unknown\+::\+Add\+Ref (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Increments reference count. 
+
+\begin{DoxyRemark}{Remarks}
+The Add\+Ref method should be called every time a new copy of an interface is made. When this copy is no longer referenced it must be released with the Release method. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{a01409_afabd38cec0a9ed37f1d3e8644a70ac41}\label{a01409_afabd38cec0a9ed37f1d3e8644a70ac41}} 
+\index{IACFUnknown@{IACFUnknown}!Release@{Release}}
+\index{Release@{Release}!IACFUnknown@{IACFUnknown}}
+\subsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily virtual acf\+U\+Int32 A\+C\+F\+M\+E\+T\+H\+O\+D\+C\+A\+L\+L\+T\+Y\+PE I\+A\+C\+F\+Unknown\+::\+Release (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Decrements reference count. 
+
+\begin{DoxyRemark}{Remarks}
+Use this method to decrement the reference count. When the reference count reaches zero the object that implements the interface will be deleted. 
+\end{DoxyRemark}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00269}{A\+A\+X\+\_\+\+A\+C\+F\+Interface.\+dox}}\end{DoxyCompactItemize}

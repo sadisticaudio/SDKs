@@ -1,0 +1,73 @@
+\hypertarget{a00755}{}\section{A\+A\+X\+\_\+\+Denormal.\+h File Reference}
+\label{a00755}\index{AAX\_Denormal.h@{AAX\_Denormal.h}}
+{\ttfamily \#include \char`\"{}A\+A\+X.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Platform\+Optimization\+Constants.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+
+
+\subsection{Description}
+Signal processing utilities for denormal/subnormal floating point numbers. 
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{a00852}{A\+AX}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00755_aebb709c3232ca8ebe6ea366ca8391dad}{A\+A\+X\+\_\+\+D\+E\+N\+O\+R\+M\+A\+L\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{a00755_ad45309abfd0e2faa7a28c9ed753f7806}{A\+A\+X\+\_\+\+S\+C\+O\+P\+E\+\_\+\+C\+O\+M\+P\+U\+T\+E\+\_\+\+D\+E\+N\+O\+R\+M\+A\+LS}}()~do \{\} while(0)
+\begin{DoxyCompactList}\small\item\em Sets the run-\/time environment to handle denormal floats within the scope of this macro. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00755_aeb63901cb0661447fb69b6d10f5f1cba}{A\+A\+X\+\_\+\+S\+C\+O\+P\+E\+\_\+\+D\+E\+N\+O\+R\+M\+A\+L\+S\+\_\+\+A\+S\+\_\+\+Z\+E\+RO}}()~do \{\} while(0)
+\begin{DoxyCompactList}\small\item\em Sets the run-\/time environment to treat denormal floats as zero within the scope of this macro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00852_aaf103dc75b68b6c4f6792dd26f9b4fd0}{A\+A\+X\+::\+De\+Denormal}} (double \&i\+Value)
+\begin{DoxyCompactList}\small\item\em Clamps very small floating point values to zero. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00852_aedfd1762f559291ceddd53f8ce8862a5}{A\+A\+X\+::\+De\+Denormal}} (float \&i\+Value)
+\begin{DoxyCompactList}\small\item\em Clamps very small floating point values to zero. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00852_ac52b6214a1de32e59b90ddbc1878e515}{A\+A\+X\+::\+De\+Denormal\+Fine}} (float \&i\+Value)
+\item 
+void \mbox{\hyperlink{a00852_a73dd9a17abecc28625c4d34279e4534f}{A\+A\+X\+::\+Filter\+Denormals}} (float $\ast$in\+Samples, int32\+\_\+t in\+Length)
+\begin{DoxyCompactList}\small\item\em Round all denormal/subnormal samples in a buffer to zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{a00852_a5c2e1bff2891a4b11252759e152cf520}{A\+A\+X\+::c\+Denormal\+Avoidance\+Offset}} =3.\+0e-\/34
+\item 
+const float \mbox{\hyperlink{a00852_ae3a66eee97cfe006ffbf11f901ddd286}{A\+A\+X\+::c\+Float\+Denormal\+Avoidance\+Offset}} =3.\+0e-\/20f
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{a00755_aebb709c3232ca8ebe6ea366ca8391dad}\label{a00755_aebb709c3232ca8ebe6ea366ca8391dad}} 
+\index{AAX\_Denormal.h@{AAX\_Denormal.h}!AAX\_DENORMAL\_H@{AAX\_DENORMAL\_H}}
+\index{AAX\_DENORMAL\_H@{AAX\_DENORMAL\_H}!AAX\_Denormal.h@{AAX\_Denormal.h}}
+\subsubsection{\texorpdfstring{AAX\_DENORMAL\_H}{AAX\_DENORMAL\_H}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+D\+E\+N\+O\+R\+M\+A\+L\+\_\+H}
+
+\mbox{\Hypertarget{a00755_ad45309abfd0e2faa7a28c9ed753f7806}\label{a00755_ad45309abfd0e2faa7a28c9ed753f7806}} 
+\index{AAX\_Denormal.h@{AAX\_Denormal.h}!AAX\_SCOPE\_COMPUTE\_DENORMALS@{AAX\_SCOPE\_COMPUTE\_DENORMALS}}
+\index{AAX\_SCOPE\_COMPUTE\_DENORMALS@{AAX\_SCOPE\_COMPUTE\_DENORMALS}!AAX\_Denormal.h@{AAX\_Denormal.h}}
+\subsubsection{\texorpdfstring{AAX\_SCOPE\_COMPUTE\_DENORMALS}{AAX\_SCOPE\_COMPUTE\_DENORMALS}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+S\+C\+O\+P\+E\+\_\+\+C\+O\+M\+P\+U\+T\+E\+\_\+\+D\+E\+N\+O\+R\+M\+A\+LS(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{\} while(0)}
+
+
+
+Sets the run-\/time environment to handle denormal floats within the scope of this macro. 
+
+The host sets the denormal policy for all \mbox{\hyperlink{a00852}{A\+AX}} threads and may use settings which treat denormal float values as zero (D\+A\+Z+\+FZ). This macro forces non-\/\+D\+AZ behavior. \mbox{\Hypertarget{a00755_aeb63901cb0661447fb69b6d10f5f1cba}\label{a00755_aeb63901cb0661447fb69b6d10f5f1cba}} 
+\index{AAX\_Denormal.h@{AAX\_Denormal.h}!AAX\_SCOPE\_DENORMALS\_AS\_ZERO@{AAX\_SCOPE\_DENORMALS\_AS\_ZERO}}
+\index{AAX\_SCOPE\_DENORMALS\_AS\_ZERO@{AAX\_SCOPE\_DENORMALS\_AS\_ZERO}!AAX\_Denormal.h@{AAX\_Denormal.h}}
+\subsubsection{\texorpdfstring{AAX\_SCOPE\_DENORMALS\_AS\_ZERO}{AAX\_SCOPE\_DENORMALS\_AS\_ZERO}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+S\+C\+O\+P\+E\+\_\+\+D\+E\+N\+O\+R\+M\+A\+L\+S\+\_\+\+A\+S\+\_\+\+Z\+E\+RO(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{\} while(0)}
+
+
+
+Sets the run-\/time environment to treat denormal floats as zero within the scope of this macro. 
+
+The host sets the denormal policy for all \mbox{\hyperlink{a00852}{A\+AX}} threads and may already use settings which treat denormal float values as zero (D\+A\+Z+\+FZ). This macro forces D\+AZ behavior. 

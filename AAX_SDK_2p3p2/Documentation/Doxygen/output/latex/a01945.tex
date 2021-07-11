@@ -1,0 +1,300 @@
+\hypertarget{a01945}{}\section{A\+A\+X\+\_\+\+V\+View\+Container Class Reference}
+\label{a01945}\index{AAX\_VViewContainer@{AAX\_VViewContainer}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+V\+View\+Container.\+h$>$}
+
+
+
+Inheritance diagram for A\+A\+X\+\_\+\+V\+View\+Container\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{a01944}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+A\+X\+\_\+\+V\+View\+Container\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{a01943}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+Version-\/managed concrete \mbox{\hyperlink{a01889}{A\+A\+X\+\_\+\+I\+View\+Container}} class. \subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a01945_aac7bd02ee005502da1d1b81667ced4a3}{A\+A\+X\+\_\+\+V\+View\+Container}} (\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$p\+Unknown)
+\item 
+\mbox{\hyperlink{a01945_a5b4e7392fa1cb28912bf6e5456984cc0}{$\sim$\+A\+A\+X\+\_\+\+V\+View\+Container}} () \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{a01945_a2d1b4bc3d5ff813a4761fd0200073be7}{Get\+Type}} () \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Returns the raw view type as one of \mbox{\hyperlink{a00503_ab4c36de253fc80b541eb51074c64caef}{A\+A\+X\+\_\+\+E\+View\+Container\+\_\+\+Type}}. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{a01945_a8cb4bb50d773b0f37ad38ca8d2bb3ada}{Get\+Ptr}} () \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the raw view. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01945_acdc71a4c6bd536bbd3be11635c1ff514}{Get\+Modifiers}} (uint32\+\_\+t $\ast$out\+Modifiers) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Queries the host for the current \mbox{\hyperlink{a00491_a47756e0a56d00468b7045eb26500cb78}{modifier keys}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01945_a7c0ca66b8b7b79c5b97f987c60ebbefc}{Set\+View\+Size}} (\mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&in\+Size) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Request a change to the main view size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01945_a9f59dafeb761114a943463a3339593ae}{Handle\+Parameter\+Mouse\+Down}} (\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} in\+Param\+ID, uint32\+\_\+t in\+Modifiers) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Alert the host to a mouse down event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01945_ad6d3ab30a88f62709ec04a88097b1241}{Handle\+Parameter\+Mouse\+Drag}} (\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} in\+Param\+ID, uint32\+\_\+t in\+Modifiers) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Alert the host to a mouse drag event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01945_ae3e0200e1b2271638c97e772e0153368}{Handle\+Parameter\+Mouse\+Up}} (\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} in\+Param\+ID, uint32\+\_\+t in\+Modifiers) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Alert the host to a mouse up event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01945_ace8d66f35f57a9ac6353f3b741972279}{Handle\+Multiple\+Parameters\+Mouse\+Down}} (const \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} $\ast$in\+Param\+I\+Ds, uint32\+\_\+t in\+Num\+Of\+Params, uint32\+\_\+t in\+Modifiers) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Alert the host to a mouse down event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01945_a518e4eddd79f0ba3204472a00cbe2266}{Handle\+Multiple\+Parameters\+Mouse\+Drag}} (const \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} $\ast$in\+Param\+I\+Ds, uint32\+\_\+t in\+Num\+Of\+Params, uint32\+\_\+t in\+Modifiers) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Alert the host to a mouse drag event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01945_a7df890b95c925f00536ff97e1322d7b4}{Handle\+Multiple\+Parameters\+Mouse\+Up}} (const \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} $\ast$in\+Param\+I\+Ds, uint32\+\_\+t in\+Num\+Of\+Params, uint32\+\_\+t in\+Modifiers) \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}
+\begin{DoxyCompactList}\small\item\em Alert the host to a mouse up event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{a01945_aac7bd02ee005502da1d1b81667ced4a3}\label{a01945_aac7bd02ee005502da1d1b81667ced4a3}} 
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\subsubsection{\texorpdfstring{AAX\_VViewContainer()}{AAX\_VViewContainer()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+V\+View\+Container\+::\+A\+A\+X\+\_\+\+V\+View\+Container (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$}]{p\+Unknown }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a01945_a5b4e7392fa1cb28912bf6e5456984cc0}\label{a01945_a5b4e7392fa1cb28912bf6e5456984cc0}} 
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!````~AAX\_VViewContainer@{$\sim$AAX\_VViewContainer}}
+\index{````~AAX\_VViewContainer@{$\sim$AAX\_VViewContainer}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\subsubsection{\texorpdfstring{$\sim$AAX\_VViewContainer()}{~AAX\_VViewContainer()}}
+{\footnotesize\ttfamily A\+A\+X\+\_\+\+V\+View\+Container\+::$\sim$\+A\+A\+X\+\_\+\+V\+View\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a01945_a2d1b4bc3d5ff813a4761fd0200073be7}\label{a01945_a2d1b4bc3d5ff813a4761fd0200073be7}} 
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!GetType@{GetType}}
+\index{GetType@{GetType}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\subsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily int32\+\_\+t A\+A\+X\+\_\+\+V\+View\+Container\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the raw view type as one of \mbox{\hyperlink{a00503_ab4c36de253fc80b541eb51074c64caef}{A\+A\+X\+\_\+\+E\+View\+Container\+\_\+\+Type}}. 
+
+
+
+Implements \mbox{\hyperlink{a01889_a1715c042ed8412a2135f4d9e5109e8fb}{A\+A\+X\+\_\+\+I\+View\+Container}}.
+
+\mbox{\Hypertarget{a01945_a8cb4bb50d773b0f37ad38ca8d2bb3ada}\label{a01945_a8cb4bb50d773b0f37ad38ca8d2bb3ada}} 
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!GetPtr@{GetPtr}}
+\index{GetPtr@{GetPtr}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\subsubsection{\texorpdfstring{GetPtr()}{GetPtr()}}
+{\footnotesize\ttfamily void$\ast$ A\+A\+X\+\_\+\+V\+View\+Container\+::\+Get\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a pointer to the raw view. 
+
+
+
+Implements \mbox{\hyperlink{a01889_adfde8f90c9a29b83dc80042cf9c3f749}{A\+A\+X\+\_\+\+I\+View\+Container}}.
+
+\mbox{\Hypertarget{a01945_acdc71a4c6bd536bbd3be11635c1ff514}\label{a01945_acdc71a4c6bd536bbd3be11635c1ff514}} 
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!GetModifiers@{GetModifiers}}
+\index{GetModifiers@{GetModifiers}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\subsubsection{\texorpdfstring{GetModifiers()}{GetModifiers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+View\+Container\+::\+Get\+Modifiers (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{out\+Modifiers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Queries the host for the current \mbox{\hyperlink{a00491_a47756e0a56d00468b7045eb26500cb78}{modifier keys}}. 
+
+This method returns a bit mask with bits set for each of the currently active modifier keys. This method does not return the state of the \mbox{\hyperlink{a00491_a47756e0a56d00468b7045eb26500cb78a6d7914ad68992fa2670fc0327704cbb7}{A\+A\+X\+\_\+e\+Modifiers\+\_\+\+Secondary\+Button}}.
+
+\begin{DoxyRefDesc}{Host Compatibility Notes}
+\item[\mbox{\hyperlink{a00786__compatibility_notes000064}{Host Compatibility Notes}}]Although this method allows plug-\/ins to acquire the current state of the Windows key (normally blocked by Pro Tools), plug-\/ins should not use key combinations that require this key.\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em out\+Modifiers} & Current modifiers as a bitmask of \mbox{\hyperlink{a00491_a47756e0a56d00468b7045eb26500cb78}{A\+A\+X\+\_\+\+E\+Modifiers}} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01889_ac2fe16f6d81a8d941e36242d9f9d0980}{A\+A\+X\+\_\+\+I\+View\+Container}}.
+
+\mbox{\Hypertarget{a01945_a7c0ca66b8b7b79c5b97f987c60ebbefc}\label{a01945_a7c0ca66b8b7b79c5b97f987c60ebbefc}} 
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!SetViewSize@{SetViewSize}}
+\index{SetViewSize@{SetViewSize}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\subsubsection{\texorpdfstring{SetViewSize()}{SetViewSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+View\+Container\+::\+Set\+View\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01609}{A\+A\+X\+\_\+\+Point}} \&}]{in\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Request a change to the main view size. 
+
+\begin{DoxyNote}{Note}
+\begin{DoxyItemize}
+\item For compatibility with the smallest supported displays, plug-\/in G\+UI dimensions should not exceed 749x617 pixels, or 749x565 pixels for plug-\/ins with sidechain support.\end{DoxyItemize}
+
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Size} & The new size to which the plug-\/in view should be set \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01889_ad750e9f0231c61ab32114276ee8cb5f7}{A\+A\+X\+\_\+\+I\+View\+Container}}.
+
+\mbox{\Hypertarget{a01945_a9f59dafeb761114a943463a3339593ae}\label{a01945_a9f59dafeb761114a943463a3339593ae}} 
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!HandleParameterMouseDown@{HandleParameterMouseDown}}
+\index{HandleParameterMouseDown@{HandleParameterMouseDown}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\subsubsection{\texorpdfstring{HandleParameterMouseDown()}{HandleParameterMouseDown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+View\+Container\+::\+Handle\+Parameter\+Mouse\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{in\+Param\+ID,  }\item[{uint32\+\_\+t}]{in\+Modifiers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Alert the host to a mouse down event. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Param\+ID} & ID of the parameter whose control is being edited \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Modifiers} & A bitmask of \mbox{\hyperlink{a00491_a47756e0a56d00468b7045eb26500cb78}{A\+A\+X\+\_\+\+E\+Modifiers}} values \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01889_a75bdb733456034a6dde5eea2043569d4}{A\+A\+X\+\_\+\+I\+View\+Container}}.
+
+\mbox{\Hypertarget{a01945_ad6d3ab30a88f62709ec04a88097b1241}\label{a01945_ad6d3ab30a88f62709ec04a88097b1241}} 
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!HandleParameterMouseDrag@{HandleParameterMouseDrag}}
+\index{HandleParameterMouseDrag@{HandleParameterMouseDrag}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\subsubsection{\texorpdfstring{HandleParameterMouseDrag()}{HandleParameterMouseDrag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+View\+Container\+::\+Handle\+Parameter\+Mouse\+Drag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{in\+Param\+ID,  }\item[{uint32\+\_\+t}]{in\+Modifiers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Alert the host to a mouse drag event. 
+
+\begin{DoxyWarning}{Warning}
+The host may return \mbox{\hyperlink{a00494_a5f8c7439f3a706c4f8315a9609811937a3b76994b32b97fcd56b19ef8032245df}{A\+A\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+N\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED}} for this event even if the host did handle the corresponding mouse down event. A plug-\/in should ignore any following mouse drag and mouse up events that correspond to a host-\/managed mouse down event. (\mbox{\hyperlink{a00846_PTSW-195209}{P\+T\+S\+W-\/195209 / P\+T-\/218474}})
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Param\+ID} & ID of the parameter whose control is being edited \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Modifiers} & A bitmask of \mbox{\hyperlink{a00491_a47756e0a56d00468b7045eb26500cb78}{A\+A\+X\+\_\+\+E\+Modifiers}} values \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01889_a86a4b56270153bb8fa38eccd48e3c080}{A\+A\+X\+\_\+\+I\+View\+Container}}.
+
+\mbox{\Hypertarget{a01945_ae3e0200e1b2271638c97e772e0153368}\label{a01945_ae3e0200e1b2271638c97e772e0153368}} 
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!HandleParameterMouseUp@{HandleParameterMouseUp}}
+\index{HandleParameterMouseUp@{HandleParameterMouseUp}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\subsubsection{\texorpdfstring{HandleParameterMouseUp()}{HandleParameterMouseUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+View\+Container\+::\+Handle\+Parameter\+Mouse\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}]{in\+Param\+ID,  }\item[{uint32\+\_\+t}]{in\+Modifiers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Alert the host to a mouse up event. 
+
+\begin{DoxyWarning}{Warning}
+The host may return \mbox{\hyperlink{a00494_a5f8c7439f3a706c4f8315a9609811937a3b76994b32b97fcd56b19ef8032245df}{A\+A\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+N\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED}} for this event even if the host did handle the corresponding mouse down event. A plug-\/in should ignore any following mouse drag and mouse up events that correspond to a host-\/managed mouse down event. (\mbox{\hyperlink{a00846_PTSW-195209}{P\+T\+S\+W-\/195209 / P\+T-\/218474}})
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Param\+ID} & ID of the parameter whose control is being edited \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Modifiers} & A bitmask of \mbox{\hyperlink{a00491_a47756e0a56d00468b7045eb26500cb78}{A\+A\+X\+\_\+\+E\+Modifiers}} values \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01889_a28458b791dc2fede05e64c1e5f596855}{A\+A\+X\+\_\+\+I\+View\+Container}}.
+
+\mbox{\Hypertarget{a01945_ace8d66f35f57a9ac6353f3b741972279}\label{a01945_ace8d66f35f57a9ac6353f3b741972279}} 
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!HandleMultipleParametersMouseDown@{HandleMultipleParametersMouseDown}}
+\index{HandleMultipleParametersMouseDown@{HandleMultipleParametersMouseDown}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\subsubsection{\texorpdfstring{HandleMultipleParametersMouseDown()}{HandleMultipleParametersMouseDown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+View\+Container\+::\+Handle\+Multiple\+Parameters\+Mouse\+Down (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} $\ast$}]{in\+Param\+I\+Ds,  }\item[{uint32\+\_\+t}]{in\+Num\+Of\+Params,  }\item[{uint32\+\_\+t}]{in\+Modifiers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Alert the host to a mouse down event. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Param\+I\+Ds} & I\+Ds of the parameters that belong to the same G\+UI element whose controls are being edited \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Num\+Of\+Params} & Number of parameter I\+DS \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Modifiers} & A bitmask of \mbox{\hyperlink{a00491_a47756e0a56d00468b7045eb26500cb78}{A\+A\+X\+\_\+\+E\+Modifiers}} values \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01889_ae4eb23fadc9f9e437fbcf2a73741f635}{A\+A\+X\+\_\+\+I\+View\+Container}}.
+
+\mbox{\Hypertarget{a01945_a518e4eddd79f0ba3204472a00cbe2266}\label{a01945_a518e4eddd79f0ba3204472a00cbe2266}} 
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!HandleMultipleParametersMouseDrag@{HandleMultipleParametersMouseDrag}}
+\index{HandleMultipleParametersMouseDrag@{HandleMultipleParametersMouseDrag}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\subsubsection{\texorpdfstring{HandleMultipleParametersMouseDrag()}{HandleMultipleParametersMouseDrag()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+View\+Container\+::\+Handle\+Multiple\+Parameters\+Mouse\+Drag (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} $\ast$}]{in\+Param\+I\+Ds,  }\item[{uint32\+\_\+t}]{in\+Num\+Of\+Params,  }\item[{uint32\+\_\+t}]{in\+Modifiers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Alert the host to a mouse drag event. 
+
+\begin{DoxyWarning}{Warning}
+The host may return \mbox{\hyperlink{a00494_a5f8c7439f3a706c4f8315a9609811937a3b76994b32b97fcd56b19ef8032245df}{A\+A\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+N\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED}} for this event even if the host did handle the corresponding mouse down event. A plug-\/in should ignore any following mouse drag and mouse up events that correspond to a host-\/managed mouse down event. (\mbox{\hyperlink{a00846_PTSW-195209}{P\+T\+S\+W-\/195209 / P\+T-\/218474}})
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Param\+I\+Ds} & I\+Ds of the parameters that belong to the same G\+UI element whose controls are being edited \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Num\+Of\+Params} & Number of parameter I\+DS \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Modifiers} & A bitmask of \mbox{\hyperlink{a00491_a47756e0a56d00468b7045eb26500cb78}{A\+A\+X\+\_\+\+E\+Modifiers}} values \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01889_a719d04fae5908692f24395da0833c66d}{A\+A\+X\+\_\+\+I\+View\+Container}}.
+
+\mbox{\Hypertarget{a01945_a7df890b95c925f00536ff97e1322d7b4}\label{a01945_a7df890b95c925f00536ff97e1322d7b4}} 
+\index{AAX\_VViewContainer@{AAX\_VViewContainer}!HandleMultipleParametersMouseUp@{HandleMultipleParametersMouseUp}}
+\index{HandleMultipleParametersMouseUp@{HandleMultipleParametersMouseUp}!AAX\_VViewContainer@{AAX\_VViewContainer}}
+\subsubsection{\texorpdfstring{HandleMultipleParametersMouseUp()}{HandleMultipleParametersMouseUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+V\+View\+Container\+::\+Handle\+Multiple\+Parameters\+Mouse\+Up (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} $\ast$}]{in\+Param\+I\+Ds,  }\item[{uint32\+\_\+t}]{in\+Num\+Of\+Params,  }\item[{uint32\+\_\+t}]{in\+Modifiers }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Alert the host to a mouse up event. 
+
+\begin{DoxyWarning}{Warning}
+The host may return \mbox{\hyperlink{a00494_a5f8c7439f3a706c4f8315a9609811937a3b76994b32b97fcd56b19ef8032245df}{A\+A\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+N\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED}} for this event even if the host did handle the corresponding mouse down event. A plug-\/in should ignore any following mouse drag and mouse up events that correspond to a host-\/managed mouse down event. (\mbox{\hyperlink{a00846_PTSW-195209}{P\+T\+S\+W-\/195209 / P\+T-\/218474}})
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in\+Param\+I\+Ds} & I\+Ds of the parameters that belong to the same G\+UI element whose controls are being edited \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Num\+Of\+Params} & Number of parameter I\+DS \\
+\hline
+\mbox{\texttt{ in}}  & {\em in\+Modifiers} & A bitmask of \mbox{\hyperlink{a00491_a47756e0a56d00468b7045eb26500cb78}{A\+A\+X\+\_\+\+E\+Modifiers}} values \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{a01889_ae387bc25da878eab0a97d4197ef70a94}{A\+A\+X\+\_\+\+I\+View\+Container}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00731}{A\+A\+X\+\_\+\+V\+View\+Container.\+h}}\end{DoxyCompactItemize}

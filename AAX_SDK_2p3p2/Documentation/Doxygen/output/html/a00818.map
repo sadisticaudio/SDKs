@@ -1,0 +1,8 @@
+<map id="Additional Topics" name="Additional Topics">
+<area shape="rect" id="node1" href="$a00793.html" title=" " alt="" coords="5,77,132,101"/>
+<area shape="rect" id="node6" title="Additional information about the AAX design." alt="" coords="180,77,301,101"/>
+<area shape="rect" id="node2" href="$a00826.html" title="Specification for valid conversions between plug&#45;in types." alt="" coords="349,5,509,29"/>
+<area shape="rect" id="node3" href="$a00819.html" title="Information about parameter automation." alt="" coords="352,53,506,77"/>
+<area shape="rect" id="node4" href="$a00820.html" title="The anatomy of a parameter update." alt="" coords="362,101,496,125"/>
+<area shape="rect" id="node5" href="$a00827.html" title="How the AAX C++ interfaces work." alt="" coords="356,149,502,187"/>
+</map>

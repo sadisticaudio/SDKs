@@ -1,0 +1,790 @@
+\hypertarget{a00392}{}\section{A\+A\+X.\+h File Reference}
+\label{a00392}\index{AAX.h@{AAX.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Enums.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Errors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Properties.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Pre\+Struct\+Alignment\+Helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Push2\+Byte\+Struct\+Alignment.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Post\+Struct\+Alignment\+Helper.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+A\+X\+\_\+\+Pop\+Struct\+Alignment.\+h\char`\"{}}\newline
+
+
+\subsection{Description}
+Various utility definitions for A\+AX. 
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{a01417}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk\+Header}}
+\begin{DoxyCompactList}\small\item\em Plug-\/in chunk header. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{a01421}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk}}
+\begin{DoxyCompactList}\small\item\em Plug-\/in chunk header + data. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{a01425}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}}
+\begin{DoxyCompactList}\small\item\em Plug-\/in Identifier Triad. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{a01429}{A\+A\+X\+\_\+\+C\+Midi\+Packet}}
+\begin{DoxyCompactList}\small\item\em Packet structure for M\+I\+DI data. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{a01433}{A\+A\+X\+\_\+\+C\+Midi\+Stream}}
+\begin{DoxyCompactList}\small\item\em M\+I\+DI stream data structure used by \mbox{\hyperlink{a01845}{A\+A\+X\+\_\+\+I\+M\+I\+D\+I\+Node}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00392_aa2e8b7a189710394388ad3b0a782de86}{A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+T\+OR}}(X)~$\sim$X() = default
+\item 
+\#define \mbox{\hyperlink{a00392_a2cb0270bc94e260696e62749de215798}{A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+T\+O\+R\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}(X)~$\sim$X() override = default
+\item 
+\#define \mbox{\hyperlink{a00392_a0a58bb9dab931dfe26d8edeb4e5e6319}{A\+A\+X\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+P\+TR}}(X)~std\+::unique\+\_\+ptr$<$X$>$
+\item 
+\#define \mbox{\hyperlink{a00392_aaa22112139aa627574b1ef562f579d43}{A\+A\+X\+\_\+\+C\+A\+L\+L\+B\+A\+CK}}
+\item 
+\#define \mbox{\hyperlink{a00392_ab4f95cd2e83b3c871f47c24a4fbaae7a}{A\+A\+X\+\_\+\+P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+H\+E\+L\+P\+ER}}(X,  Y)~X \#\# Y
+\item 
+\#define \mbox{\hyperlink{a00392_af135db633628741ce84c57c6ee8dd1ce}{A\+A\+X\+\_\+\+P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+N\+C\+AT}}(X,  Y)~\mbox{\hyperlink{a00392_ab4f95cd2e83b3c871f47c24a4fbaae7a}{A\+A\+X\+\_\+\+P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+H\+E\+L\+P\+ER}}(X,Y)
+\item 
+\#define \mbox{\hyperlink{a00392_acf807247ecd6e5899dc9dc31644e9a1d}{A\+A\+X\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+D\+EX}}(a\+Context\+Type,  a\+Member)~((\mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}}) (offsetof (a\+Context\+Type, a\+Member) / sizeof (void $\ast$)))
+\begin{DoxyCompactList}\small\item\em Compute the index used to address a context field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ C++ compiler macros}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00392_a5f58f7770d463d262cc28b0e7b88747b}{T\+I\+\_\+\+V\+E\+R\+S\+I\+ON}}~0
+\begin{DoxyCompactList}\small\item\em Preprocessor flag indicating compilation for TI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_a2da185ff8aad77278f985a6fe5ee07ba}{A\+A\+X\+\_\+\+C\+P\+P11\+\_\+\+S\+U\+P\+P\+O\+RT}}~1
+\begin{DoxyCompactList}\small\item\em Preprocessor toggle for code which requires C++11 compiler support. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ C++ keyword macros}\par
+{\em Use these macros for keywords which may not be supported on all compilers
+
+\begin{DoxyWarning}{Warning}
+Be careful when using these macros; they are a workaround and the fallback versions of the macros are not guaranteed to provide identical behavior to the fully-\/supported versions. Always consider the code which will be generated in each case!
+
+If your code is protected with P\+A\+CE Fusion and you are using a P\+A\+CE S\+DK prior to v4 then you must explicitly define {\ttfamily A\+A\+X\+\_\+\+C\+P\+P11\+\_\+\+S\+U\+P\+P\+O\+RT 0} in your project\textquotesingle{}s preprocessor settings to avoid encountering source failover caused by A\+AX header includes with exotic syntax. 
+\end{DoxyWarning}
+}\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00392_ac2f24a5172689ae684344abdcce55463}{A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE}}~override
+\begin{DoxyCompactList}\small\item\em {\ttfamily override} keyword macro \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_aa4da4a09e940c332a2205e34e0677f40}{A\+A\+X\+\_\+\+F\+I\+N\+AL}}~final
+\begin{DoxyCompactList}\small\item\em {\ttfamily final} keyword macro \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_a5ed9499b8cd7549adf991d46dfbe749b}{A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+T\+OR}}(X)~X() = default
+\begin{DoxyCompactList}\small\item\em {\ttfamily default} keyword macro for a class default constructor \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_a608ab9e59f8f54c32e68fe0d32e9b991}{A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+C\+T\+OR}}(X)~X(const X\&) = default
+\begin{DoxyCompactList}\small\item\em {\ttfamily default} keyword macro for a class copy constructor \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_aded8c9ff9a00f3780ae99be88573a5ce}{A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+S\+G\+N\+\_\+\+O\+P\+ER}}(X)~X\& operator=(const X\&) = default
+\begin{DoxyCompactList}\small\item\em {\ttfamily default} keyword macro for a class assignment operator \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_a2511e9b022e49caf594bca6fa6bff74c}{A\+A\+X\+\_\+\+D\+E\+L\+E\+TE}}(X)~X = delete
+\begin{DoxyCompactList}\small\item\em {\ttfamily delete} keyword macro \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_a25bcd6f9d38bd2c9ffbf8aff01b4a274}{A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+V\+E\+\_\+\+C\+T\+OR}}(X)~X(X\&\&) = default
+\begin{DoxyCompactList}\small\item\em {\ttfamily default} keyword macro for a class move constructor \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_a0478af896a79eddf2ddee1cfd403e6b0}{A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+V\+E\+\_\+\+O\+P\+ER}}(X)~X\& operator=(X\&\&) = default
+\begin{DoxyCompactList}\small\item\em {\ttfamily default} keyword macro for a class move-\/assignment operator \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_aa7cfdcabcfd72ca9b829e6cea9ea6470}{A\+A\+X\+\_\+\+C\+O\+N\+S\+T\+E\+X\+PR}}~constexpr
+\begin{DoxyCompactList}\small\item\em {\ttfamily constexpr} keyword macro \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Pointer definitions}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00392_a3310096b753437bda7ec67de445cf9cb}{A\+A\+X\+Pointer\+\_\+32bit}}~1
+\begin{DoxyCompactList}\small\item\em When A\+A\+X\+\_\+\+Pointer\+Size == A\+A\+X\+Pointer\+\_\+32bit this is a 32-\/bit build. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_a1a53e919284726babb582d3bb105b08b}{A\+A\+X\+Pointer\+\_\+64bit}}~2
+\begin{DoxyCompactList}\small\item\em When A\+A\+X\+\_\+\+Pointer\+Size == A\+A\+X\+Pointer\+\_\+64bit this is a 64-\/bit build. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_a078a28903a34f1bd25f1e23d65df6212}{A\+A\+X\+\_\+\+Pointer\+Size}}~\mbox{\hyperlink{a00392_a3310096b753437bda7ec67de445cf9cb}{A\+A\+X\+Pointer\+\_\+32bit}}
+\begin{DoxyCompactList}\small\item\em Use this definition to check the pointer size in the current build. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Alignment macros}\par
+{\em Use these macros to define struct packing alignment for data structures that will be sent across binary or platform boundaries.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include AAX\_ALIGN\_FILE\_BEGIN}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include AAX\_ALIGN\_FILE\_HOST}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include AAX\_ALIGN\_FILE\_END}}
+\DoxyCodeLine{    \textcolor{comment}{// Structure definition}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include AAX\_ALIGN\_FILE\_BEGIN}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include AAX\_ALIGN\_FILE\_RESET}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include AAX\_ALIGN\_FILE\_END}}
+\end{DoxyCode}
+
+
+See the documentation for each macro for individual usage notes and warnings }\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00392_acbef7ed7d077bc9812cb56417e1ad325}{A\+A\+X\+\_\+\+A\+L\+I\+G\+N\+\_\+\+F\+I\+L\+E\+\_\+\+H\+O\+ST}}~\char`\"{}A\+A\+X\+\_\+\+Push2\+Byte\+Struct\+Alignment.\+h\char`\"{}
+\begin{DoxyCompactList}\small\item\em Macro to set alignment for data structures that are shared with the host. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_a8fbeac3c5db5ac694e85a021ed74dc9e}{A\+A\+X\+\_\+\+A\+L\+I\+G\+N\+\_\+\+F\+I\+L\+E\+\_\+\+A\+LG}}~\char`\"{}A\+A\+X\+\_\+\+Push8\+Byte\+Struct\+Alignment.\+h\char`\"{}
+\begin{DoxyCompactList}\small\item\em Macro to set alignment for data structures that are used in the alg. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_a8aaaefcc3d87025e84d5ccb99b650a87}{A\+A\+X\+\_\+\+A\+L\+I\+G\+N\+\_\+\+F\+I\+L\+E\+\_\+\+R\+E\+S\+ET}}~\char`\"{}A\+A\+X\+\_\+\+Pop\+Struct\+Alignment.\+h\char`\"{}
+\begin{DoxyCompactList}\small\item\em Macro to reset alignment back to default. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_adda336497ac4b6d43d00b27c6d8f4b0c}{A\+A\+X\+\_\+\+A\+L\+I\+G\+N\+\_\+\+F\+I\+L\+E\+\_\+\+B\+E\+G\+IN}}~\char`\"{}A\+A\+X\+\_\+\+Pre\+Struct\+Alignment\+Helper.\+h\char`\"{}
+\begin{DoxyCompactList}\small\item\em Wrapper macro used for warning suppression. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{a00392_a4343a2f7a4030576d290bc2c127964d8}{A\+A\+X\+\_\+\+A\+L\+I\+G\+N\+\_\+\+F\+I\+L\+E\+\_\+\+E\+ND}}~\char`\"{}A\+A\+X\+\_\+\+Post\+Struct\+Alignment\+Helper.\+h\char`\"{}
+\begin{DoxyCompactList}\small\item\em Wrapper macro used for warning suppression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int32\+\_\+t \mbox{\hyperlink{a00392_a24ac375fa55ccadbc3126e6d81146c28}{A\+A\+X\+\_\+\+C\+Index}}
+\item 
+typedef \mbox{\hyperlink{a00392_a24ac375fa55ccadbc3126e6d81146c28}{A\+A\+X\+\_\+\+C\+Index}} \mbox{\hyperlink{a00392_a9a9a14ab1486fa8c6734b96976be3056}{A\+A\+X\+\_\+\+C\+Count}}
+\item 
+typedef uint8\+\_\+t \mbox{\hyperlink{a00392_aa216506530f1d19a2965931ced2b274b}{A\+A\+X\+\_\+\+C\+Boolean}}
+\begin{DoxyCompactList}\small\item\em Cross-\/compiler boolean type used by A\+AX interfaces. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{a00392_aeaf9b387f902c50a8360ff423f4a1f23}{A\+A\+X\+\_\+\+C\+Selector}}
+\item 
+typedef int64\+\_\+t \mbox{\hyperlink{a00392_aae7325dbfa53a983f208a68cb563fba5}{A\+A\+X\+\_\+\+C\+Timestamp}}
+\begin{DoxyCompactList}\small\item\em Time stamp value. Measured against the D\+AE clock (see \mbox{\hyperlink{a01781_a59727dee1043fcd7f14da130ab254445}{A\+A\+X\+\_\+\+I\+Component\+Descriptor\+::\+Add\+Clock()}} ) \end{DoxyCompactList}\item 
+typedef int64\+\_\+t \mbox{\hyperlink{a00392_a46542a1dcccdcc3b4260a9926edf8a2a}{A\+A\+X\+\_\+\+C\+Time\+Of\+Day}}
+\begin{DoxyCompactList}\small\item\em Hardware running clock value. M\+I\+DI packet time stamps are measured against this clock. This is actually the same as Transport\+Counter, but kept for compatibility. \end{DoxyCompactList}\item 
+typedef int64\+\_\+t \mbox{\hyperlink{a00392_ac09cd6857748cc296ac0f8bcc20dc74b}{A\+A\+X\+\_\+\+C\+Transport\+Counter}}
+\begin{DoxyCompactList}\small\item\em Offset of samples from transport start. Same as Time\+Of\+Day, but added for new interfaces as Time\+Of\+Day is a confusing name. \end{DoxyCompactList}\item 
+typedef float \mbox{\hyperlink{a00392_a3d9eea08f47e0b0a23432e15baa4e885}{A\+A\+X\+\_\+\+C\+Sample\+Rate}}
+\begin{DoxyCompactList}\small\item\em Literal sample rate value used by the \mbox{\hyperlink{a01781_adbd57beaa0a3143d3cf44b93ecdb59ec}{sample rate field}}. For \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0dac5294e2feb18587d57b6ca0216a6bb1e}{A\+A\+X\+\_\+e\+Property\+\_\+\+Sample\+Rate}}, use a mask of \mbox{\hyperlink{a00491_a5bb98259de21d2c4d04a2d6010d757c7}{A\+A\+X\+\_\+\+E\+Sample\+Rate\+Mask}}. \end{DoxyCompactList}\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{a00392_ac678f9c1fbcc26315d209f71a147a175}{A\+A\+X\+\_\+\+C\+Type\+ID}}
+\begin{DoxyCompactList}\small\item\em Matches type of O\+S\+Type used in classic plugins. \end{DoxyCompactList}\item 
+typedef int32\+\_\+t \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}}
+\item 
+typedef int32\+\_\+t \mbox{\hyperlink{a00392_ab247c0d8686c14e05cbb567ef276f249}{A\+A\+X\+\_\+\+C\+Property\+Value}}
+\begin{DoxyCompactList}\small\item\em 32-\/bit property values \end{DoxyCompactList}\item 
+typedef int64\+\_\+t \mbox{\hyperlink{a00392_a49471789032304f99ac1af8c15a87313}{A\+A\+X\+\_\+\+C\+Property\+Value64}}
+\begin{DoxyCompactList}\small\item\em 64-\/bit property values \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{a00392_ab247c0d8686c14e05cbb567ef276f249}{A\+A\+X\+\_\+\+C\+Property\+Value}} \mbox{\hyperlink{a00392_a7abe263a7521e988ed4ee4ac691ed5f9}{A\+A\+X\+\_\+\+C\+Pointer\+Property\+Value}}
+\begin{DoxyCompactList}\small\item\em Pointer-\/sized property values. \end{DoxyCompactList}\item 
+typedef int32\+\_\+t \mbox{\hyperlink{a00392_a8f2cefa455217fa9f3ce190fe5fd8033}{A\+A\+X\+\_\+\+C\+Target\+Platform}}
+\begin{DoxyCompactList}\small\item\em Matches type of \mbox{\hyperlink{a00491_a19e8cc27f59bb9bb4039b00fadb3cb83}{target platform.}}\end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{a00392_a24ac375fa55ccadbc3126e6d81146c28}{A\+A\+X\+\_\+\+C\+Index}} \mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}}
+\begin{DoxyCompactList}\small\item\em Not used by A\+AX plug-\/ins (except in \mbox{\hyperlink{a00392_acf807247ecd6e5899dc9dc31644e9a1d}{A\+A\+X\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+D\+EX}} macro) \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{a00392_aeaf9b387f902c50a8360ff423f4a1f23}{A\+A\+X\+\_\+\+C\+Selector}} \mbox{\hyperlink{a00392_a7e697acf597bd7024de6bb13b9845ce7}{A\+A\+X\+\_\+\+C\+Component\+ID}}
+\item 
+typedef \mbox{\hyperlink{a00392_aeaf9b387f902c50a8360ff423f4a1f23}{A\+A\+X\+\_\+\+C\+Selector}} \mbox{\hyperlink{a00392_a6d976263b5f3dd5d01a89d65a3b98ded}{A\+A\+X\+\_\+\+C\+Meter\+ID}}
+\item 
+typedef const char $\ast$ \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}
+\begin{DoxyCompactList}\small\item\em Parameter identifier. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} \mbox{\hyperlink{a00392_ab4e01b971dac1b25632fd9f710dd8f77}{A\+A\+X\+\_\+\+C\+Page\+Table\+Param\+ID}}
+\begin{DoxyCompactList}\small\item\em Parameter identifier used in a page table. \end{DoxyCompactList}\item 
+typedef const char $\ast$ \mbox{\hyperlink{a00392_a4b8f04e1a56624da97ace7a28d550dcc}{A\+A\+X\+\_\+\+C\+Effect\+ID}}
+\begin{DoxyCompactList}\small\item\em U\+R\+L-\/style Effect identifier. Must be unique among all registered effects in the collection. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{a01405}{\+\_\+acf\+U\+ID}} \mbox{\hyperlink{a00392_a66d978418e20352380f1c775c9180a93}{acf\+U\+ID}}
+\item 
+typedef \mbox{\hyperlink{a00269_ab19414382287ff80930c48a196145214}{acf\+U\+ID}} \mbox{\hyperlink{a00392_a53d6cf8a08224b3e813333e411ce798e}{A\+A\+X\+\_\+\+Feature\+\_\+\+U\+ID}}
+\item 
+typedef const float $\ast$const  $\ast$ \mbox{\hyperlink{a00392_a901605fce9f6c52b770f95916a5db4cf}{A\+A\+X\+\_\+\+C\+Audio\+In\+Port}}
+\begin{DoxyCompactList}\small\item\em A\+AX algorithm audio input port data type \end{DoxyCompactList}\item 
+typedef float $\ast$const  $\ast$ \mbox{\hyperlink{a00392_a650727644637144afc13344e7996c947}{A\+A\+X\+\_\+\+C\+Audio\+Out\+Port}}
+\begin{DoxyCompactList}\small\item\em A\+AX algorithm audio output port data type \end{DoxyCompactList}\item 
+typedef float $\ast$const \mbox{\hyperlink{a00392_aa6f40c5c3f36ede060fca61535ea8464}{A\+A\+X\+\_\+\+C\+Meter\+Port}}
+\begin{DoxyCompactList}\small\item\em A\+AX algorithm meter port data type \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{a01417}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk\+Header}} \mbox{\hyperlink{a00392_a5a7e5322afe0c3b98da933557ae0cbba}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk\+Header}}
+\item 
+typedef struct \mbox{\hyperlink{a01421}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk}} \mbox{\hyperlink{a00392_af52a5fe2ae79f803234d089889b7e481}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk}}
+\item 
+typedef struct \mbox{\hyperlink{a01421}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk}} $\ast$ \mbox{\hyperlink{a00392_ab215ba217e7d757be9ef167dfd8fa23a}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk\+Ptr}}
+\item 
+typedef struct \mbox{\hyperlink{a01425}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}} \mbox{\hyperlink{a00392_aa20951c2f27c7f5ff8ea4f92a893e29c}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}}
+\item 
+typedef struct \mbox{\hyperlink{a01425}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}} $\ast$ \mbox{\hyperlink{a00392_af0e64ac48db3c92acf98646b97a69f88}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad\+Ptr}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00392_aa216506530f1d19a2965931ced2b274b}{A\+A\+X\+\_\+\+C\+Boolean}} \mbox{\hyperlink{a00392_adec37d03995016a9e25490d5785f0d8b}{sample\+Rate\+In\+Mask}} (\mbox{\hyperlink{a00392_a3d9eea08f47e0b0a23432e15baa4e885}{A\+A\+X\+\_\+\+C\+Sample\+Rate}} in\+SR, uint32\+\_\+t i\+Mask)
+\begin{DoxyCompactList}\small\item\em Determines whether a particular \mbox{\hyperlink{a00392_a3d9eea08f47e0b0a23432e15baa4e885}{A\+A\+X\+\_\+\+C\+Sample\+Rate}} is present in a given mask of \mbox{\hyperlink{a00491_a5bb98259de21d2c4d04a2d6010d757c7}{A\+A\+X\+\_\+\+E\+Sample\+Rate\+Mask}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00392_a3d9eea08f47e0b0a23432e15baa4e885}{A\+A\+X\+\_\+\+C\+Sample\+Rate}} \mbox{\hyperlink{a00392_a7ed6789141267c2270b49ef9a38bd55a}{get\+Lowest\+Sample\+Rate\+In\+Mask}} (uint32\+\_\+t i\+Mask)
+\begin{DoxyCompactList}\small\item\em Converts from a mask of \mbox{\hyperlink{a00491_a5bb98259de21d2c4d04a2d6010d757c7}{A\+A\+X\+\_\+\+E\+Sample\+Rate\+Mask}} to the lowest supported \mbox{\hyperlink{a00392_a3d9eea08f47e0b0a23432e15baa4e885}{A\+A\+X\+\_\+\+C\+Sample\+Rate}} value in Hz. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{a00392_a35608eb248567091abba77878fb87eab}{get\+Mask\+For\+Sample\+Rate}} (float in\+SR)
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{a00491_a5bb98259de21d2c4d04a2d6010d757c7}{A\+A\+X\+\_\+\+E\+Sample\+Rate\+Mask}} selector for a literal sample rate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{a00392_a5f58f7770d463d262cc28b0e7b88747b}\label{a00392_a5f58f7770d463d262cc28b0e7b88747b}} 
+\index{AAX.h@{AAX.h}!TI\_VERSION@{TI\_VERSION}}
+\index{TI\_VERSION@{TI\_VERSION}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{TI\_VERSION}{TI\_VERSION}}
+{\footnotesize\ttfamily \#define T\+I\+\_\+\+V\+E\+R\+S\+I\+ON~0}
+
+
+
+Preprocessor flag indicating compilation for TI. 
+
+\mbox{\Hypertarget{a00392_a2da185ff8aad77278f985a6fe5ee07ba}\label{a00392_a2da185ff8aad77278f985a6fe5ee07ba}} 
+\index{AAX.h@{AAX.h}!AAX\_CPP11\_SUPPORT@{AAX\_CPP11\_SUPPORT}}
+\index{AAX\_CPP11\_SUPPORT@{AAX\_CPP11\_SUPPORT}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CPP11\_SUPPORT}{AAX\_CPP11\_SUPPORT}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+C\+P\+P11\+\_\+\+S\+U\+P\+P\+O\+RT~1}
+
+
+
+Preprocessor toggle for code which requires C++11 compiler support. 
+
+\mbox{\Hypertarget{a00392_ac2f24a5172689ae684344abdcce55463}\label{a00392_ac2f24a5172689ae684344abdcce55463}} 
+\index{AAX.h@{AAX.h}!AAX\_OVERRIDE@{AAX\_OVERRIDE}}
+\index{AAX\_OVERRIDE@{AAX\_OVERRIDE}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_OVERRIDE}{AAX\_OVERRIDE}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+O\+V\+E\+R\+R\+I\+DE~override}
+
+
+
+{\ttfamily override} keyword macro 
+
+\mbox{\Hypertarget{a00392_aa4da4a09e940c332a2205e34e0677f40}\label{a00392_aa4da4a09e940c332a2205e34e0677f40}} 
+\index{AAX.h@{AAX.h}!AAX\_FINAL@{AAX\_FINAL}}
+\index{AAX\_FINAL@{AAX\_FINAL}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_FINAL}{AAX\_FINAL}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+F\+I\+N\+AL~final}
+
+
+
+{\ttfamily final} keyword macro 
+
+\mbox{\Hypertarget{a00392_aa2e8b7a189710394388ad3b0a782de86}\label{a00392_aa2e8b7a189710394388ad3b0a782de86}} 
+\index{AAX.h@{AAX.h}!AAX\_DEFAULT\_DTOR@{AAX\_DEFAULT\_DTOR}}
+\index{AAX\_DEFAULT\_DTOR@{AAX\_DEFAULT\_DTOR}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_DEFAULT\_DTOR}{AAX\_DEFAULT\_DTOR}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+T\+OR(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~$\sim$X() = default}
+
+\mbox{\Hypertarget{a00392_a2cb0270bc94e260696e62749de215798}\label{a00392_a2cb0270bc94e260696e62749de215798}} 
+\index{AAX.h@{AAX.h}!AAX\_DEFAULT\_DTOR\_OVERRIDE@{AAX\_DEFAULT\_DTOR\_OVERRIDE}}
+\index{AAX\_DEFAULT\_DTOR\_OVERRIDE@{AAX\_DEFAULT\_DTOR\_OVERRIDE}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_DEFAULT\_DTOR\_OVERRIDE}{AAX\_DEFAULT\_DTOR\_OVERRIDE}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+T\+O\+R\+\_\+\+O\+V\+E\+R\+R\+I\+DE(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~$\sim$X() override = default}
+
+\mbox{\Hypertarget{a00392_a5ed9499b8cd7549adf991d46dfbe749b}\label{a00392_a5ed9499b8cd7549adf991d46dfbe749b}} 
+\index{AAX.h@{AAX.h}!AAX\_DEFAULT\_CTOR@{AAX\_DEFAULT\_CTOR}}
+\index{AAX\_DEFAULT\_CTOR@{AAX\_DEFAULT\_CTOR}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_DEFAULT\_CTOR}{AAX\_DEFAULT\_CTOR}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+T\+OR(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~X() = default}
+
+
+
+{\ttfamily default} keyword macro for a class default constructor 
+
+\mbox{\Hypertarget{a00392_a608ab9e59f8f54c32e68fe0d32e9b991}\label{a00392_a608ab9e59f8f54c32e68fe0d32e9b991}} 
+\index{AAX.h@{AAX.h}!AAX\_DEFAULT\_COPY\_CTOR@{AAX\_DEFAULT\_COPY\_CTOR}}
+\index{AAX\_DEFAULT\_COPY\_CTOR@{AAX\_DEFAULT\_COPY\_CTOR}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_DEFAULT\_COPY\_CTOR}{AAX\_DEFAULT\_COPY\_CTOR}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+P\+Y\+\_\+\+C\+T\+OR(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~X(const X\&) = default}
+
+
+
+{\ttfamily default} keyword macro for a class copy constructor 
+
+\mbox{\Hypertarget{a00392_aded8c9ff9a00f3780ae99be88573a5ce}\label{a00392_aded8c9ff9a00f3780ae99be88573a5ce}} 
+\index{AAX.h@{AAX.h}!AAX\_DEFAULT\_ASGN\_OPER@{AAX\_DEFAULT\_ASGN\_OPER}}
+\index{AAX\_DEFAULT\_ASGN\_OPER@{AAX\_DEFAULT\_ASGN\_OPER}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_DEFAULT\_ASGN\_OPER}{AAX\_DEFAULT\_ASGN\_OPER}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+A\+S\+G\+N\+\_\+\+O\+P\+ER(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~X\& operator=(const X\&) = default}
+
+
+
+{\ttfamily default} keyword macro for a class assignment operator 
+
+\mbox{\Hypertarget{a00392_a2511e9b022e49caf594bca6fa6bff74c}\label{a00392_a2511e9b022e49caf594bca6fa6bff74c}} 
+\index{AAX.h@{AAX.h}!AAX\_DELETE@{AAX\_DELETE}}
+\index{AAX\_DELETE@{AAX\_DELETE}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_DELETE}{AAX\_DELETE}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+D\+E\+L\+E\+TE(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~X = delete}
+
+
+
+{\ttfamily delete} keyword macro 
+
+\begin{DoxyWarning}{Warning}
+The non-\/\+C++11 version of this macro assumes {\ttfamily public} declaration access 
+\end{DoxyWarning}
+\mbox{\Hypertarget{a00392_a25bcd6f9d38bd2c9ffbf8aff01b4a274}\label{a00392_a25bcd6f9d38bd2c9ffbf8aff01b4a274}} 
+\index{AAX.h@{AAX.h}!AAX\_DEFAULT\_MOVE\_CTOR@{AAX\_DEFAULT\_MOVE\_CTOR}}
+\index{AAX\_DEFAULT\_MOVE\_CTOR@{AAX\_DEFAULT\_MOVE\_CTOR}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_DEFAULT\_MOVE\_CTOR}{AAX\_DEFAULT\_MOVE\_CTOR}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+V\+E\+\_\+\+C\+T\+OR(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~X(X\&\&) = default}
+
+
+
+{\ttfamily default} keyword macro for a class move constructor 
+
+\mbox{\Hypertarget{a00392_a0478af896a79eddf2ddee1cfd403e6b0}\label{a00392_a0478af896a79eddf2ddee1cfd403e6b0}} 
+\index{AAX.h@{AAX.h}!AAX\_DEFAULT\_MOVE\_OPER@{AAX\_DEFAULT\_MOVE\_OPER}}
+\index{AAX\_DEFAULT\_MOVE\_OPER@{AAX\_DEFAULT\_MOVE\_OPER}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_DEFAULT\_MOVE\_OPER}{AAX\_DEFAULT\_MOVE\_OPER}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+O\+V\+E\+\_\+\+O\+P\+ER(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~X\& operator=(X\&\&) = default}
+
+
+
+{\ttfamily default} keyword macro for a class move-\/assignment operator 
+
+\mbox{\Hypertarget{a00392_aa7cfdcabcfd72ca9b829e6cea9ea6470}\label{a00392_aa7cfdcabcfd72ca9b829e6cea9ea6470}} 
+\index{AAX.h@{AAX.h}!AAX\_CONSTEXPR@{AAX\_CONSTEXPR}}
+\index{AAX\_CONSTEXPR@{AAX\_CONSTEXPR}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CONSTEXPR}{AAX\_CONSTEXPR}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+C\+O\+N\+S\+T\+E\+X\+PR~constexpr}
+
+
+
+{\ttfamily constexpr} keyword macro 
+
+\mbox{\Hypertarget{a00392_a0a58bb9dab931dfe26d8edeb4e5e6319}\label{a00392_a0a58bb9dab931dfe26d8edeb4e5e6319}} 
+\index{AAX.h@{AAX.h}!AAX\_UNIQUE\_PTR@{AAX\_UNIQUE\_PTR}}
+\index{AAX\_UNIQUE\_PTR@{AAX\_UNIQUE\_PTR}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_UNIQUE\_PTR}{AAX\_UNIQUE\_PTR}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+P\+TR(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~std\+::unique\+\_\+ptr$<$X$>$}
+
+\mbox{\Hypertarget{a00392_a3310096b753437bda7ec67de445cf9cb}\label{a00392_a3310096b753437bda7ec67de445cf9cb}} 
+\index{AAX.h@{AAX.h}!AAXPointer\_32bit@{AAXPointer\_32bit}}
+\index{AAXPointer\_32bit@{AAXPointer\_32bit}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAXPointer\_32bit}{AAXPointer\_32bit}}
+{\footnotesize\ttfamily \#define A\+A\+X\+Pointer\+\_\+32bit~1}
+
+
+
+When A\+A\+X\+\_\+\+Pointer\+Size == A\+A\+X\+Pointer\+\_\+32bit this is a 32-\/bit build. 
+
+\mbox{\Hypertarget{a00392_a1a53e919284726babb582d3bb105b08b}\label{a00392_a1a53e919284726babb582d3bb105b08b}} 
+\index{AAX.h@{AAX.h}!AAXPointer\_64bit@{AAXPointer\_64bit}}
+\index{AAXPointer\_64bit@{AAXPointer\_64bit}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAXPointer\_64bit}{AAXPointer\_64bit}}
+{\footnotesize\ttfamily \#define A\+A\+X\+Pointer\+\_\+64bit~2}
+
+
+
+When A\+A\+X\+\_\+\+Pointer\+Size == A\+A\+X\+Pointer\+\_\+64bit this is a 64-\/bit build. 
+
+\mbox{\Hypertarget{a00392_a078a28903a34f1bd25f1e23d65df6212}\label{a00392_a078a28903a34f1bd25f1e23d65df6212}} 
+\index{AAX.h@{AAX.h}!AAX\_PointerSize@{AAX\_PointerSize}}
+\index{AAX\_PointerSize@{AAX\_PointerSize}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_PointerSize}{AAX\_PointerSize}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+Pointer\+Size~\mbox{\hyperlink{a00392_a3310096b753437bda7ec67de445cf9cb}{A\+A\+X\+Pointer\+\_\+32bit}}}
+
+
+
+Use this definition to check the pointer size in the current build. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{a00392_a3310096b753437bda7ec67de445cf9cb}{A\+A\+X\+Pointer\+\_\+32bit}} 
+
+\mbox{\hyperlink{a00392_a1a53e919284726babb582d3bb105b08b}{A\+A\+X\+Pointer\+\_\+64bit}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{a00392_acbef7ed7d077bc9812cb56417e1ad325}\label{a00392_acbef7ed7d077bc9812cb56417e1ad325}} 
+\index{AAX.h@{AAX.h}!AAX\_ALIGN\_FILE\_HOST@{AAX\_ALIGN\_FILE\_HOST}}
+\index{AAX\_ALIGN\_FILE\_HOST@{AAX\_ALIGN\_FILE\_HOST}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_ALIGN\_FILE\_HOST}{AAX\_ALIGN\_FILE\_HOST}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+A\+L\+I\+G\+N\+\_\+\+F\+I\+L\+E\+\_\+\+H\+O\+ST~\char`\"{}A\+A\+X\+\_\+\+Push2\+Byte\+Struct\+Alignment.\+h\char`\"{}}
+
+
+
+Macro to set alignment for data structures that are shared with the host. 
+
+This macro is used to set alignment for data structures that are part of the A\+AX A\+BI. You should not need to use this macro for any custom data structures in your plug-\/in. \mbox{\Hypertarget{a00392_a8fbeac3c5db5ac694e85a021ed74dc9e}\label{a00392_a8fbeac3c5db5ac694e85a021ed74dc9e}} 
+\index{AAX.h@{AAX.h}!AAX\_ALIGN\_FILE\_ALG@{AAX\_ALIGN\_FILE\_ALG}}
+\index{AAX\_ALIGN\_FILE\_ALG@{AAX\_ALIGN\_FILE\_ALG}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_ALIGN\_FILE\_ALG}{AAX\_ALIGN\_FILE\_ALG}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+A\+L\+I\+G\+N\+\_\+\+F\+I\+L\+E\+\_\+\+A\+LG~\char`\"{}A\+A\+X\+\_\+\+Push8\+Byte\+Struct\+Alignment.\+h\char`\"{}}
+
+
+
+Macro to set alignment for data structures that are used in the alg. 
+
+I\+M\+P\+O\+R\+T\+A\+NT\+: Be very careful to maintain correct data alignment when sending data structures between platforms.
+
+\begin{DoxyWarning}{Warning}
+\begin{DoxyItemize}
+\item This macro does not guarantee data alignment compatibility for data structures which include base classes/structs or virtual functions. The M\+S\+VC, G\+CC and L\+L\+V\+M/clang, and C\+CS (TI) compilers do not support data structure cross-\/compatibility for these types of structures. clang will now present a warning when these macros are used on any such structures\+: {\ttfamily \#pragma ms\+\_\+struct can not be used with dynamic classes or structures} \item Struct Member Alignment (/\+Zp) on Microsoft compilers must be set to a minimum of 8-\/byte packing in order for this macro to function properly. For more information, see this M\+S\+DN article\+:~\newline
+\href{http://msdn.microsoft.com/en-us/library/ms253935.aspx}{\texttt{ http\+://msdn.\+microsoft.\+com/en-\/us/library/ms253935.\+aspx}} \end{DoxyItemize}
+
+\end{DoxyWarning}
+\mbox{\Hypertarget{a00392_a8aaaefcc3d87025e84d5ccb99b650a87}\label{a00392_a8aaaefcc3d87025e84d5ccb99b650a87}} 
+\index{AAX.h@{AAX.h}!AAX\_ALIGN\_FILE\_RESET@{AAX\_ALIGN\_FILE\_RESET}}
+\index{AAX\_ALIGN\_FILE\_RESET@{AAX\_ALIGN\_FILE\_RESET}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_ALIGN\_FILE\_RESET}{AAX\_ALIGN\_FILE\_RESET}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+A\+L\+I\+G\+N\+\_\+\+F\+I\+L\+E\+\_\+\+R\+E\+S\+ET~\char`\"{}A\+A\+X\+\_\+\+Pop\+Struct\+Alignment.\+h\char`\"{}}
+
+
+
+Macro to reset alignment back to default. 
+
+\mbox{\Hypertarget{a00392_adda336497ac4b6d43d00b27c6d8f4b0c}\label{a00392_adda336497ac4b6d43d00b27c6d8f4b0c}} 
+\index{AAX.h@{AAX.h}!AAX\_ALIGN\_FILE\_BEGIN@{AAX\_ALIGN\_FILE\_BEGIN}}
+\index{AAX\_ALIGN\_FILE\_BEGIN@{AAX\_ALIGN\_FILE\_BEGIN}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_ALIGN\_FILE\_BEGIN}{AAX\_ALIGN\_FILE\_BEGIN}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+A\+L\+I\+G\+N\+\_\+\+F\+I\+L\+E\+\_\+\+B\+E\+G\+IN~\char`\"{}A\+A\+X\+\_\+\+Pre\+Struct\+Alignment\+Helper.\+h\char`\"{}}
+
+
+
+Wrapper macro used for warning suppression. 
+
+This wrapper is required in llvm 10.\+0 and later due to the addition of the {\ttfamily -\/Wpragma-\/pack} warning. This is a useful compiler warning but it is awkward to properly suppress in cases where we are intentionally including only part of the push/pop sequence in a single file, as with the {\ttfamily A\+A\+X\+\_\+\+A\+L\+I\+G\+N\+\_\+\+F\+I\+L\+E\+\_\+\+X\+XX} macros. \mbox{\Hypertarget{a00392_a4343a2f7a4030576d290bc2c127964d8}\label{a00392_a4343a2f7a4030576d290bc2c127964d8}} 
+\index{AAX.h@{AAX.h}!AAX\_ALIGN\_FILE\_END@{AAX\_ALIGN\_FILE\_END}}
+\index{AAX\_ALIGN\_FILE\_END@{AAX\_ALIGN\_FILE\_END}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_ALIGN\_FILE\_END}{AAX\_ALIGN\_FILE\_END}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+A\+L\+I\+G\+N\+\_\+\+F\+I\+L\+E\+\_\+\+E\+ND~\char`\"{}A\+A\+X\+\_\+\+Post\+Struct\+Alignment\+Helper.\+h\char`\"{}}
+
+
+
+Wrapper macro used for warning suppression. 
+
+This wrapper is required in llvm 10.\+0 and later due to the addition of the {\ttfamily -\/Wpragma-\/pack} warning. This is a useful compiler warning but it is awkward to properly suppress in cases where we are intentionally including only part of the push/pop sequence in a single file, as with the {\ttfamily A\+A\+X\+\_\+\+A\+L\+I\+G\+N\+\_\+\+F\+I\+L\+E\+\_\+\+X\+XX} macros. \mbox{\Hypertarget{a00392_aaa22112139aa627574b1ef562f579d43}\label{a00392_aaa22112139aa627574b1ef562f579d43}} 
+\index{AAX.h@{AAX.h}!AAX\_CALLBACK@{AAX\_CALLBACK}}
+\index{AAX\_CALLBACK@{AAX\_CALLBACK}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CALLBACK}{AAX\_CALLBACK}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+C\+A\+L\+L\+B\+A\+CK}
+
+\mbox{\Hypertarget{a00392_ab4f95cd2e83b3c871f47c24a4fbaae7a}\label{a00392_ab4f95cd2e83b3c871f47c24a4fbaae7a}} 
+\index{AAX.h@{AAX.h}!AAX\_PREPROCESSOR\_CONCAT\_HELPER@{AAX\_PREPROCESSOR\_CONCAT\_HELPER}}
+\index{AAX\_PREPROCESSOR\_CONCAT\_HELPER@{AAX\_PREPROCESSOR\_CONCAT\_HELPER}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_PREPROCESSOR\_CONCAT\_HELPER}{AAX\_PREPROCESSOR\_CONCAT\_HELPER}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+H\+E\+L\+P\+ER(\begin{DoxyParamCaption}\item[{}]{X,  }\item[{}]{Y }\end{DoxyParamCaption})~X \#\# Y}
+
+\mbox{\Hypertarget{a00392_af135db633628741ce84c57c6ee8dd1ce}\label{a00392_af135db633628741ce84c57c6ee8dd1ce}} 
+\index{AAX.h@{AAX.h}!AAX\_PREPROCESSOR\_CONCAT@{AAX\_PREPROCESSOR\_CONCAT}}
+\index{AAX\_PREPROCESSOR\_CONCAT@{AAX\_PREPROCESSOR\_CONCAT}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_PREPROCESSOR\_CONCAT}{AAX\_PREPROCESSOR\_CONCAT}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+N\+C\+AT(\begin{DoxyParamCaption}\item[{}]{X,  }\item[{}]{Y }\end{DoxyParamCaption})~\mbox{\hyperlink{a00392_ab4f95cd2e83b3c871f47c24a4fbaae7a}{A\+A\+X\+\_\+\+P\+R\+E\+P\+R\+O\+C\+E\+S\+S\+O\+R\+\_\+\+C\+O\+N\+C\+A\+T\+\_\+\+H\+E\+L\+P\+ER}}(X,Y)}
+
+\mbox{\Hypertarget{a00392_acf807247ecd6e5899dc9dc31644e9a1d}\label{a00392_acf807247ecd6e5899dc9dc31644e9a1d}} 
+\index{AAX.h@{AAX.h}!AAX\_FIELD\_INDEX@{AAX\_FIELD\_INDEX}}
+\index{AAX\_FIELD\_INDEX@{AAX\_FIELD\_INDEX}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_FIELD\_INDEX}{AAX\_FIELD\_INDEX}}
+{\footnotesize\ttfamily \#define A\+A\+X\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+D\+EX(\begin{DoxyParamCaption}\item[{}]{a\+Context\+Type,  }\item[{}]{a\+Member }\end{DoxyParamCaption})~((\mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}}) (offsetof (a\+Context\+Type, a\+Member) / sizeof (void $\ast$)))}
+
+
+
+Compute the index used to address a context field. 
+
+This macro expands to a constant expression suitable for use in enumerator definitions and case labels so int32\+\_\+t as {\ttfamily a\+Member} is a constant specifier.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a\+Context\+Type} & The name of context type\\
+\hline
+\mbox{\texttt{ in}}  & {\em a\+Member} & The name or other specifier of a field of that context type \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{a00392_a24ac375fa55ccadbc3126e6d81146c28}\label{a00392_a24ac375fa55ccadbc3126e6d81146c28}} 
+\index{AAX.h@{AAX.h}!AAX\_CIndex@{AAX\_CIndex}}
+\index{AAX\_CIndex@{AAX\_CIndex}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CIndex}{AAX\_CIndex}}
+{\footnotesize\ttfamily typedef int32\+\_\+t \mbox{\hyperlink{a00392_a24ac375fa55ccadbc3126e6d81146c28}{A\+A\+X\+\_\+\+C\+Index}}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000003}{Todo}}]Not used by A\+AX plug-\/ins (except as \mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}}) \end{DoxyRefDesc}
+\mbox{\Hypertarget{a00392_a9a9a14ab1486fa8c6734b96976be3056}\label{a00392_a9a9a14ab1486fa8c6734b96976be3056}} 
+\index{AAX.h@{AAX.h}!AAX\_CCount@{AAX\_CCount}}
+\index{AAX\_CCount@{AAX\_CCount}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CCount}{AAX\_CCount}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{a00392_a24ac375fa55ccadbc3126e6d81146c28}{A\+A\+X\+\_\+\+C\+Index}} \mbox{\hyperlink{a00392_a9a9a14ab1486fa8c6734b96976be3056}{A\+A\+X\+\_\+\+C\+Count}}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000004}{Todo}}]Not used by A\+AX plug-\/ins \end{DoxyRefDesc}
+\mbox{\Hypertarget{a00392_aa216506530f1d19a2965931ced2b274b}\label{a00392_aa216506530f1d19a2965931ced2b274b}} 
+\index{AAX.h@{AAX.h}!AAX\_CBoolean@{AAX\_CBoolean}}
+\index{AAX\_CBoolean@{AAX\_CBoolean}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CBoolean}{AAX\_CBoolean}}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \mbox{\hyperlink{a00392_aa216506530f1d19a2965931ced2b274b}{A\+A\+X\+\_\+\+C\+Boolean}}}
+
+
+
+Cross-\/compiler boolean type used by A\+AX interfaces. 
+
+\mbox{\Hypertarget{a00392_aeaf9b387f902c50a8360ff423f4a1f23}\label{a00392_aeaf9b387f902c50a8360ff423f4a1f23}} 
+\index{AAX.h@{AAX.h}!AAX\_CSelector@{AAX\_CSelector}}
+\index{AAX\_CSelector@{AAX\_CSelector}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CSelector}{AAX\_CSelector}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{a00392_aeaf9b387f902c50a8360ff423f4a1f23}{A\+A\+X\+\_\+\+C\+Selector}}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000005}{Todo}}]Clean up usage; currently used for a variety of I\+D-\/related values \end{DoxyRefDesc}
+\mbox{\Hypertarget{a00392_aae7325dbfa53a983f208a68cb563fba5}\label{a00392_aae7325dbfa53a983f208a68cb563fba5}} 
+\index{AAX.h@{AAX.h}!AAX\_CTimestamp@{AAX\_CTimestamp}}
+\index{AAX\_CTimestamp@{AAX\_CTimestamp}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CTimestamp}{AAX\_CTimestamp}}
+{\footnotesize\ttfamily typedef int64\+\_\+t \mbox{\hyperlink{a00392_aae7325dbfa53a983f208a68cb563fba5}{A\+A\+X\+\_\+\+C\+Timestamp}}}
+
+
+
+Time stamp value. Measured against the D\+AE clock (see \mbox{\hyperlink{a01781_a59727dee1043fcd7f14da130ab254445}{A\+A\+X\+\_\+\+I\+Component\+Descriptor\+::\+Add\+Clock()}} ) 
+
+\mbox{\Hypertarget{a00392_a46542a1dcccdcc3b4260a9926edf8a2a}\label{a00392_a46542a1dcccdcc3b4260a9926edf8a2a}} 
+\index{AAX.h@{AAX.h}!AAX\_CTimeOfDay@{AAX\_CTimeOfDay}}
+\index{AAX\_CTimeOfDay@{AAX\_CTimeOfDay}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CTimeOfDay}{AAX\_CTimeOfDay}}
+{\footnotesize\ttfamily typedef int64\+\_\+t \mbox{\hyperlink{a00392_a46542a1dcccdcc3b4260a9926edf8a2a}{A\+A\+X\+\_\+\+C\+Time\+Of\+Day}}}
+
+
+
+Hardware running clock value. M\+I\+DI packet time stamps are measured against this clock. This is actually the same as Transport\+Counter, but kept for compatibility. 
+
+\mbox{\Hypertarget{a00392_ac09cd6857748cc296ac0f8bcc20dc74b}\label{a00392_ac09cd6857748cc296ac0f8bcc20dc74b}} 
+\index{AAX.h@{AAX.h}!AAX\_CTransportCounter@{AAX\_CTransportCounter}}
+\index{AAX\_CTransportCounter@{AAX\_CTransportCounter}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CTransportCounter}{AAX\_CTransportCounter}}
+{\footnotesize\ttfamily typedef int64\+\_\+t \mbox{\hyperlink{a00392_ac09cd6857748cc296ac0f8bcc20dc74b}{A\+A\+X\+\_\+\+C\+Transport\+Counter}}}
+
+
+
+Offset of samples from transport start. Same as Time\+Of\+Day, but added for new interfaces as Time\+Of\+Day is a confusing name. 
+
+\mbox{\Hypertarget{a00392_a3d9eea08f47e0b0a23432e15baa4e885}\label{a00392_a3d9eea08f47e0b0a23432e15baa4e885}} 
+\index{AAX.h@{AAX.h}!AAX\_CSampleRate@{AAX\_CSampleRate}}
+\index{AAX\_CSampleRate@{AAX\_CSampleRate}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CSampleRate}{AAX\_CSampleRate}}
+{\footnotesize\ttfamily typedef float \mbox{\hyperlink{a00392_a3d9eea08f47e0b0a23432e15baa4e885}{A\+A\+X\+\_\+\+C\+Sample\+Rate}}}
+
+
+
+Literal sample rate value used by the \mbox{\hyperlink{a01781_adbd57beaa0a3143d3cf44b93ecdb59ec}{sample rate field}}. For \mbox{\hyperlink{a00662_a13e384f22825afd3db6d68395b79ce0dac5294e2feb18587d57b6ca0216a6bb1e}{A\+A\+X\+\_\+e\+Property\+\_\+\+Sample\+Rate}}, use a mask of \mbox{\hyperlink{a00491_a5bb98259de21d2c4d04a2d6010d757c7}{A\+A\+X\+\_\+\+E\+Sample\+Rate\+Mask}}. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{a00392_adec37d03995016a9e25490d5785f0d8b}{sample\+Rate\+In\+Mask}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{a00392_ac678f9c1fbcc26315d209f71a147a175}\label{a00392_ac678f9c1fbcc26315d209f71a147a175}} 
+\index{AAX.h@{AAX.h}!AAX\_CTypeID@{AAX\_CTypeID}}
+\index{AAX\_CTypeID@{AAX\_CTypeID}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CTypeID}{AAX\_CTypeID}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{a00392_ac678f9c1fbcc26315d209f71a147a175}{A\+A\+X\+\_\+\+C\+Type\+ID}}}
+
+
+
+Matches type of O\+S\+Type used in classic plugins. 
+
+\mbox{\Hypertarget{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}\label{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}} 
+\index{AAX.h@{AAX.h}!AAX\_Result@{AAX\_Result}}
+\index{AAX\_Result@{AAX\_Result}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_Result}{AAX\_Result}}
+{\footnotesize\ttfamily typedef int32\+\_\+t \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}}}
+
+\mbox{\Hypertarget{a00392_ab247c0d8686c14e05cbb567ef276f249}\label{a00392_ab247c0d8686c14e05cbb567ef276f249}} 
+\index{AAX.h@{AAX.h}!AAX\_CPropertyValue@{AAX\_CPropertyValue}}
+\index{AAX\_CPropertyValue@{AAX\_CPropertyValue}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CPropertyValue}{AAX\_CPropertyValue}}
+{\footnotesize\ttfamily typedef int32\+\_\+t \mbox{\hyperlink{a00392_ab247c0d8686c14e05cbb567ef276f249}{A\+A\+X\+\_\+\+C\+Property\+Value}}}
+
+
+
+32-\/bit property values 
+
+Use this property value type for all properties unless otherwise specified by the property documentation \mbox{\Hypertarget{a00392_a49471789032304f99ac1af8c15a87313}\label{a00392_a49471789032304f99ac1af8c15a87313}} 
+\index{AAX.h@{AAX.h}!AAX\_CPropertyValue64@{AAX\_CPropertyValue64}}
+\index{AAX\_CPropertyValue64@{AAX\_CPropertyValue64}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CPropertyValue64}{AAX\_CPropertyValue64}}
+{\footnotesize\ttfamily typedef int64\+\_\+t \mbox{\hyperlink{a00392_a49471789032304f99ac1af8c15a87313}{A\+A\+X\+\_\+\+C\+Property\+Value64}}}
+
+
+
+64-\/bit property values 
+
+Do not use this value type unless specified explicitly in the property documentation \mbox{\Hypertarget{a00392_a7abe263a7521e988ed4ee4ac691ed5f9}\label{a00392_a7abe263a7521e988ed4ee4ac691ed5f9}} 
+\index{AAX.h@{AAX.h}!AAX\_CPointerPropertyValue@{AAX\_CPointerPropertyValue}}
+\index{AAX\_CPointerPropertyValue@{AAX\_CPointerPropertyValue}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CPointerPropertyValue}{AAX\_CPointerPropertyValue}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{a00392_ab247c0d8686c14e05cbb567ef276f249}{A\+A\+X\+\_\+\+C\+Property\+Value}} \mbox{\hyperlink{a00392_a7abe263a7521e988ed4ee4ac691ed5f9}{A\+A\+X\+\_\+\+C\+Pointer\+Property\+Value}}}
+
+
+
+Pointer-\/sized property values. 
+
+Do not use this value type unless specified explicitly in the property documentation \mbox{\Hypertarget{a00392_a8f2cefa455217fa9f3ce190fe5fd8033}\label{a00392_a8f2cefa455217fa9f3ce190fe5fd8033}} 
+\index{AAX.h@{AAX.h}!AAX\_CTargetPlatform@{AAX\_CTargetPlatform}}
+\index{AAX\_CTargetPlatform@{AAX\_CTargetPlatform}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CTargetPlatform}{AAX\_CTargetPlatform}}
+{\footnotesize\ttfamily typedef int32\+\_\+t \mbox{\hyperlink{a00392_a8f2cefa455217fa9f3ce190fe5fd8033}{A\+A\+X\+\_\+\+C\+Target\+Platform}}}
+
+
+
+Matches type of \mbox{\hyperlink{a00491_a19e8cc27f59bb9bb4039b00fadb3cb83}{target platform.}}
+
+\mbox{\Hypertarget{a00392_ae807f8986143820cfb5d6da32165c9c7}\label{a00392_ae807f8986143820cfb5d6da32165c9c7}} 
+\index{AAX.h@{AAX.h}!AAX\_CFieldIndex@{AAX\_CFieldIndex}}
+\index{AAX\_CFieldIndex@{AAX\_CFieldIndex}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CFieldIndex}{AAX\_CFieldIndex}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{a00392_a24ac375fa55ccadbc3126e6d81146c28}{A\+A\+X\+\_\+\+C\+Index}} \mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}}}
+
+
+
+Not used by A\+AX plug-\/ins (except in \mbox{\hyperlink{a00392_acf807247ecd6e5899dc9dc31644e9a1d}{A\+A\+X\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+D\+EX}} macro) 
+
+\mbox{\Hypertarget{a00392_a7e697acf597bd7024de6bb13b9845ce7}\label{a00392_a7e697acf597bd7024de6bb13b9845ce7}} 
+\index{AAX.h@{AAX.h}!AAX\_CComponentID@{AAX\_CComponentID}}
+\index{AAX\_CComponentID@{AAX\_CComponentID}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CComponentID}{AAX\_CComponentID}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{a00392_aeaf9b387f902c50a8360ff423f4a1f23}{A\+A\+X\+\_\+\+C\+Selector}} \mbox{\hyperlink{a00392_a7e697acf597bd7024de6bb13b9845ce7}{A\+A\+X\+\_\+\+C\+Component\+ID}}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000006}{Todo}}]Not used by A\+AX plug-\/ins \end{DoxyRefDesc}
+\mbox{\Hypertarget{a00392_a6d976263b5f3dd5d01a89d65a3b98ded}\label{a00392_a6d976263b5f3dd5d01a89d65a3b98ded}} 
+\index{AAX.h@{AAX.h}!AAX\_CMeterID@{AAX\_CMeterID}}
+\index{AAX\_CMeterID@{AAX\_CMeterID}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CMeterID}{AAX\_CMeterID}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{a00392_aeaf9b387f902c50a8360ff423f4a1f23}{A\+A\+X\+\_\+\+C\+Selector}} \mbox{\hyperlink{a00392_a6d976263b5f3dd5d01a89d65a3b98ded}{A\+A\+X\+\_\+\+C\+Meter\+ID}}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000007}{Todo}}]Not used by A\+AX plug-\/ins \end{DoxyRefDesc}
+\mbox{\Hypertarget{a00392_a1440c756fe5cb158b78193b2fc1780d1}\label{a00392_a1440c756fe5cb158b78193b2fc1780d1}} 
+\index{AAX.h@{AAX.h}!AAX\_CParamID@{AAX\_CParamID}}
+\index{AAX\_CParamID@{AAX\_CParamID}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CParamID}{AAX\_CParamID}}
+{\footnotesize\ttfamily typedef const char$\ast$ \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}}}
+
+
+
+Parameter identifier. 
+
+\begin{DoxyNote}{Note}
+While this is a string, it must be less than 32 characters in length. (strlen of 31 or less) 
+\end{DoxyNote}
+\mbox{\Hypertarget{a00392_ab4e01b971dac1b25632fd9f710dd8f77}\label{a00392_ab4e01b971dac1b25632fd9f710dd8f77}} 
+\index{AAX.h@{AAX.h}!AAX\_CPageTableParamID@{AAX\_CPageTableParamID}}
+\index{AAX\_CPageTableParamID@{AAX\_CPageTableParamID}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CPageTableParamID}{AAX\_CPageTableParamID}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{a00392_a1440c756fe5cb158b78193b2fc1780d1}{A\+A\+X\+\_\+\+C\+Param\+ID}} \mbox{\hyperlink{a00392_ab4e01b971dac1b25632fd9f710dd8f77}{A\+A\+X\+\_\+\+C\+Page\+Table\+Param\+ID}}}
+
+
+
+Parameter identifier used in a page table. 
+
+May be a parameter ID or a parameter name string depending on the page table formatting. Must be less than 32 characters in length (strlen of 31 or less.) \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{a00833_subsection_parameter_identifiers}{Parameter identifiers}} in the \mbox{\hyperlink{a00833}{Page Table Guide}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{a00392_a4b8f04e1a56624da97ace7a28d550dcc}\label{a00392_a4b8f04e1a56624da97ace7a28d550dcc}} 
+\index{AAX.h@{AAX.h}!AAX\_CEffectID@{AAX\_CEffectID}}
+\index{AAX\_CEffectID@{AAX\_CEffectID}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CEffectID}{AAX\_CEffectID}}
+{\footnotesize\ttfamily typedef const char$\ast$ \mbox{\hyperlink{a00392_a4b8f04e1a56624da97ace7a28d550dcc}{A\+A\+X\+\_\+\+C\+Effect\+ID}}}
+
+
+
+U\+R\+L-\/style Effect identifier. Must be unique among all registered effects in the collection. 
+
+\mbox{\Hypertarget{a00392_a66d978418e20352380f1c775c9180a93}\label{a00392_a66d978418e20352380f1c775c9180a93}} 
+\index{AAX.h@{AAX.h}!acfUID@{acfUID}}
+\index{acfUID@{acfUID}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{acfUID}{acfUID}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{a01405}{\+\_\+acf\+U\+ID}} \mbox{\hyperlink{a00269_ab19414382287ff80930c48a196145214}{acf\+U\+ID}}}
+
+\mbox{\Hypertarget{a00392_a53d6cf8a08224b3e813333e411ce798e}\label{a00392_a53d6cf8a08224b3e813333e411ce798e}} 
+\index{AAX.h@{AAX.h}!AAX\_Feature\_UID@{AAX\_Feature\_UID}}
+\index{AAX\_Feature\_UID@{AAX\_Feature\_UID}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_Feature\_UID}{AAX\_Feature\_UID}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{a00269_ab19414382287ff80930c48a196145214}{acf\+U\+ID}} \mbox{\hyperlink{a00392_a53d6cf8a08224b3e813333e411ce798e}{A\+A\+X\+\_\+\+Feature\+\_\+\+U\+ID}}}
+
+Identifier for A\+AX features
+
+See \mbox{\hyperlink{a01793_aa0d9e27d0207113f98c217d870bfa5e9}{A\+A\+X\+\_\+\+I\+Description\+Host\+::\+Acquire\+Feature\+Properties()}} and \mbox{\hyperlink{a01829}{A\+A\+X\+\_\+\+I\+Feature\+Info}} \mbox{\Hypertarget{a00392_a901605fce9f6c52b770f95916a5db4cf}\label{a00392_a901605fce9f6c52b770f95916a5db4cf}} 
+\index{AAX.h@{AAX.h}!AAX\_CAudioInPort@{AAX\_CAudioInPort}}
+\index{AAX\_CAudioInPort@{AAX\_CAudioInPort}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CAudioInPort}{AAX\_CAudioInPort}}
+{\footnotesize\ttfamily typedef const float$\ast$ const$\ast$ \mbox{\hyperlink{a00392_a901605fce9f6c52b770f95916a5db4cf}{A\+A\+X\+\_\+\+C\+Audio\+In\+Port}}}
+
+
+
+A\+AX algorithm audio input port data type 
+
+Audio input ports are provided with a pointer to an array of const audio buffers, with one buffer provided per input or side chain channel.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000009}{Todo}}]Not used directly by A\+AX plug-\/ins \end{DoxyRefDesc}
+\mbox{\Hypertarget{a00392_a650727644637144afc13344e7996c947}\label{a00392_a650727644637144afc13344e7996c947}} 
+\index{AAX.h@{AAX.h}!AAX\_CAudioOutPort@{AAX\_CAudioOutPort}}
+\index{AAX\_CAudioOutPort@{AAX\_CAudioOutPort}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CAudioOutPort}{AAX\_CAudioOutPort}}
+{\footnotesize\ttfamily typedef float$\ast$ const$\ast$ \mbox{\hyperlink{a00392_a650727644637144afc13344e7996c947}{A\+A\+X\+\_\+\+C\+Audio\+Out\+Port}}}
+
+
+
+A\+AX algorithm audio output port data type 
+
+Audio output ports are provided with a pointer to an array of audio buffers, with one buffer provided per output or auxiliary output channel.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000010}{Todo}}]Not used directly by A\+AX plug-\/ins \end{DoxyRefDesc}
+\mbox{\Hypertarget{a00392_aa6f40c5c3f36ede060fca61535ea8464}\label{a00392_aa6f40c5c3f36ede060fca61535ea8464}} 
+\index{AAX.h@{AAX.h}!AAX\_CMeterPort@{AAX\_CMeterPort}}
+\index{AAX\_CMeterPort@{AAX\_CMeterPort}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_CMeterPort}{AAX\_CMeterPort}}
+{\footnotesize\ttfamily typedef float$\ast$ const \mbox{\hyperlink{a00392_aa6f40c5c3f36ede060fca61535ea8464}{A\+A\+X\+\_\+\+C\+Meter\+Port}}}
+
+
+
+A\+AX algorithm meter port data type 
+
+Meter output ports are provided with a pointer to an array of floats, with one float provided per meter tap. The algorithm is responsible for setting these to the corresponding per-\/buffer peak sample values.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{a00785__todo000011}{Todo}}]Not used directly by A\+AX plug-\/ins \end{DoxyRefDesc}
+\mbox{\Hypertarget{a00392_a5a7e5322afe0c3b98da933557ae0cbba}\label{a00392_a5a7e5322afe0c3b98da933557ae0cbba}} 
+\index{AAX.h@{AAX.h}!AAX\_SPlugInChunkHeader@{AAX\_SPlugInChunkHeader}}
+\index{AAX\_SPlugInChunkHeader@{AAX\_SPlugInChunkHeader}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_SPlugInChunkHeader}{AAX\_SPlugInChunkHeader}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{a01417}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk\+Header}} \mbox{\hyperlink{a01417}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk\+Header}}}
+
+\mbox{\Hypertarget{a00392_af52a5fe2ae79f803234d089889b7e481}\label{a00392_af52a5fe2ae79f803234d089889b7e481}} 
+\index{AAX.h@{AAX.h}!AAX\_SPlugInChunk@{AAX\_SPlugInChunk}}
+\index{AAX\_SPlugInChunk@{AAX\_SPlugInChunk}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_SPlugInChunk}{AAX\_SPlugInChunk}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{a01421}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk}} \mbox{\hyperlink{a01421}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk}}}
+
+\mbox{\Hypertarget{a00392_ab215ba217e7d757be9ef167dfd8fa23a}\label{a00392_ab215ba217e7d757be9ef167dfd8fa23a}} 
+\index{AAX.h@{AAX.h}!AAX\_SPlugInChunkPtr@{AAX\_SPlugInChunkPtr}}
+\index{AAX\_SPlugInChunkPtr@{AAX\_SPlugInChunkPtr}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_SPlugInChunkPtr}{AAX\_SPlugInChunkPtr}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{a01421}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk}} $\ast$ \mbox{\hyperlink{a00392_ab215ba217e7d757be9ef167dfd8fa23a}{A\+A\+X\+\_\+\+S\+Plug\+In\+Chunk\+Ptr}}}
+
+\mbox{\Hypertarget{a00392_aa20951c2f27c7f5ff8ea4f92a893e29c}\label{a00392_aa20951c2f27c7f5ff8ea4f92a893e29c}} 
+\index{AAX.h@{AAX.h}!AAX\_SPlugInIdentifierTriad@{AAX\_SPlugInIdentifierTriad}}
+\index{AAX\_SPlugInIdentifierTriad@{AAX\_SPlugInIdentifierTriad}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_SPlugInIdentifierTriad}{AAX\_SPlugInIdentifierTriad}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{a01425}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}} \mbox{\hyperlink{a01425}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}}}
+
+\mbox{\Hypertarget{a00392_af0e64ac48db3c92acf98646b97a69f88}\label{a00392_af0e64ac48db3c92acf98646b97a69f88}} 
+\index{AAX.h@{AAX.h}!AAX\_SPlugInIdentifierTriadPtr@{AAX\_SPlugInIdentifierTriadPtr}}
+\index{AAX\_SPlugInIdentifierTriadPtr@{AAX\_SPlugInIdentifierTriadPtr}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{AAX\_SPlugInIdentifierTriadPtr}{AAX\_SPlugInIdentifierTriadPtr}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{a01425}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad}} $\ast$ \mbox{\hyperlink{a00392_af0e64ac48db3c92acf98646b97a69f88}{A\+A\+X\+\_\+\+S\+Plug\+In\+Identifier\+Triad\+Ptr}}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{a00392_adec37d03995016a9e25490d5785f0d8b}\label{a00392_adec37d03995016a9e25490d5785f0d8b}} 
+\index{AAX.h@{AAX.h}!sampleRateInMask@{sampleRateInMask}}
+\index{sampleRateInMask@{sampleRateInMask}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{sampleRateInMask()}{sampleRateInMask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_aa216506530f1d19a2965931ced2b274b}{A\+A\+X\+\_\+\+C\+Boolean}} sample\+Rate\+In\+Mask (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00392_a3d9eea08f47e0b0a23432e15baa4e885}{A\+A\+X\+\_\+\+C\+Sample\+Rate}}}]{in\+SR,  }\item[{uint32\+\_\+t}]{i\+Mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determines whether a particular \mbox{\hyperlink{a00392_a3d9eea08f47e0b0a23432e15baa4e885}{A\+A\+X\+\_\+\+C\+Sample\+Rate}} is present in a given mask of \mbox{\hyperlink{a00491_a5bb98259de21d2c4d04a2d6010d757c7}{A\+A\+X\+\_\+\+E\+Sample\+Rate\+Mask}}. 
+
+\begin{DoxySeeAlso}{See also}
+k\+A\+A\+X\+\_\+\+Property\+\_\+\+Sample\+Rate 
+\end{DoxySeeAlso}
+
+
+References A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+176400, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+192000, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+44100, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+48000, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+88200, and A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+96000.
+
+\mbox{\Hypertarget{a00392_a7ed6789141267c2270b49ef9a38bd55a}\label{a00392_a7ed6789141267c2270b49ef9a38bd55a}} 
+\index{AAX.h@{AAX.h}!getLowestSampleRateInMask@{getLowestSampleRateInMask}}
+\index{getLowestSampleRateInMask@{getLowestSampleRateInMask}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{getLowestSampleRateInMask()}{getLowestSampleRateInMask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00392_a3d9eea08f47e0b0a23432e15baa4e885}{A\+A\+X\+\_\+\+C\+Sample\+Rate}} get\+Lowest\+Sample\+Rate\+In\+Mask (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{i\+Mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Converts from a mask of \mbox{\hyperlink{a00491_a5bb98259de21d2c4d04a2d6010d757c7}{A\+A\+X\+\_\+\+E\+Sample\+Rate\+Mask}} to the lowest supported \mbox{\hyperlink{a00392_a3d9eea08f47e0b0a23432e15baa4e885}{A\+A\+X\+\_\+\+C\+Sample\+Rate}} value in Hz. 
+
+
+
+References A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+176400, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+192000, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+44100, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+48000, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+88200, and A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+96000.
+
+\mbox{\Hypertarget{a00392_a35608eb248567091abba77878fb87eab}\label{a00392_a35608eb248567091abba77878fb87eab}} 
+\index{AAX.h@{AAX.h}!getMaskForSampleRate@{getMaskForSampleRate}}
+\index{getMaskForSampleRate@{getMaskForSampleRate}!AAX.h@{AAX.h}}
+\subsubsection{\texorpdfstring{getMaskForSampleRate()}{getMaskForSampleRate()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+Mask\+For\+Sample\+Rate (\begin{DoxyParamCaption}\item[{float}]{in\+SR }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the \mbox{\hyperlink{a00491_a5bb98259de21d2c4d04a2d6010d757c7}{A\+A\+X\+\_\+\+E\+Sample\+Rate\+Mask}} selector for a literal sample rate. 
+
+The given rate must be an exact match with one of the available selectors. If no exact match is found then \mbox{\hyperlink{a00491_a5bb98259de21d2c4d04a2d6010d757c7a458fc436e77f902b77b7b983a851219f}{A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+\+No}} is returned. 
+
+References A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+176400, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+192000, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+44100, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+48000, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+88200, A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+96000, and A\+A\+X\+\_\+e\+Sample\+Rate\+Mask\+\_\+\+No.
+

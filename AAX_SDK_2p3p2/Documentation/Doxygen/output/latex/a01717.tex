@@ -1,0 +1,65 @@
+\hypertarget{a01717}{}\section{A\+A\+X\+\_\+\+I\+A\+C\+F\+Host\+Services\+\_\+\+V2 Class Reference}
+\label{a01717}\index{AAX\_IACFHostServices\_V2@{AAX\_IACFHostServices\_V2}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+I\+A\+C\+F\+Host\+Services.\+h$>$}
+
+
+
+Inheritance diagram for A\+A\+X\+\_\+\+I\+A\+C\+F\+Host\+Services\+\_\+\+V2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{a01716}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for A\+A\+X\+\_\+\+I\+A\+C\+F\+Host\+Services\+\_\+\+V2\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{a01715}
+\end{center}
+\end{figure}
+
+
+\subsection{Description}
+V2 of versioned interface to diagnostic and debugging services provided by the A\+AX host. \subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} \mbox{\hyperlink{a01717_a6dd6315809e9a143e525ac7206d45573}{Stack\+Trace}} (int32\+\_\+t i\+Trace\+Priority, int32\+\_\+t i\+Stack\+Trace\+Priority, const char $\ast$i\+Message)=0
+\begin{DoxyCompactList}\small\item\em Log a trace message or a stack trace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{a01717_a6dd6315809e9a143e525ac7206d45573}\label{a01717_a6dd6315809e9a143e525ac7206d45573}} 
+\index{AAX\_IACFHostServices\_V2@{AAX\_IACFHostServices\_V2}!StackTrace@{StackTrace}}
+\index{StackTrace@{StackTrace}!AAX\_IACFHostServices\_V2@{AAX\_IACFHostServices\_V2}}
+\subsubsection{\texorpdfstring{StackTrace()}{StackTrace()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{a00392_a4d8f69a697df7f70c3a8e9b8ee130d2f}{A\+A\+X\+\_\+\+Result}} A\+A\+X\+\_\+\+I\+A\+C\+F\+Host\+Services\+\_\+\+V2\+::\+Stack\+Trace (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{i\+Trace\+Priority,  }\item[{int32\+\_\+t}]{i\+Stack\+Trace\+Priority,  }\item[{const char $\ast$}]{i\+Message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Log a trace message or a stack trace. 
+
+If the logging output filtering is set to include logs with {\ttfamily i\+Stack\+Trace\+Priority} then both the logging message and a stack trace will be emitted, regardless of {\ttfamily i\+Trace\+Priority}.
+
+If the logging output filtering is set to include logs with {\ttfamily i\+Trace\+Priority} but to exclude logs with {\ttfamily i\+Stack\+Trace\+Priority} then this will emit a normal log with no stack trace.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i\+Trace\+Priority} & Priority of the trace, used for log filtering. One of \mbox{\hyperlink{a00395_abd6b80f2e0a26581086b21b7e7ad0ce9}{k\+A\+A\+X\+\_\+\+Trace\+\_\+\+Priority\+\_\+\+Low}}, \mbox{\hyperlink{a00395_a8a6953f26f36747357d5d95f96dcf68d}{k\+A\+A\+X\+\_\+\+Trace\+\_\+\+Priority\+\_\+\+Normal}}, \mbox{\hyperlink{a00395_a5edd9a4ac559a4ef99a948c2ebd422db}{k\+A\+A\+X\+\_\+\+Trace\+\_\+\+Priority\+\_\+\+High}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em i\+Stack\+Trace\+Priority} & Priority of the stack trace, used for log filtering. One of \mbox{\hyperlink{a00395_abd6b80f2e0a26581086b21b7e7ad0ce9}{k\+A\+A\+X\+\_\+\+Trace\+\_\+\+Priority\+\_\+\+Low}}, \mbox{\hyperlink{a00395_a8a6953f26f36747357d5d95f96dcf68d}{k\+A\+A\+X\+\_\+\+Trace\+\_\+\+Priority\+\_\+\+Normal}}, \mbox{\hyperlink{a00395_a5edd9a4ac559a4ef99a948c2ebd422db}{k\+A\+A\+X\+\_\+\+Trace\+\_\+\+Priority\+\_\+\+High}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em i\+Message} & Message string to log \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00542}{A\+A\+X\+\_\+\+I\+A\+C\+F\+Host\+Services.\+h}}\end{DoxyCompactItemize}

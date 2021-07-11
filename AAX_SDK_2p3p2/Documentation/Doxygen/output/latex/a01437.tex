@@ -1,0 +1,68 @@
+\hypertarget{a01437}{}\section{A\+A\+X\+\_\+\+Component$<$ a\+Context\+Type $>$ Class Template Reference}
+\label{a01437}\index{AAX\_Component$<$ aContextType $>$@{AAX\_Component$<$ aContextType $>$}}
+
+
+{\ttfamily \#include $<$A\+A\+X\+\_\+\+Callbacks.\+h$>$}
+
+
+
+\subsection{Description}
+\subsubsection*{template$<$typename a\+Context\+Type$>$\newline
+class A\+A\+X\+\_\+\+Component$<$ a\+Context\+Type $>$}
+
+Empty class containing type declarations for the A\+AX algorithm and associated callbacks. \subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(\mbox{\hyperlink{a00392_aaa22112139aa627574b1ef562f579d43}{A\+A\+X\+\_\+\+C\+A\+L\+L\+B\+A\+CK}} $\ast$ \mbox{\hyperlink{a01437_a6376eebcd50474f744490ce6e4c53395}{C\+Process\+Proc}}) (a\+Context\+Type $\ast$const in\+Context\+Ptrs\+Begin \mbox{[}$\,$\mbox{]}, const void $\ast$in\+Context\+Ptrs\+End)
+\item 
+typedef void $\ast$(\mbox{\hyperlink{a00392_aaa22112139aa627574b1ef562f579d43}{A\+A\+X\+\_\+\+C\+A\+L\+L\+B\+A\+CK}} $\ast$ \mbox{\hyperlink{a01437_ab72700098d29650fcef553e827d8f1b4}{C\+Packet\+Allocator}}) (const a\+Context\+Type $\ast$in\+Context\+Ptr, \mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}} in\+Output\+Port, \mbox{\hyperlink{a00392_aae7325dbfa53a983f208a68cb563fba5}{A\+A\+X\+\_\+\+C\+Timestamp}} in\+Timestamp)
+\item 
+typedef int32\+\_\+t(\mbox{\hyperlink{a00392_aaa22112139aa627574b1ef562f579d43}{A\+A\+X\+\_\+\+C\+A\+L\+L\+B\+A\+CK}} $\ast$ \mbox{\hyperlink{a01437_adf90ef33bfecba08b4a723a85f9f2b59}{C\+Instance\+Init\+Proc}}) (const a\+Context\+Type $\ast$in\+Instance\+Context\+Ptr, \mbox{\hyperlink{a00491_aff5646376a3c93f032cf2400e0885023}{A\+A\+X\+\_\+\+E\+Component\+Instance\+Init\+Action}} i\+Action)
+\item 
+typedef int32\+\_\+t(\mbox{\hyperlink{a00392_aaa22112139aa627574b1ef562f579d43}{A\+A\+X\+\_\+\+C\+A\+L\+L\+B\+A\+CK}} $\ast$ \mbox{\hyperlink{a01437_a69fa55fbcbe19518395a0bf73bd12591}{C\+Background\+Proc}}) (void)
+\item 
+typedef void(\mbox{\hyperlink{a00392_aaa22112139aa627574b1ef562f579d43}{A\+A\+X\+\_\+\+C\+A\+L\+L\+B\+A\+CK}} $\ast$ \mbox{\hyperlink{a01437_a44affb8e2f47718b198bdf47f49ff2b1}{C\+Init\+Private\+Data\+Proc}}) (\mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}} in\+Field\+Index, void $\ast$in\+New\+Block, int32\+\_\+t in\+Size, \mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$const in\+Controller)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{a01437_a6376eebcd50474f744490ce6e4c53395}\label{a01437_a6376eebcd50474f744490ce6e4c53395}} 
+\index{AAX\_Component$<$ aContextType $>$@{AAX\_Component$<$ aContextType $>$}!CProcessProc@{CProcessProc}}
+\index{CProcessProc@{CProcessProc}!AAX\_Component$<$ aContextType $>$@{AAX\_Component$<$ aContextType $>$}}
+\subsubsection{\texorpdfstring{CProcessProc}{CProcessProc}}
+{\footnotesize\ttfamily template$<$typename a\+Context\+Type $>$ \\
+typedef void(\mbox{\hyperlink{a00392_aaa22112139aa627574b1ef562f579d43}{A\+A\+X\+\_\+\+C\+A\+L\+L\+B\+A\+CK}} $\ast$ \mbox{\hyperlink{a01437}{A\+A\+X\+\_\+\+Component}}$<$ a\+Context\+Type $>$\+::C\+Process\+Proc) (a\+Context\+Type $\ast$const in\+Context\+Ptrs\+Begin \mbox{[}$\,$\mbox{]}, const void $\ast$in\+Context\+Ptrs\+End)}
+
+\mbox{\Hypertarget{a01437_ab72700098d29650fcef553e827d8f1b4}\label{a01437_ab72700098d29650fcef553e827d8f1b4}} 
+\index{AAX\_Component$<$ aContextType $>$@{AAX\_Component$<$ aContextType $>$}!CPacketAllocator@{CPacketAllocator}}
+\index{CPacketAllocator@{CPacketAllocator}!AAX\_Component$<$ aContextType $>$@{AAX\_Component$<$ aContextType $>$}}
+\subsubsection{\texorpdfstring{CPacketAllocator}{CPacketAllocator}}
+{\footnotesize\ttfamily template$<$typename a\+Context\+Type $>$ \\
+typedef void$\ast$(\mbox{\hyperlink{a00392_aaa22112139aa627574b1ef562f579d43}{A\+A\+X\+\_\+\+C\+A\+L\+L\+B\+A\+CK}} $\ast$ \mbox{\hyperlink{a01437}{A\+A\+X\+\_\+\+Component}}$<$ a\+Context\+Type $>$\+::C\+Packet\+Allocator) (const a\+Context\+Type $\ast$in\+Context\+Ptr, \mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}} in\+Output\+Port, \mbox{\hyperlink{a00392_aae7325dbfa53a983f208a68cb563fba5}{A\+A\+X\+\_\+\+C\+Timestamp}} in\+Timestamp)}
+
+\mbox{\Hypertarget{a01437_adf90ef33bfecba08b4a723a85f9f2b59}\label{a01437_adf90ef33bfecba08b4a723a85f9f2b59}} 
+\index{AAX\_Component$<$ aContextType $>$@{AAX\_Component$<$ aContextType $>$}!CInstanceInitProc@{CInstanceInitProc}}
+\index{CInstanceInitProc@{CInstanceInitProc}!AAX\_Component$<$ aContextType $>$@{AAX\_Component$<$ aContextType $>$}}
+\subsubsection{\texorpdfstring{CInstanceInitProc}{CInstanceInitProc}}
+{\footnotesize\ttfamily template$<$typename a\+Context\+Type $>$ \\
+typedef int32\+\_\+t(\mbox{\hyperlink{a00392_aaa22112139aa627574b1ef562f579d43}{A\+A\+X\+\_\+\+C\+A\+L\+L\+B\+A\+CK}} $\ast$ \mbox{\hyperlink{a01437}{A\+A\+X\+\_\+\+Component}}$<$ a\+Context\+Type $>$\+::C\+Instance\+Init\+Proc) (const a\+Context\+Type $\ast$in\+Instance\+Context\+Ptr, \mbox{\hyperlink{a00491_aff5646376a3c93f032cf2400e0885023}{A\+A\+X\+\_\+\+E\+Component\+Instance\+Init\+Action}} i\+Action)}
+
+\mbox{\Hypertarget{a01437_a69fa55fbcbe19518395a0bf73bd12591}\label{a01437_a69fa55fbcbe19518395a0bf73bd12591}} 
+\index{AAX\_Component$<$ aContextType $>$@{AAX\_Component$<$ aContextType $>$}!CBackgroundProc@{CBackgroundProc}}
+\index{CBackgroundProc@{CBackgroundProc}!AAX\_Component$<$ aContextType $>$@{AAX\_Component$<$ aContextType $>$}}
+\subsubsection{\texorpdfstring{CBackgroundProc}{CBackgroundProc}}
+{\footnotesize\ttfamily template$<$typename a\+Context\+Type $>$ \\
+typedef int32\+\_\+t(\mbox{\hyperlink{a00392_aaa22112139aa627574b1ef562f579d43}{A\+A\+X\+\_\+\+C\+A\+L\+L\+B\+A\+CK}} $\ast$ \mbox{\hyperlink{a01437}{A\+A\+X\+\_\+\+Component}}$<$ a\+Context\+Type $>$\+::C\+Background\+Proc) (void)}
+
+\mbox{\Hypertarget{a01437_a44affb8e2f47718b198bdf47f49ff2b1}\label{a01437_a44affb8e2f47718b198bdf47f49ff2b1}} 
+\index{AAX\_Component$<$ aContextType $>$@{AAX\_Component$<$ aContextType $>$}!CInitPrivateDataProc@{CInitPrivateDataProc}}
+\index{CInitPrivateDataProc@{CInitPrivateDataProc}!AAX\_Component$<$ aContextType $>$@{AAX\_Component$<$ aContextType $>$}}
+\subsubsection{\texorpdfstring{CInitPrivateDataProc}{CInitPrivateDataProc}}
+{\footnotesize\ttfamily template$<$typename a\+Context\+Type $>$ \\
+typedef void(\mbox{\hyperlink{a00392_aaa22112139aa627574b1ef562f579d43}{A\+A\+X\+\_\+\+C\+A\+L\+L\+B\+A\+CK}} $\ast$ \mbox{\hyperlink{a01437}{A\+A\+X\+\_\+\+Component}}$<$ a\+Context\+Type $>$\+::C\+Init\+Private\+Data\+Proc) (\mbox{\hyperlink{a00392_ae807f8986143820cfb5d6da32165c9c7}{A\+A\+X\+\_\+\+C\+Field\+Index}} in\+Field\+Index, void $\ast$in\+New\+Block, int32\+\_\+t in\+Size, \mbox{\hyperlink{a01409}{I\+A\+C\+F\+Unknown}} $\ast$const in\+Controller)}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00401}{A\+A\+X\+\_\+\+Callbacks.\+h}}\end{DoxyCompactItemize}

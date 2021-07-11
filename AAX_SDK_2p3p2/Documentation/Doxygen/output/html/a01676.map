@@ -1,0 +1,10 @@
+<map id="AAX_IACFEffectParameters_V2" name="AAX_IACFEffectParameters_V2">
+<area shape="rect" id="node1" title="Supplemental interface for an AAX Plug&#45;in&#39;s data model." alt="" coords="5,152,218,177"/>
+<area shape="rect" id="node4" href="$a01681.html" title="Supplemental interface for an AAX Plug&#45;in&#39;s data model." alt="" coords="5,225,218,251"/>
+<area shape="rect" id="node2" href="$a01669.html" title="The interface for an AAX Plug&#45;in&#39;s data model." alt="" coords="17,79,206,104"/>
+<area shape="rect" id="node3" href="$a01409.html" title="COM compatible IUnknown C++ interface." alt="" coords="58,5,165,31"/>
+<area shape="rect" id="node5" href="$a01685.html" title="Supplemental interface for an AAX Plug&#45;in&#39;s data model." alt="" coords="5,299,218,324"/>
+<area shape="rect" id="node6" href="$a01825.html" title="The interface for an AAX Plug&#45;in&#39;s data model." alt="" coords="31,372,192,397"/>
+<area shape="rect" id="node7" href="$a01481.html" title="Default implementation of the AAX_IEffectParameters interface." alt="" coords="28,445,195,471"/>
+<area shape="rect" id="node8" href="$a01969.html" title="Extension of the AAX_CEffectParameters class for monolithic VIs and effects." alt="" coords="14,519,208,544"/>
+</map>

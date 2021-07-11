@@ -1,0 +1,4 @@
+<map id="AAX_IACFEffectGUI" name="AAX_IACFEffectGUI">
+<area shape="rect" id="node1" title="The interface for a AAX Plug&#45;in&#39;s GUI (graphical user interface)." alt="" coords="5,79,149,104"/>
+<area shape="rect" id="node2" href="$a01409.html" title="COM compatible IUnknown C++ interface." alt="" coords="23,5,131,31"/>
+</map>

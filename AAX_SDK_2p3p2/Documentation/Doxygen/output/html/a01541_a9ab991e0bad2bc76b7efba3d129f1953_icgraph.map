@@ -1,0 +1,6 @@
+<map id="AAX_CStatelessParameter::Identifier" name="AAX_CStatelessParameter::Identifier">
+<area shape="rect" id="node1" title="Returns the parameter&#39;s unique identifier." alt="" coords="235,68,418,107"/>
+<area shape="rect" id="node2" href="$a01541.html#a815f21974e1a75eb9fdcc5cf3e0704c4" title="Signals the automation system that a control has been released." alt="" coords="5,5,187,44"/>
+<area shape="rect" id="node3" href="$a01541.html#acaf1f39e881c14fb3b81f9c0c23fea31" title="Sets the automation delegate (if one is required)" alt="" coords="5,68,187,107"/>
+<area shape="rect" id="node4" href="$a01541.html#a91eda962cdbf1e211a396240c23c0330" title="Signals the automation system that a control has been touched." alt="" coords="5,131,187,169"/>
+</map>
